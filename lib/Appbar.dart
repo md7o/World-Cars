@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:world_car/screen/Home.dart';
+import 'package:world_car/screen/famousCar.dart';
 import 'package:world_car/screen/setting.dart';
 
 class naviBar extends StatefulWidget {
@@ -22,6 +23,7 @@ class _naviBarState extends State<naviBar> {
 
   final List<Widget> pages = [
     const Home(),
+    const FamousCar(),
     const Setting(),
   ];
 
@@ -46,16 +48,16 @@ class _naviBarState extends State<naviBar> {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
             tabs: const [
               GButton(
-                icon: Icons.settings,
-                text: 'Setting',
-              ),
-              GButton(
                 icon: Icons.home,
                 text: 'Home',
               ),
               GButton(
                 icon: Icons.star,
                 text: 'Famous',
+              ),
+              GButton(
+                icon: Icons.settings,
+                text: 'Setting',
               ),
             ],
           ),
