@@ -8,11 +8,11 @@ class WorldCar {
   });
 }
 
-class FamousWorld {
+class popularsCar {
   final String backgroundImg;
   final String title;
 
-  const FamousWorld({
+  const popularsCar({
     required this.backgroundImg,
     required this.title,
   });

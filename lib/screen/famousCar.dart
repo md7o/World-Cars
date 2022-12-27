@@ -7,15 +7,11 @@ class FamousCar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map info = {
-      {
-        "name": 'name',
-        'imag': 'images/japan.png',
-      },
-      {
-        'name': 'glao',
-      }
-    } as Map;
+    final List<popularsCar> popular = [
+      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
+    ];
 
     return Scaffold(
       backgroundColor: const Color(0xFF11101C),
@@ -58,24 +54,26 @@ class FamousCar extends StatelessWidget {
 
           // AppBar
           // ignore: non_constant_identifier_names
-          for (final FamousList in Listdata)
-            Column(
-              children: [
-                for (FamousWorld Lists in (FamousList.content))
-                  ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        child: Column(
-                          children: [
-                            Text(Lists.backgroundImg),
-                          ],
+
+          Expanded(
+            child: ListView(
+                children: popular.map(
+              (st) {
+                return Container(
+                  child: Column(
+                    children: [
+                      Container(
+                        child: Image.asset(
+                          st.backgroundImg,
+                          width: 80,
                         ),
-                      );
-                    },
+                      ),
+                    ],
                   ),
-              ],
-            ),
+                );
+              },
+            ).toList()),
+          ),
 
           // country
         ],
