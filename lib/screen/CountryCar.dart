@@ -31,22 +31,6 @@ class CountryCar extends StatelessWidget {
         children: [
           // AppBar
 
-          //  AnimatedBuilder(
-          //     animation: transitionAnimation,
-          //     builder: (context, child) {
-          //       return SlideTransition(
-          //         position: Tween<Offset>(
-          //           begin: const Offset(-1, 0),
-          //           end: const Offset(0, 0),
-          //         ).animate(
-          //           CurvedAnimation(
-          //             curve: const Interval(0.4, 1, curve: Curves.ease),
-          //             parent: transitionAnimation,
-          //           ),
-          //         ),
-          //         child: child,
-          //       );
-
           AnimatedBuilder(
             animation: transitionAnimation,
             builder: (context, child) {

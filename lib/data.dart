@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:world_car/models/category.dart';
 import 'package:world_car/models/world_car.dart';
 
@@ -126,4 +127,21 @@ final data = {
       ),
     ],
   ),
+};
+
+final Listdata = {
+  FamousList(Listy: const [
+    FamousCar(
+      backgroundImg: "images/earth.png",
+      title: 'hlao',
+    ),
+    FamousCar(
+      backgroundImg: "images/earth.png",
+      title: 'hlao',
+    ),
+    FamousCar(
+      backgroundImg: "images/earth.png",
+      title: 'hlao',
+    ),
+  ])
 };

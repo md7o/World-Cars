@@ -6,6 +6,14 @@ class WorldCar {
     required this.name,
     required this.imageUrl,
   });
+}
 
-  get length => null;
+class FamousCar {
+  final String backgroundImg;
+  final String title;
+
+  const FamousCar({
+    required this.backgroundImg,
+    required this.title,
+  });
 }
