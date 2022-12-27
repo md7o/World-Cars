@@ -8,9 +8,9 @@ class FamousCar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<popularsCar> popular = [
-      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
-      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
-      const popularsCar(title: 'hlao', backgroundImg: "images/japan.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
     ];
 
     return Scaffold(
@@ -58,17 +58,40 @@ class FamousCar extends StatelessWidget {
           Expanded(
             child: ListView(
                 children: popular.map(
-              (st) {
-                return Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        child: Image.asset(
-                          st.backgroundImg,
-                          width: 80,
-                        ),
+              (po) {
+                return Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(po.backgroundImg),
+                        fit: BoxFit.cover,
                       ),
-                    ],
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 10),
+                            child: Text(
+                              po.title,
+                              style: const TextStyle(
+                                backgroundColor: Colors.black12,
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
