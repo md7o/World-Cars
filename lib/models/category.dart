@@ -11,11 +11,3 @@ class Category {
     required this.items,
   });
 }
-
-class FamousList {
-  final List<FamousCar> Listy;
-
-  FamousList({
-    required this.Listy,
-  });
-}

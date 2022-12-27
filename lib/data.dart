@@ -128,20 +128,3 @@ final data = {
     ],
   ),
 };
-
-final Listdata = {
-  FamousList(Listy: const [
-    FamousCar(
-      backgroundImg: "images/earth.png",
-      title: 'hlao',
-    ),
-    FamousCar(
-      backgroundImg: "images/earth.png",
-      title: 'hlao',
-    ),
-    FamousCar(
-      backgroundImg: "images/earth.png",
-      title: 'hlao',
-    ),
-  ])
-};
