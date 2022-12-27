@@ -1,9 +1,12 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:world_car/screen/Home.dart';
 import 'package:world_car/screen/famousCar.dart';
 import 'package:world_car/screen/setting.dart';
 
+// ignore: camel_case_types
 class naviBar extends StatefulWidget {
   const naviBar({super.key});
 

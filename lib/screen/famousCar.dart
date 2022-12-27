@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:world_car/data.dart';
 import 'package:world_car/models/world_car.dart';
 
 class FamousCar extends StatelessWidget {
@@ -8,9 +7,10 @@ class FamousCar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<popularsCar> popular = [
-      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
-      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
-      const popularsCar(title: 'hlao', backgroundImg: "images/Corolla.png"),
+      const popularsCar(
+          title: 'Toyota Corolla', backgroundImg: "images/Corolla.png"),
+      const popularsCar(title: 'Toyota R', backgroundImg: "images/RAV4.png"),
+      const popularsCar(title: 'hlao', backgroundImg: "images/Crv.png"),
     ];
 
     return Scaffold(
@@ -74,20 +74,18 @@ class FamousCar extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 10),
-                            child: Text(
-                              po.title,
-                              style: const TextStyle(
-                                backgroundColor: Colors.black12,
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                              textAlign: TextAlign.left,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 10),
+                          child: Text(
+                            po.title,
+                            style: const TextStyle(
+                              backgroundColor: Colors.black12,
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
                       ],

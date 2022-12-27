@@ -8,6 +8,7 @@ class WorldCar {
   });
 }
 
+// ignore: camel_case_types
 class popularsCar {
   final String backgroundImg;
   final String title;
