@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/data.dart';
 import 'package:world_car/models/world_car.dart';
 import 'package:world_car/screen/CountryCar.dart';
@@ -43,12 +44,13 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Text(
+                  Text(
                     'Car World',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     ),
                   )
                 ],
@@ -57,15 +59,16 @@ class _HomeState extends State<Home> {
           // AppBar
 
           Column(
-            children: const [
+            children: [
               Padding(
-                padding: EdgeInsets.only(top: 35),
+                padding: const EdgeInsets.only(top: 35, bottom: 15),
                 child: Text(
                   'Car Country',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.normal),
                   ),
                 ),
               ),
@@ -122,10 +125,11 @@ class _HomeState extends State<Home> {
                                 alignment: const Alignment(0.3, 0),
                                 child: Text(
                                   category.label,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.normal),
                                   ),
                                 ),
                               ),

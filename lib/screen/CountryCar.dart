@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 
 class CountryCar extends StatelessWidget {
@@ -66,10 +67,11 @@ class CountryCar extends StatelessWidget {
                   ),
                   Text(
                     label,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.normal),
                     ),
                   )
                 ],
@@ -86,10 +88,11 @@ class CountryCar extends StatelessWidget {
                   parent: transitionAnimation, curve: Curves.easeOutCubic)),
               child: Text(
                 '$label Cars',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                style: GoogleFonts.josefinSans(
+                  textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal),
                 ),
               ),
             ),
@@ -127,13 +130,14 @@ class CountryCar extends StatelessWidget {
                             width: 52,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
+                            padding: const EdgeInsets.only(top: 10),
                             child: Text(
                               item[index].name,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
+                              style: GoogleFonts.josefinSans(
+                                textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal),
                               ),
                             ),
                           )
@@ -151,12 +155,13 @@ class CountryCar extends StatelessWidget {
             child: ScaleTransition(
               scale: Tween<double>(begin: 0.5, end: 1).animate(CurvedAnimation(
                   parent: transitionAnimation, curve: Curves.easeOutCubic)),
-              child: const Text(
+              child: Text(
                 'Facts',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                style: GoogleFonts.josefinSans(
+                  textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal),
                 ),
               ),
             ),
@@ -189,7 +194,7 @@ class CountryCar extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.only(left: 30),
                 child: Row(
                   children: [
                     Image.asset(
@@ -200,12 +205,16 @@ class CountryCar extends StatelessWidget {
                       width: 20,
                     ),
                     Flexible(
-                      child: Text(
-                        item[4].name,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Text(
+                          item[4].name,
+                          style: GoogleFonts.josefinSans(
+                            textStyle: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal),
+                          ),
                         ),
                       ),
                     ),
@@ -250,12 +259,16 @@ class CountryCar extends StatelessWidget {
                   child: Row(
                     children: [
                       Flexible(
-                        child: Text(
-                          item[5].name,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Text(
+                            item[5].name,
+                            style: GoogleFonts.josefinSans(
+                              textStyle: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal),
+                            ),
                           ),
                         ),
                       ),

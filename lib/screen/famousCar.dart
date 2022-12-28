@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 
 class FamousCar extends StatelessWidget {
@@ -72,15 +73,16 @@ class FamousCar extends StatelessWidget {
           // ignore: non_constant_identifier_names
 
           Wrap(
-            children: const [
+            children: [
               Padding(
-                padding:
-                    EdgeInsets.only(top: 60, bottom: 30, left: 30, right: 30),
+                padding: const EdgeInsets.only(
+                    top: 60, bottom: 30, left: 30, right: 30),
                 child: Text('Best selling cars worldwide in (2021)',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 19,
+                          fontWeight: FontWeight.normal),
                     ),
                     textAlign: TextAlign.center),
               ),
@@ -132,10 +134,11 @@ class FamousCar extends StatelessWidget {
                                         vertical: 10, horizontal: 10),
                                     child: Text(
                                       po.title,
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
+                                      style: GoogleFonts.josefinSans(
+                                        textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.normal),
                                       ),
                                       textAlign: TextAlign.left,
                                     ),
@@ -155,10 +158,11 @@ class FamousCar extends StatelessWidget {
                                             const EdgeInsets.only(left: 10),
                                         child: Text(
                                           po.selling,
-                                          style: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
+                                          style: GoogleFonts.josefinSans(
+                                            textStyle: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.normal),
                                           ),
                                         ),
                                       ),
