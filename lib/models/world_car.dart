@@ -12,9 +12,11 @@ class WorldCar {
 class popularsCar {
   final String backgroundImg;
   final String title;
+  final String selling;
 
   const popularsCar({
     required this.backgroundImg,
     required this.title,
+    required this.selling,
   });
 }
