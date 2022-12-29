@@ -14,6 +14,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Image appLogo = const Image(
+      image: ExactAssetImage("images/earth.png"),
+      width: 175,
+      height: 100,
+      alignment: FractionalOffset.center);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
