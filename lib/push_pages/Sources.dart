@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DarkMode extends StatefulWidget {
-  const DarkMode({super.key});
+class Sources extends StatefulWidget {
+  const Sources({super.key});
 
   @override
-  State<DarkMode> createState() => _DarkModeState();
+  State<Sources> createState() => _SourcesState();
 }
 
-class _DarkModeState extends State<DarkMode> {
+class _SourcesState extends State<Sources> {
   @override
   Widget build(BuildContext context) {
     return Container(
