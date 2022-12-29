@@ -45,41 +45,109 @@ class Setting extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             child: Container(
-              height: 45,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xFF1A2037),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF1A2037),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
                 ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Row(
+                child: Column(
                   children: [
-                    const Icon(
-                      Icons.dark_mode,
+                    Container(
+                      height: 45,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF1A2037),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.dark_mode,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Dark mode',
+                              style: GoogleFonts.josefinSans(
+                                textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 125),
+                              child: Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const Divider(
+                      indent: 30,
+                      endIndent: 30,
+                      thickness: 2,
                       color: Colors.white,
-                      size: 40,
                     ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Dark mode',
-                      style: GoogleFonts.josefinSans(
-                        textStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal),
+                    Container(
+                      height: 45,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF1A2037),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.text_fields,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              'Fonts',
+                              style: GoogleFonts.josefinSans(
+                                textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 175),
+                              child: Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
-                ),
-              ),
-            ),
+                )),
           ),
         ],
       ),
