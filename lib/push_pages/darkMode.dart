@@ -12,12 +12,9 @@ class DarkMode extends StatefulWidget {
 class _DarkModeState extends State<DarkMode> {
   @override
   Widget build(BuildContext context) {
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
     return Scaffold(
         appBar: AppBar(
-          actions: [
+          actions: const [
             ChangeThemeButtonWidget(),
           ],
         ),

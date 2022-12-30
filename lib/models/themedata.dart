@@ -14,10 +14,10 @@ class ThemeProvider extends ChangeNotifier {
 class MyThemes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFF11101C),
-    colorScheme: ColorScheme.dark(),
+    colorScheme: const ColorScheme.dark(),
   );
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light(),
+    colorScheme: const ColorScheme.light(),
   );
 }
