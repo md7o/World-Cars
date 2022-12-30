@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:world_car/widget/change.dart';
+
 class DarkMode extends StatefulWidget {
   const DarkMode({super.key});
 
@@ -10,8 +12,22 @@ class DarkMode extends StatefulWidget {
 class _DarkModeState extends State<DarkMode> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Dark mode'),
-    );
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
+    return Scaffold(
+        appBar: AppBar(
+          actions: [
+            ChangeThemeButtonWidget(),
+          ],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: const [
+              Text('hlao'),
+            ],
+          ),
+        ));
   }
 }
