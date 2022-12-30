@@ -22,9 +22,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
     return Scaffold(
-      backgroundColor: const Color(0xFF11101C),
-
       // Body
 
       body: Column(
@@ -54,9 +55,7 @@ class _HomeState extends State<Home> {
                     'Car World',
                     style: GoogleFonts.josefinSans(
                       textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal),
+                          fontSize: 20, fontWeight: FontWeight.normal),
                     ),
                   )
                 ],

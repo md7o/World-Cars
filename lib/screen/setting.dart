@@ -82,7 +82,7 @@ class Setting extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 30, top: 50),
                 child: Text(
-                  'About App',
+                  'About',
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
                         color: Colors.white,
