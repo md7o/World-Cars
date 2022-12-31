@@ -80,6 +80,7 @@ class FamousCar extends StatelessWidget {
                     top: 60, bottom: 30, left: 30, right: 30),
                 child: Text('Best selling cars worldwide in (2021)',
                     style: GoogleFonts.josefinSans(
+                      color: Theme.of(context).iconTheme.color,
                       textStyle: const TextStyle(
                           fontSize: 19, fontWeight: FontWeight.normal),
                     ),

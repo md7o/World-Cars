@@ -22,6 +22,7 @@ class Setting extends StatelessWidget {
               child: Text(
                 'Setting',
                 style: GoogleFonts.josefinSans(
+                  color: Theme.of(context).iconTheme.color,
                   textStyle: const TextStyle(
                       fontSize: 30, fontWeight: FontWeight.normal),
                 ),
@@ -36,6 +37,7 @@ class Setting extends StatelessWidget {
                 child: Text(
                   'General',
                   style: GoogleFonts.josefinSans(
+                    color: Theme.of(context).iconTheme.color,
                     textStyle: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.normal),
                   ),
@@ -81,6 +83,7 @@ class Setting extends StatelessWidget {
                 child: Text(
                   'About',
                   style: GoogleFonts.josefinSans(
+                    color: Theme.of(context).iconTheme.color,
                     textStyle: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.normal),
                   ),

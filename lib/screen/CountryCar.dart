@@ -63,6 +63,7 @@ class CountryCar extends StatelessWidget {
                   Text(
                     label,
                     style: GoogleFonts.josefinSans(
+                      color: Theme.of(context).iconTheme.color,
                       textStyle: const TextStyle(
                           fontSize: 22, fontWeight: FontWeight.normal),
                     ),
@@ -82,6 +83,7 @@ class CountryCar extends StatelessWidget {
               child: Text(
                 '$label Cars',
                 style: GoogleFonts.josefinSans(
+                  color: Theme.of(context).iconTheme.color,
                   textStyle: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.normal),
                 ),
@@ -149,6 +151,7 @@ class CountryCar extends StatelessWidget {
               child: Text(
                 'Facts',
                 style: GoogleFonts.josefinSans(
+                  color: Theme.of(context).iconTheme.color,
                   textStyle: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.normal),
                 ),
