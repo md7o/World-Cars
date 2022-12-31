@@ -15,9 +15,11 @@ class MyThemes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: const Color(0xFF11101C),
     colorScheme: const ColorScheme.dark(),
+    primaryColor: const Color(0xFF1A2037),
   );
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: const Color(0xFFC9D4FF),
     colorScheme: const ColorScheme.light(),
+    primaryColor: const Color(0xFF8097F1),
   );
 }

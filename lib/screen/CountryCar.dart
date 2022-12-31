@@ -19,15 +19,10 @@ class CountryCar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
     return Scaffold(
-      backgroundColor: const Color(0xFF11101C),
-
-      // appBar: AppBar(
-      //   backgroundColor: const Color(0xFF11101C),
-      //   title: const Text('LuckyRoller'),
-      // ),
-      // Body
-
       body: Column(
         children: [
           // AppBar
@@ -49,9 +44,9 @@ class CountryCar extends StatelessWidget {
             child: Container(
               height: 175.0,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                  color: Color(0xFF1A2037),
-                  borderRadius: BorderRadius.vertical(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: const BorderRadius.vertical(
                       bottom: Radius.elliptical(200, 100))),
               child: Column(
                 children: [
@@ -69,9 +64,7 @@ class CountryCar extends StatelessWidget {
                     label,
                     style: GoogleFonts.josefinSans(
                       textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.normal),
+                          fontSize: 22, fontWeight: FontWeight.normal),
                     ),
                   )
                 ],
@@ -90,9 +83,7 @@ class CountryCar extends StatelessWidget {
                 '$label Cars',
                 style: GoogleFonts.josefinSans(
                   textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
+                      fontSize: 20, fontWeight: FontWeight.normal),
                 ),
               ),
             ),
@@ -119,7 +110,7 @@ class CountryCar extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFF1A2037),
+                        color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: Column(
@@ -159,9 +150,7 @@ class CountryCar extends StatelessWidget {
                 'Facts',
                 style: GoogleFonts.josefinSans(
                   textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
+                      fontSize: 20, fontWeight: FontWeight.normal),
                 ),
               ),
             ),
@@ -187,9 +176,9 @@ class CountryCar extends StatelessWidget {
               margin: const EdgeInsets.only(left: 55),
               height: 100,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Color(0xFF1A2037),
-                borderRadius: BorderRadius.horizontal(
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const BorderRadius.horizontal(
                   left: Radius.elliptical(50, 50),
                 ),
               ),
@@ -248,9 +237,9 @@ class CountryCar extends StatelessWidget {
                 margin: const EdgeInsets.only(right: 55),
                 height: 100,
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF1A2037),
-                  borderRadius: BorderRadius.horizontal(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: const BorderRadius.horizontal(
                     right: Radius.elliptical(50, 50),
                   ),
                 ),

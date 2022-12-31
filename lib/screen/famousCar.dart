@@ -7,6 +7,9 @@ class FamousCar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
     final List<popularsCar> popular = [
       const popularsCar(
         title: '1- Toyota Corolla',
@@ -61,8 +64,6 @@ class FamousCar extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: const Color(0xFF11101C),
-
       // Body
 
       body: Column(
@@ -80,9 +81,7 @@ class FamousCar extends StatelessWidget {
                 child: Text('Best selling cars worldwide in (2021)',
                     style: GoogleFonts.josefinSans(
                       textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 19,
-                          fontWeight: FontWeight.normal),
+                          fontSize: 19, fontWeight: FontWeight.normal),
                     ),
                     textAlign: TextAlign.center),
               ),

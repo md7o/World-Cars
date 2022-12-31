@@ -35,9 +35,9 @@ class _HomeState extends State<Home> {
           Container(
               height: 175.0,
               width: double.infinity,
-              decoration: const BoxDecoration(
-                  color: Color(0xFF1A2037),
-                  borderRadius: BorderRadius.vertical(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: const BorderRadius.vertical(
                       bottom: Radius.elliptical(200, 100))),
               child: Column(
                 children: [
@@ -71,9 +71,7 @@ class _HomeState extends State<Home> {
                   'Car Country',
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.normal),
+                        fontSize: 22, fontWeight: FontWeight.normal),
                   ),
                 ),
               ),
@@ -120,9 +118,9 @@ class _HomeState extends State<Home> {
                               margin: const EdgeInsets.only(top: 10.5),
                               width: 200,
                               height: 54,
-                              decoration: const BoxDecoration(
-                                color: Color(0xFF1A2037),
-                                borderRadius: BorderRadius.all(
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: const BorderRadius.all(
                                   Radius.circular(5),
                                 ),
                               ),

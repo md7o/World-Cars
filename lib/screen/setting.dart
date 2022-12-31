@@ -8,9 +8,10 @@ class Setting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
     return Scaffold(
-      backgroundColor: const Color(0xFF11101C),
-
       // Body
 
       body: Column(
@@ -22,9 +23,7 @@ class Setting extends StatelessWidget {
                 'Setting',
                 style: GoogleFonts.josefinSans(
                   textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.normal),
+                      fontSize: 30, fontWeight: FontWeight.normal),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -38,9 +37,7 @@ class Setting extends StatelessWidget {
                   'General',
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal),
+                        fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
               ),
@@ -50,9 +47,9 @@ class Setting extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             child: Container(
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF1A2037),
-                  borderRadius: BorderRadius.all(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(5),
                   ),
                 ),
@@ -85,9 +82,7 @@ class Setting extends StatelessWidget {
                   'About',
                   style: GoogleFonts.josefinSans(
                     textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal),
+                        fontSize: 20, fontWeight: FontWeight.normal),
                   ),
                 ),
               ),
@@ -98,9 +93,9 @@ class Setting extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             child: Container(
                 width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF1A2037),
-                  borderRadius: BorderRadius.all(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor,
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(5),
                   ),
                 ),

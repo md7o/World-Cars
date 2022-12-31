@@ -11,6 +11,9 @@ class modeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
+        ? 'darkTheme'
+        : 'LightTheme';
     return InkWell(
       onTap: () => Navigator.push(
         context,
@@ -21,9 +24,9 @@ class modeWidget extends StatelessWidget {
       child: Container(
         height: 45,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color(0xFF1A2037),
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(
             Radius.circular(5),
           ),
         ),
@@ -79,9 +82,9 @@ class fontWidget extends StatelessWidget {
       child: Container(
         height: 45,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color(0xFF1A2037),
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(
             Radius.circular(5),
           ),
         ),
@@ -137,9 +140,9 @@ class sourcesWidget extends StatelessWidget {
       child: Container(
         height: 45,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color(0xFF1A2037),
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(
             Radius.circular(5),
           ),
         ),
@@ -195,9 +198,9 @@ class contantWidget extends StatelessWidget {
       child: Container(
         height: 45,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color(0xFF1A2037),
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(
             Radius.circular(5),
           ),
         ),
@@ -246,9 +249,9 @@ class shareWidget extends StatelessWidget {
     return Container(
       height: 45,
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Color(0xFF1A2037),
-        borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        borderRadius: const BorderRadius.all(
           Radius.circular(5),
         ),
       ),
