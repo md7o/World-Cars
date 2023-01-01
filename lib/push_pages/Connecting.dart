@@ -81,7 +81,7 @@ class _ConnectionState extends State<Connection> {
                           child: Row(
                             children: [
                               Image.asset(
-                                "images/japan.png",
+                                "images/github.png",
                                 width: 25,
                               ),
                               const SizedBox(
@@ -127,16 +127,15 @@ class _ConnectionState extends State<Connection> {
                           padding: const EdgeInsets.only(left: 20),
                           child: Row(
                             children: [
-                              const Icon(
-                                Icons.directions_car,
-                                color: Colors.white,
-                                size: 25,
+                              Image.asset(
+                                "images/twitter.png",
+                                width: 25,
                               ),
                               const SizedBox(
                                 width: 10,
                               ),
                               Text(
-                                'Statista',
+                                'Twitter',
                                 style: GoogleFonts.josefinSans(
                                   textStyle: const TextStyle(
                                       color: Colors.white,
