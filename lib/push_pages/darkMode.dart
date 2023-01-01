@@ -22,6 +22,15 @@ class _DarkModeState extends State<DarkMode> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
+          title: Text(
+            'appearance',
+            style: GoogleFonts.josefinSans(
+              color: Theme.of(context).iconTheme.color,
+              textStyle:
+                  const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+            ),
+          ),
+          centerTitle: true,
           elevation: 0,
           leading: IconButton(
               color: Theme.of(context).iconTheme.color,
@@ -30,26 +39,29 @@ class _DarkModeState extends State<DarkMode> {
               },
               icon: const Icon(Icons.close)),
         ),
-        body: Column(
-          children: [
-            Text(
-              "Chose Mode:",
-              style: GoogleFonts.josefinSans(
-                color: Theme.of(context).iconTheme.color,
-                textStyle: const TextStyle(
-                    fontSize: 30, fontWeight: FontWeight.normal),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Column(
+            children: [
+              Text(
+                "Chose Mode:",
+                style: GoogleFonts.josefinSans(
+                  color: Theme.of(context).iconTheme.color,
+                  textStyle: const TextStyle(
+                      fontSize: 30, fontWeight: FontWeight.normal),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            const Center(
-              child: Actions(
-                actions: {},
-                child: ChangeThemeButtonWidget(),
+              SizedBox(
+                height: 50,
               ),
-            ),
-          ],
+              const Center(
+                child: Actions(
+                  actions: {},
+                  child: ChangeThemeButtonWidget(),
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }
