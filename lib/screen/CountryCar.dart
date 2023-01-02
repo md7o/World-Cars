@@ -63,7 +63,7 @@ class CountryCar extends StatelessWidget {
                   Text(
                     label,
                     style: GoogleFonts.josefinSans(
-                      color: Theme.of(context).iconTheme.color,
+                      color: Colors.white,
                       textStyle: const TextStyle(
                           fontSize: 22, fontWeight: FontWeight.normal),
                     ),

@@ -55,7 +55,9 @@ class _HomeState extends State<Home> {
                     'Car World',
                     style: GoogleFonts.josefinSans(
                       textStyle: const TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.normal),
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     ),
                   )
                 ],

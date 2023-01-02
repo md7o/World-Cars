@@ -32,7 +32,7 @@ class _ConnectionState extends State<Connection> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           title: Text(
-            'Soureces',
+            'Social Media',
             style: GoogleFonts.josefinSans(
               color: Theme.of(context).iconTheme.color,
               textStyle:
@@ -141,14 +141,6 @@ class _ConnectionState extends State<Connection> {
                                       color: Colors.white,
                                       fontSize: 20,
                                       fontWeight: FontWeight.normal),
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(left: 160),
-                                child: Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  color: Colors.white,
-                                  size: 25,
                                 ),
                               ),
                             ],

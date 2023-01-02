@@ -51,7 +51,7 @@ class _DarkModeState extends State<DarkMode> {
                       fontSize: 30, fontWeight: FontWeight.normal),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               const Center(
