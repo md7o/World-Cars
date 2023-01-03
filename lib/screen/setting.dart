@@ -126,7 +126,11 @@ class Setting extends StatelessWidget {
                       thickness: 1,
                       color: Colors.white,
                     ),
-
+                    InkWell(
+                        onTap: () async {
+                          await Share.share('Omk 3nde');
+                        },
+                        child: const shareWidget()),
                     //  Fonts
                   ],
                 )),
