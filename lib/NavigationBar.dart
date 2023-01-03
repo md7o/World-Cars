@@ -32,6 +32,7 @@ class _naviBarState extends State<naviBar> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final text = MediaQuery.of(context).platformBrightness == Brightness.dark
         ? 'darkTheme'
         : 'LightTheme';

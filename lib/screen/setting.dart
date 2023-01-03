@@ -1,5 +1,8 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../widget/Setting_wid.dart';
 
@@ -103,12 +106,12 @@ class Setting extends StatelessWidget {
                   ),
                 ),
                 child: Column(
-                  children: const [
+                  children: [
                     //  Dark mode
-                    sourcesWidget(),
+                    const sourcesWidget(),
                     //  Dark mode
 
-                    Divider(
+                    const Divider(
                       indent: 30,
                       endIndent: 30,
                       thickness: 1,
@@ -116,14 +119,14 @@ class Setting extends StatelessWidget {
                     ),
 
                     //  Fonts
-                    contantWidget(),
-                    Divider(
+                    const contantWidget(),
+                    const Divider(
                       indent: 30,
                       endIndent: 30,
                       thickness: 1,
                       color: Colors.white,
                     ),
-                    shareWidget(),
+
                     //  Fonts
                   ],
                 )),

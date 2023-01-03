@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';

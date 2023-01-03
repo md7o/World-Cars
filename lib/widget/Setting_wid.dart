@@ -1,9 +1,10 @@
+// ignore_for_file: file_names, camel_case_types, unused_local_variable, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/push_pages/Connecting.dart';
 import 'package:world_car/push_pages/Fonts.dart';
 import 'package:world_car/push_pages/Sources.dart';
-
 import '../push_pages/darkMode.dart';
 
 class modeWidget extends StatelessWidget {

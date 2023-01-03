@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -10,6 +12,7 @@ class Connection extends StatefulWidget {
 }
 
 class _ConnectionState extends State<Connection> {
+  // ignore: unused_element
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri(scheme: "https", host: url);
     if (!await launchUrl(
