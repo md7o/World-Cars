@@ -58,83 +58,49 @@ class Setting extends StatelessWidget {
                     Radius.circular(5),
                   ),
                 ),
-                child: Column(
-                  children: const [
-                    //  Dark mode
-                    modeWidget(),
-                    //  Dark mode
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    children: [
+                      //  Dark mode
+                      const modeWidget(),
+                      //  Dark mode
 
-                    Divider(
-                      indent: 30,
-                      endIndent: 30,
-                      thickness: 1,
-                      color: Colors.white,
-                    ),
+                      const Divider(
+                        indent: 30,
+                        endIndent: 30,
+                        thickness: 1,
+                        color: Color(0x73FFFFFF),
+                      ),
 
-                    //  Fonts
-                    fontWidget(),
-                    //  Fonts
-                  ],
+                      sourcesWidget(),
+
+                      const Divider(
+                        indent: 30,
+                        endIndent: 30,
+                        thickness: 1,
+                        color: Color(0x73FFFFFF),
+                      ),
+
+                      const contantWidget(),
+
+                      const Divider(
+                        indent: 30,
+                        endIndent: 30,
+                        thickness: 1,
+                        color: Color(0x73FFFFFF),
+                      ),
+
+                      InkWell(
+                          onTap: () async {
+                            await Share.share('Omk 3nde');
+                          },
+                          child: shareWidget()),
+                    ],
+                  ),
                 )),
           ),
           //  Last General code
-
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 30, top: 50),
-                child: Text(
-                  'About',
-                  style: GoogleFonts.josefinSans(
-                    color: Theme.of(context).iconTheme.color,
-                    textStyle: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.normal),
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-            child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(5),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    //  Dark mode
-                    const sourcesWidget(),
-                    //  Dark mode
-
-                    const Divider(
-                      indent: 30,
-                      endIndent: 30,
-                      thickness: 1,
-                      color: Colors.white,
-                    ),
-
-                    //  Fonts
-                    const contantWidget(),
-                    const Divider(
-                      indent: 30,
-                      endIndent: 30,
-                      thickness: 1,
-                      color: Colors.white,
-                    ),
-                    InkWell(
-                        onTap: () async {
-                          await Share.share('Omk 3nde');
-                        },
-                        child: const shareWidget()),
-                    //  Fonts
-                  ],
-                )),
-          ),
         ],
       ),
 

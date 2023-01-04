@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/push_pages/Connecting.dart';
-import 'package:world_car/push_pages/Fonts.dart';
 import 'package:world_car/push_pages/Sources.dart';
 import '../push_pages/darkMode.dart';
 
@@ -54,64 +53,6 @@ class modeWidget extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 125),
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
-                  size: 25,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class fontWidget extends StatelessWidget {
-  const fontWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => FontsPage(),
-        ),
-      ),
-      child: Container(
-        height: 45,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(5),
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Row(
-            children: [
-              const Icon(
-                Icons.text_fields,
-                color: Colors.white,
-                size: 25,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                'Fonts',
-                style: GoogleFonts.josefinSans(
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 175),
                 child: Icon(
                   Icons.arrow_forward_ios_rounded,
                   color: Colors.white,
