@@ -98,6 +98,7 @@ class _HomeState extends State<Home> {
                               (context, animation, secondaryAnimation) {
                             return Brands(
                               item: category.items,
+                              carItem: item.carItems,
                               label: category.label,
                               img: category.img,
                               transitionAnimation: animation,

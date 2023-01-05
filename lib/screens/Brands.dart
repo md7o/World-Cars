@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
-import 'package:world_car/screens/Cars.dart';
+import 'package:world_car/screens/brand_cars.dart';
 
 class Brands extends StatelessWidget {
   const Brands({
@@ -11,10 +11,12 @@ class Brands extends StatelessWidget {
     required this.item,
     required this.label,
     required this.img,
+    required this.carItem,
     required this.transitionAnimation,
   });
 
   final List<WorldCar> item;
+  final List<Cars> carItem;
   final String label;
   final String img;
 
@@ -77,28 +79,12 @@ class Brands extends StatelessWidget {
           ),
 
           // AppBar
-
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            child: ScaleTransition(
-              scale: Tween<double>(begin: 0.6, end: 1).animate(CurvedAnimation(
-                  parent: transitionAnimation, curve: Curves.easeOutCubic)),
-              child: Text(
-                '$label Cars',
-                style: GoogleFonts.josefinSans(
-                  color: Theme.of(context).iconTheme.color,
-                  textStyle: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.normal),
-                ),
-              ),
-            ),
+          const SizedBox(
+            height: 15,
           ),
-
-          // for (final category in data)
-
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 85),
+              padding: const EdgeInsets.symmetric(horizontal: 80),
               child: ScaleTransition(
                 scale: Tween<double>(begin: 0.5, end: 1).animate(
                   CurvedAnimation(
@@ -121,7 +107,10 @@ class Brands extends StatelessWidget {
                       onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Cars(item: item[index]),
+                          builder: (context) => brand_cars(
+                            item: item[index],
+                            carItem: item[index].carItems,
+                          ),
                         ),
                       ),
                       child: Container(
@@ -228,11 +217,9 @@ class Brands extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
+
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25),
+            padding: const EdgeInsets.symmetric(vertical: 40),
             child: AnimatedBuilder(
               animation: transitionAnimation,
               builder: (context, child) {
@@ -271,7 +258,7 @@ class Brands extends StatelessWidget {
                             style: GoogleFonts.josefinSans(
                               textStyle: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontWeight: FontWeight.normal),
                             ),
                           ),

@@ -9,27 +9,71 @@ final data = {
       WorldCar(
         imageUrl: "images/mercedes.png",
         name: "Mercedes ",
+        carItems: [
+          Cars(
+            carImage: 'images/BenzC.jpg',
+            carName: 'Mercedes C-class',
+          ),
+          Cars(
+            carImage: 'images/BenzG.jpg',
+            carName: 'Mercedes G-class',
+          ),
+          Cars(
+            carImage: 'images/BenzCLA.jpg',
+            carName: 'Mercedes CLA-class',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/volks.png",
         name: "Volkswagen ",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/bmw.png",
         name: "BMW",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Porsche.png",
         name: "Porsche",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/KIA.png",
         name: "The most popular car in Germany in 2021-2022 is Volkswagen",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/benz.png",
         name:
             '(renamed Benz & Cie. in 1899) is founded in Mannheim by Carl Benz in October 1883 in collaboration with businessman Max Kaspar Rose.',
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
     ],
   ),
@@ -40,27 +84,63 @@ final data = {
       WorldCar(
         imageUrl: "images/Honda.png",
         name: "Honda",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Toyota.png",
         name: "Toyota",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Mazda.png",
         name: "Mazda",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Nissan.png",
         name: "Nissan",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/KIA.png",
         name: "The world's best selling car is the Toyota Corolla.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/toyota_founder.png",
         name:
             "It was founded by Kiichiro Toyoda and incorporated on August 28, 1937 (1937-08-28).",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
     ],
   ),
@@ -71,27 +151,63 @@ final data = {
       WorldCar(
         imageUrl: "images/GMC.png",
         name: "GMC",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Ford.png",
         name: "Ford",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Sheforleh.png",
         name: "Sheforleh",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Lencon.png",
         name: "Lincoln ",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/KIA.png",
         name: "The second best selling car in the world Ford F-series.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/lincon_founder.png",
         name:
             "Henry Leland, a founder of the Cadillac auto brand, established the Lincoln Motor Company in 1917.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
     ],
   ),
@@ -102,27 +218,63 @@ final data = {
       WorldCar(
         imageUrl: "images/KIA.png",
         name: "KIA",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Hyundai.png",
         name: "Hyundai",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Rena.png",
         name: "Renault ",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/Genesis.png",
         name: "Genesis",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/KIA.png",
         name: "The most popular car in South Korea in 2021-2022 is Hyundai.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
       WorldCar(
         imageUrl: "images/kia_founder.png",
         name:
             "Kia's humble history dates back to 1944. Founder Kim Chul Ho was born in Korea in 1905.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+          )
+        ],
       ),
     ],
   ),

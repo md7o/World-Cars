@@ -66,15 +66,8 @@ class FamousCar extends StatelessWidget {
     ];
 
     return Scaffold(
-      // Body
-
       body: Column(
         children: [
-          // AppBar
-
-          // AppBar
-          // ignore: non_constant_identifier_names
-
           Wrap(
             children: [
               Padding(
@@ -90,7 +83,6 @@ class FamousCar extends StatelessWidget {
               ),
             ],
           ),
-
           Expanded(
             child: ListView(
                 physics: const BouncingScrollPhysics(),
@@ -104,8 +96,10 @@ class FamousCar extends StatelessWidget {
                           Positioned.fill(
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(po.backgroundImg,
-                                  fit: BoxFit.cover),
+                              child: Image.asset(
+                                po.backgroundImg,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Container(
@@ -133,14 +127,17 @@ class FamousCar extends StatelessWidget {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 10, horizontal: 10),
+                                      vertical: 10,
+                                      horizontal: 10,
+                                    ),
                                     child: Text(
                                       po.title,
                                       style: GoogleFonts.josefinSans(
                                         textStyle: const TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.normal),
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.normal,
+                                        ),
                                       ),
                                       textAlign: TextAlign.left,
                                     ),
@@ -151,9 +148,15 @@ class FamousCar extends StatelessWidget {
                                         width: 200,
                                         height: 20,
                                         decoration: BoxDecoration(
-                                            borderRadius:
-                                                (BorderRadius.circular(10)),
-                                            color: Colors.green.shade500),
+                                          borderRadius:
+                                              (const BorderRadius.only(
+                                            bottomLeft: Radius.circular(10),
+                                            bottomRight: Radius.circular(30),
+                                            topRight: Radius.circular(30),
+                                            topLeft: Radius.circular(10),
+                                          )),
+                                          color: Colors.green.shade500,
+                                        ),
                                       ),
                                       Padding(
                                         padding:
@@ -162,9 +165,10 @@ class FamousCar extends StatelessWidget {
                                           po.selling,
                                           style: GoogleFonts.josefinSans(
                                             textStyle: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.normal),
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.normal,
+                                            ),
                                           ),
                                         ),
                                       ),

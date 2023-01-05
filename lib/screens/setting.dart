@@ -73,7 +73,7 @@ class Setting extends StatelessWidget {
                         color: Color(0x73FFFFFF),
                       ),
 
-                      sourcesWidget(),
+                      const sourcesWidget(),
 
                       const Divider(
                         indent: 30,
@@ -95,7 +95,7 @@ class Setting extends StatelessWidget {
                           onTap: () async {
                             await Share.share('Omk 3nde');
                           },
-                          child: shareWidget()),
+                          child: const shareWidget()),
                     ],
                   ),
                 )),
