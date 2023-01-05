@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:world_car/widget/change.dart';
+import 'package:world_car/widgets/change.dart';
 
 class DarkMode extends StatefulWidget {
   const DarkMode({super.key});

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../widget/Setting_wid.dart';
+import '../widgets/Setting_wid.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});

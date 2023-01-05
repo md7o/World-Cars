@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:world_car/screen/Home.dart';
-import 'package:world_car/screen/famousCar.dart';
-import 'package:world_car/screen/setting.dart';
+import 'package:world_car/screens/Home.dart';
+import 'package:world_car/screens/famousCar.dart';
+import 'package:world_car/screens/setting.dart';
 
 // ignore: camel_case_types
 class naviBar extends StatefulWidget {

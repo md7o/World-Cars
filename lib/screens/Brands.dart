@@ -3,9 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
+import 'package:world_car/screens/Cars.dart';
 
-class CountryCar extends StatelessWidget {
-  const CountryCar({
+class Brands extends StatelessWidget {
+  const Brands({
     super.key,
     required this.item,
     required this.label,
@@ -93,14 +94,18 @@ class CountryCar extends StatelessWidget {
             ),
           ),
 
+          // for (final category in data)
+
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 85),
               child: ScaleTransition(
                 scale: Tween<double>(begin: 0.5, end: 1).animate(
-                    CurvedAnimation(
-                        parent: transitionAnimation,
-                        curve: Curves.easeOutCubic)),
+                  CurvedAnimation(
+                    parent: transitionAnimation,
+                    curve: Curves.easeOutCubic,
+                  ),
+                ),
                 child: GridView.builder(
                   physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
@@ -112,31 +117,39 @@ class CountryCar extends StatelessWidget {
                   ),
                   itemCount: 4,
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: BorderRadius.circular(5),
+                    return InkWell(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Cars(item: item[index]),
+                        ),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            item[index].imageUrl,
-                            width: 52,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10),
-                            child: Text(
-                              item[index].name,
-                              style: GoogleFonts.josefinSans(
-                                textStyle: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal),
-                              ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              item[index].imageUrl,
+                              width: 52,
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Text(
+                                item[index].name,
+                                style: GoogleFonts.josefinSans(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },
@@ -144,7 +157,6 @@ class CountryCar extends StatelessWidget {
               ),
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.only(bottom: 25),
             child: ScaleTransition(
@@ -160,7 +172,6 @@ class CountryCar extends StatelessWidget {
               ),
             ),
           ),
-
           AnimatedBuilder(
             animation: transitionAnimation,
             builder: (context, child) {

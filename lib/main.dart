@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:world_car/NavigationBar.dart';
+import 'package:world_car/widgets/NavigationBar.dart';
 import 'package:world_car/models/themedata.dart';
 
 void main() {
