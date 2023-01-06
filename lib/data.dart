@@ -13,14 +13,38 @@ final data = {
           Cars(
             carImage: 'images/BenzC.jpg',
             carName: 'Mercedes C-class',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           ),
           Cars(
             carImage: 'images/BenzG.jpg',
             carName: 'Mercedes G-class',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           ),
           Cars(
             carImage: 'images/BenzCLA.jpg',
             carName: 'Mercedes CLA-class',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -31,6 +55,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -41,6 +73,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -51,6 +91,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -61,6 +109,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -72,6 +128,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -88,6 +152,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -98,6 +170,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -108,6 +188,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -118,6 +206,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -128,6 +224,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -139,6 +243,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -155,6 +267,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -165,6 +285,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -175,6 +303,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -185,6 +321,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -195,6 +339,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -206,6 +358,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -222,6 +382,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -232,6 +400,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -242,6 +418,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -252,6 +436,14 @@ final data = {
           Cars(
             carImage: 'images/mercedes.png',
             carName: 'Mercedes',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -262,6 +454,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),
@@ -273,6 +473,14 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            details: [
+              Details(
+                lengthCar: '199',
+                made: '199',
+                type: '299',
+                speed: '399',
+              )
+            ],
           )
         ],
       ),

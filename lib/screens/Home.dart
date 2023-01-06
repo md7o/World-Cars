@@ -63,24 +63,10 @@ class _HomeState extends State<Home> {
                 ],
               )),
 
-          // AppBar
-
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 35, bottom: 15),
-                child: Text(
-                  'Car Country',
-                  style: GoogleFonts.josefinSans(
-                    textStyle: const TextStyle(
-                        fontSize: 22, fontWeight: FontWeight.normal),
-                  ),
-                ),
-              ),
-            ],
+          const SizedBox(
+            height: 50,
           ),
 
-          // country
           for (final category in data)
             Stack(
               children: [

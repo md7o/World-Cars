@@ -41,27 +41,35 @@ class _DarkModeState extends State<DarkMode> {
               icon: const Icon(Icons.close)),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top: 50),
-          child: Column(
-            children: [
-              Text(
-                "Chose Mode:",
-                style: GoogleFonts.josefinSans(
-                  color: Theme.of(context).iconTheme.color,
-                  textStyle: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.normal),
-                ),
+          padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(5),
               ),
-              const SizedBox(
-                height: 50,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Chose Mode:",
+                    style: GoogleFonts.josefinSans(
+                      color: Colors.white,
+                      textStyle: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                  const Actions(
+                    actions: {},
+                    child: ChangeThemeButtonWidget(),
+                  ),
+                ],
               ),
-              const Center(
-                child: Actions(
-                  actions: {},
-                  child: ChangeThemeButtonWidget(),
-                ),
-              ),
-            ],
+            ),
           ),
         ));
   }

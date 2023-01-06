@@ -63,11 +63,22 @@ class brand_cars extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
                   child: Stack(
                     children: [
-                      Positioned.fill(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(5),
-                          child: Image.asset(carItem[index].carImage,
-                              fit: BoxFit.cover),
+                      InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => brand_cars(
+                                // item: item[index],
+                                // carItem: item[index].carItems,
+                                ),
+                          ),
+                        ),
+                        child: Positioned.fill(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(5),
+                            child: Image.asset(carItem[index].carImage,
+                                fit: BoxFit.cover),
+                          ),
                         ),
                       ),
                       Container(

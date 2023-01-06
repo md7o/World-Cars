@@ -12,12 +12,14 @@ class ChangeThemeButtonWidget extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return LiteRollingSwitch(
+      width: 100,
       value: themeProvider.isDarkMode,
       textOn: 'Dark ',
       textOff: 'Light',
       textOnColor: Colors.white,
-      colorOn: const Color(0xFF1A2037),
-      colorOff: const Color(0xFF8097F1),
+      textOffColor: Color.fromARGB(255, 0, 0, 0),
+      colorOn: const Color(0xFF11101C),
+      colorOff: const Color(0xFFC9D4FF),
       iconOn: Icons.dark_mode_outlined,
       iconOff: Icons.wb_sunny_outlined,
       textSize: 16.0,

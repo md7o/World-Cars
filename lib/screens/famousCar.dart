@@ -12,53 +12,53 @@ class FamousCar extends StatelessWidget {
     final text = MediaQuery.of(context).platformBrightness == Brightness.dark
         ? 'darkTheme'
         : 'LightTheme';
-    final List<popularsCar> popular = [
-      const popularsCar(
+    final List<PopularsCar> popular = [
+      const PopularsCar(
         title: '1- Toyota Corolla',
         backgroundImg: "images/Corolla.png",
         selling: '1.1M 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '2- Toyota RAV4',
         backgroundImg: "images/RAV4.png",
         selling: '1M 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '3- Ford F-Series',
         backgroundImg: "images/Ford_F.png",
         selling: '860K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '4- Honda CR-V',
         backgroundImg: "images/CRV.png",
         selling: '730K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '5- Toyota Camry',
         backgroundImg: "images/Camry.png",
         selling: '690K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '6- Ram Pick-up',
         backgroundImg: "images/Ram.png",
         selling: '650K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '7- Toyota Yaris',
         backgroundImg: "images/Yaris.png",
         selling: '590K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '8- Honda Civic',
         backgroundImg: "images/Civic.png",
         selling: '590K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '9- Chevrolet Silverado',
         backgroundImg: "images/Silverado.png",
         selling: '580K 👤',
       ),
-      const popularsCar(
+      const PopularsCar(
         title: '10- Tesla Model 3',
         backgroundImg: "images/Tesla.png",
         selling: '580K 👤',
