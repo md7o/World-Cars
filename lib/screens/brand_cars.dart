@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
+import 'package:world_car/screens/details.dart';
 
 class brand_cars extends StatelessWidget {
   const brand_cars({
     super.key,
     required this.item,
     required this.carItem,
+    required this.detail,
   });
 
   final WorldCar item;
   final List<Cars> carItem;
+  final List<Details> detail;
 
   @override
   Widget build(BuildContext context) {
@@ -63,65 +66,64 @@ class brand_cars extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 25),
                   child: Stack(
                     children: [
+                      Positioned.fill(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(5),
+                          child: Image.asset(carItem[index].carImage,
+                              fit: BoxFit.cover),
+                        ),
+                      ),
                       InkWell(
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => brand_cars(
-                                // item: item[index],
-                                // carItem: item[index].carItems,
+                            builder: (context) => Details_car(
+                              detail: carItem[index].details,
+                            ),
+                          ),
+                        ),
+                        child: Container(
+                          height: 200,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(5),
+                              bottomRight: Radius.circular(5),
+                            ),
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.7),
+                                Colors.transparent
+                              ],
+                            ),
+                          ),
+
+                          // color: Theme.of(context).primaryColor,
+                          // borderRadius: const BorderRadius.vertical(
+                          //     bottom: Radius.elliptical(200, 100))
+
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    vertical: 30, horizontal: 10),
+                                child: Text(
+                                  carItem[index].carName,
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  textAlign: TextAlign.left,
                                 ),
-                          ),
-                        ),
-                        child: Positioned.fill(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(5),
-                            child: Image.asset(carItem[index].carImage,
-                                fit: BoxFit.cover),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 200,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(5),
-                            bottomRight: Radius.circular(5),
-                          ),
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                            colors: [
-                              Colors.black.withOpacity(0.7),
-                              Colors.transparent
+                              ),
                             ],
                           ),
-                        ),
-
-                        // color: Theme.of(context).primaryColor,
-                        // borderRadius: const BorderRadius.vertical(
-                        //     bottom: Radius.elliptical(200, 100))
-
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 30, horizontal: 10),
-                              child: Text(
-                                carItem[index].carName,
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                textAlign: TextAlign.left,
-                              ),
-                            ),
-                          ],
                         ),
                       ),
                     ],

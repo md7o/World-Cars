@@ -17,6 +17,7 @@ class Brands extends StatelessWidget {
 
   final List<WorldCar> item;
   final List<Cars> carItem;
+
   final String label;
   final String img;
 
@@ -82,6 +83,8 @@ class Brands extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
+          // for (final cars in data)
+          //     for (Cars carItem in (Cars.carItems))
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 80),
@@ -110,6 +113,7 @@ class Brands extends StatelessWidget {
                           builder: (context) => brand_cars(
                             item: item[index],
                             carItem: item[index].carItems,
+                            detail: carItem[index].details,
                           ),
                         ),
                       ),
