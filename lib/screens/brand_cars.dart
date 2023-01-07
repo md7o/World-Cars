@@ -79,6 +79,7 @@ class brand_cars extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => Details_car(
                               detail: carItem[index].details,
+                              carItem: item.carItems,
                             ),
                           ),
                         ),

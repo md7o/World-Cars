@@ -30,16 +30,14 @@ class Cars {
 //=================
 //third list
 class Details {
-  final String lengthCar;
-  final String made;
-  final String type;
-  final String speed;
+  final String detailPhoto;
+  final String detailName;
+  final String detailInfo;
 
   const Details({
-    required this.lengthCar,
-    required this.made,
-    required this.type,
-    required this.speed,
+    required this.detailPhoto,
+    required this.detailName,
+    required this.detailInfo,
   });
 }
 
