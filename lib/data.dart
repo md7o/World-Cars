@@ -17,7 +17,7 @@ final data = {
               Details(
                 detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '188 Inches',
+                detailInfo: '188 Inch',
               ),
               Details(
                 detailName: 'Made in:',
@@ -27,12 +27,32 @@ final data = {
               Details(
                 detailName: 'Max speed:',
                 detailPhoto: 'images/speedometer.png',
-                detailInfo: '223 Km/h',
+                detailInfo: '250 Km/h',
               ),
               Details(
-                detailName: 'Car Type:',
-                detailPhoto: 'images/carWash.png',
-                detailInfo: 'luxury',
+                detailName: 'Car Fule:',
+                detailPhoto: 'images/gas.png',
+                detailInfo: 'Petrol',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '255-503 ',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$42,000',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'Automatic',
               ),
             ],
           ),

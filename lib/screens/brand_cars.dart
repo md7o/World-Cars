@@ -79,7 +79,7 @@ class brand_cars extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => Details_car(
                               detail: carItem[index].details,
-                              carItem: item.carItems,
+                              carItem: carItem[index],
                             ),
                           ),
                         ),
@@ -100,11 +100,6 @@ class brand_cars extends StatelessWidget {
                               ],
                             ),
                           ),
-
-                          // color: Theme.of(context).primaryColor,
-                          // borderRadius: const BorderRadius.vertical(
-                          //     bottom: Radius.elliptical(200, 100))
-
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.center,

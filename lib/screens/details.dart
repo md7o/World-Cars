@@ -10,7 +10,7 @@ class Details_car extends StatelessWidget {
   });
 
   final List<Details> detail;
-  final List<Cars> carItem;
+  final Cars carItem;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +43,12 @@ class Details_car extends StatelessWidget {
               children: [
                 Positioned.fill(
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
-                    child: Image.asset(carItem[0].carImage, fit: BoxFit.cover),
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(carItem.carImage, fit: BoxFit.cover),
                   ),
                 ),
                 Container(
-                  height: 200,
+                  height: 150,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
@@ -64,111 +64,89 @@ class Details_car extends StatelessWidget {
                       ],
                     ),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Padding(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 30, horizontal: 10),
-                      ),
-                    ],
-                  ),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 20),
+            padding: const EdgeInsets.symmetric(vertical: 30),
             child: Text(
-              carItem[0].carName,
+              carItem.carName,
               style: GoogleFonts.josefinSans(
                 textStyle: const TextStyle(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: 25,
                     fontWeight: FontWeight.normal),
               ),
             ),
           ),
           SizedBox(
-            height: 350,
-            child: ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: detail.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 3),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 82,
-                            width: 199,
-                            decoration: BoxDecoration(
-                              color: Theme.of(context).primaryColor,
-                              borderRadius: BorderRadius.circular(10),
+            height: 440,
+            child: Padding(
+              padding: const EdgeInsets.all(5),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                  crossAxisCount: 2,
+                  mainAxisExtent: 95,
+                ),
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: detail.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 3, horizontal: 3),
+                    child: Container(
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 20),
+                              child: Image.asset(
+                                detail[index].detailPhoto,
+                                width: 40,
+                              ),
                             ),
-                            child: Row(
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 18),
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 8.0),
-                                        child: Image.asset(
-                                          detail[index].detailPhoto,
-                                          width: 50,
-                                        ),
-                                      ),
-                                      Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            detail[index].detailName,
-                                            style: GoogleFonts.josefinSans(
-                                              textStyle: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                  fontWeight:
-                                                      FontWeight.normal),
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(top: 10),
-                                            child: Text(
-                                              detail[index].detailInfo,
-                                              style: GoogleFonts.josefinSans(
-                                                textStyle: const TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 18,
-                                                    fontWeight:
-                                                        FontWeight.normal),
-                                              ),
-                                              textAlign: TextAlign.left,
-                                            ),
-                                          )
-                                        ],
-                                      ),
-                                    ],
+                                Text(
+                                  detail[index].detailName,
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.normal),
                                   ),
                                 ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 10),
+                                  child: Text(
+                                    detail[index].detailInfo,
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                )
                               ],
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ],
-                );
-              },
+                  );
+                },
+              ),
             ),
           )
         ],
