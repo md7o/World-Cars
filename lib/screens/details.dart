@@ -28,12 +28,26 @@ class Details_car extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         toolbarHeight: 35,
-        leading: IconButton(
-            color: Theme.of(context).iconTheme.color,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.close)),
+        leading: InkWell(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+            child: Container(
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1B2859),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Icon(
+                  Icons.arrow_back_ios_rounded,
+                  color: Colors.blue,
+                  size: 18,
+                )),
+          ),
+        ),
       ),
       body: Column(
         children: [

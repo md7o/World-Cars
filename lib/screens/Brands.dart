@@ -29,6 +29,40 @@ class Brands extends StatelessWidget {
         ? 'darkTheme'
         : 'LightTheme';
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF1B2859),
+      //   title: Text(
+      //     'Soureces',
+      //     style: GoogleFonts.josefinSans(
+      //       color: Theme.of(context).iconTheme.color,
+      //       textStyle:
+      //           const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      //     ),
+      //   ),
+      //   centerTitle: true,
+      //   elevation: 0,
+      //   toolbarHeight: 35,
+      // leading: InkWell(
+      //   splashColor: Colors.transparent,
+      //   highlightColor: Colors.transparent,
+      //   onTap: () {
+      //     Navigator.pop(context);
+      //   },
+      //   child: Padding(
+      //     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+      //     child: Container(
+      //         decoration: BoxDecoration(
+      //           color: const Color(0xFF1B2859),
+      //           borderRadius: BorderRadius.circular(10),
+      //         ),
+      //         child: const Icon(
+      //           Icons.arrow_back_ios_rounded,
+      //           color: Colors.blue,
+      //           size: 18,
+      //         )),
+      //   ),
+      // ),
+      // ),
       body: Column(
         children: [
           // AppBar
@@ -48,7 +82,7 @@ class Brands extends StatelessWidget {
               );
             },
             child: Container(
-              height: 175.0,
+              height: 175,
               width: double.infinity,
               decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
@@ -68,10 +102,10 @@ class Brands extends StatelessWidget {
                   ),
                   Text(
                     label,
-                    style: GoogleFonts.josefinSans(
+                    style: GoogleFonts.comfortaa(
                       color: Colors.white,
                       textStyle: const TextStyle(
-                          fontSize: 22, fontWeight: FontWeight.normal),
+                          fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                   )
                 ],
@@ -133,11 +167,11 @@ class Brands extends StatelessWidget {
                               padding: const EdgeInsets.only(top: 10),
                               child: Text(
                                 item[index].name,
-                                style: GoogleFonts.josefinSans(
+                                style: GoogleFonts.comfortaa(
                                   textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 14,
-                                      fontWeight: FontWeight.normal),
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ),
                             )
@@ -157,10 +191,10 @@ class Brands extends StatelessWidget {
                   parent: transitionAnimation, curve: Curves.easeOutCubic)),
               child: Text(
                 'Facts',
-                style: GoogleFonts.josefinSans(
+                style: GoogleFonts.comfortaa(
                   color: Theme.of(context).iconTheme.color,
                   textStyle: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.normal),
+                      fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -207,11 +241,11 @@ class Brands extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 10),
                         child: Text(
                           item[4].name,
-                          style: GoogleFonts.josefinSans(
+                          style: GoogleFonts.comfortaa(
                             textStyle: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
-                                fontWeight: FontWeight.normal),
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -259,11 +293,11 @@ class Brands extends StatelessWidget {
                           padding: const EdgeInsets.only(right: 8.0),
                           child: Text(
                             item[5].name,
-                            style: GoogleFonts.josefinSans(
+                            style: GoogleFonts.comfortaa(
                               textStyle: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 12,
-                                  fontWeight: FontWeight.normal),
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),

@@ -38,7 +38,7 @@ class _DarkModeState extends State<DarkMode> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: const Icon(Icons.close)),
+              icon: const Icon(Icons.arrow_back_ios_rounded)),
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 50, left: 20, right: 20),

@@ -74,10 +74,10 @@ class FamousCar extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     top: 60, bottom: 30, left: 30, right: 30),
                 child: Text('Best selling cars worldwide in (2021)',
-                    style: GoogleFonts.josefinSans(
+                    style: GoogleFonts.comfortaa(
                       color: Theme.of(context).iconTheme.color,
                       textStyle: const TextStyle(
-                          fontSize: 19, fontWeight: FontWeight.normal),
+                          fontSize: 19, fontWeight: FontWeight.bold),
                     ),
                     textAlign: TextAlign.center),
               ),
@@ -132,11 +132,11 @@ class FamousCar extends StatelessWidget {
                                     ),
                                     child: Text(
                                       po.title,
-                                      style: GoogleFonts.josefinSans(
+                                      style: GoogleFonts.comfortaa(
                                         textStyle: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
-                                          fontWeight: FontWeight.normal,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                       textAlign: TextAlign.left,
@@ -163,11 +163,11 @@ class FamousCar extends StatelessWidget {
                                             const EdgeInsets.only(left: 10),
                                         child: Text(
                                           po.selling,
-                                          style: GoogleFonts.josefinSans(
+                                          style: GoogleFonts.comfortaa(
                                             textStyle: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 20,
-                                              fontWeight: FontWeight.normal,
+                                              fontWeight: FontWeight.bold,
                                             ),
                                           ),
                                         ),

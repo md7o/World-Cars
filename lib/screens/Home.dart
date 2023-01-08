@@ -33,35 +33,44 @@ class _HomeState extends State<Home> {
           // AppBar
 
           Container(
-              height: 175.0,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.vertical(
-                      bottom: Radius.elliptical(200, 100))),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40),
-                    child: Image.asset(
-                      "images/earth.png",
-                      width: 80,
-                    ),
+            height: 175.0,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: const DecorationImage(
+                  image: NetworkImage(
+                    'https://gifimage.net/wp-content/uploads/2018/04/pixel-space-gif-1.gif',
                   ),
-                  const SizedBox(
-                    height: 10,
+                  fit: BoxFit.cover),
+              color: Theme.of(context).primaryColor,
+              borderRadius: const BorderRadius.vertical(
+                bottom: Radius.elliptical(200, 100),
+              ),
+            ),
+            child: Column(
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 40),
+                  child: Image(
+                    image: NetworkImage(
+                        'https://openseauserdata.com/files/cdcfaa7304a662705be493464763cd63.gif'),
+                    width: 80,
                   ),
-                  Text(
-                    'Car World',
-                    style: GoogleFonts.josefinSans(
-                      textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  )
-                ],
-              )),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Car World',
+                  style: GoogleFonts.comfortaa(
+                    textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
+          ),
 
           const SizedBox(
             height: 50,
@@ -117,11 +126,11 @@ class _HomeState extends State<Home> {
                                 alignment: const Alignment(0.3, 0),
                                 child: Text(
                                   category.label,
-                                  style: GoogleFonts.josefinSans(
+                                  style: GoogleFonts.comfortaa(
                                     textStyle: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
-                                        fontWeight: FontWeight.normal),
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
