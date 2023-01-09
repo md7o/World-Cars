@@ -14,15 +14,11 @@ class Brands extends StatelessWidget {
     required this.carItem,
     required this.transitionAnimation,
   });
-
   final List<WorldCar> item;
   final List<Cars> carItem;
-
   final String label;
   final String img;
-
   final Animation<double> transitionAnimation;
-
   @override
   Widget build(BuildContext context) {
     final text = MediaQuery.of(context).platformBrightness == Brightness.dark
@@ -30,13 +26,43 @@ class Brands extends StatelessWidget {
         : 'LightTheme';
     return Scaffold(
       // appBar: AppBar(
-      //   backgroundColor: Color(0xFF1B2859),
-      //   title: Text(
-      //     'Soureces',
-      //     style: GoogleFonts.josefinSans(
-      //       color: Theme.of(context).iconTheme.color,
-      //       textStyle:
-      //           const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      //   backgroundColor: Theme.of(context).primaryColor,
+      //   shape: const RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.vertical(
+      //       bottom: Radius.elliptical(200, 100),
+      //     ),
+      //   ),
+      //   bottom: PreferredSize(
+      //     preferredSize: const Size.fromHeight(0),
+      //     child: Container(
+      //       decoration: BoxDecoration(
+      //         color: Theme.of(context).primaryColor,
+      //         borderRadius: const BorderRadius.vertical(
+      //           bottom: Radius.elliptical(200, 100),
+      //         ),
+      //       ),
+      //       child: Column(
+      //         children: [
+      //           Image.asset(
+      //             img,
+      //             width: 75,
+      //           ),
+      //           const SizedBox(
+      //             height: 10,
+      //           ),
+      //           Padding(
+      //             padding: const EdgeInsets.only(bottom: 20),
+      //             child: Text(
+      //               label,
+      //               style: GoogleFonts.comfortaa(
+      //                 color: Colors.white,
+      //                 textStyle: const TextStyle(
+      //                     fontSize: 17, fontWeight: FontWeight.bold),
+      //               ),
+      //             ),
+      //           )
+      //         ],
+      //       ),
       //     ),
       //   ),
       //   centerTitle: true,
@@ -51,22 +77,21 @@ class Brands extends StatelessWidget {
       //   child: Padding(
       //     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
       //     child: Container(
-      //         decoration: BoxDecoration(
-      //           color: const Color(0xFF1B2859),
-      //           borderRadius: BorderRadius.circular(10),
-      //         ),
-      //         child: const Icon(
-      //           Icons.arrow_back_ios_rounded,
-      //           color: Colors.blue,
-      //           size: 18,
-      //         )),
+      //       decoration: BoxDecoration(
+      //         color: const Color(0xFF1B2859),
+      //         borderRadius: BorderRadius.circular(10),
+      //       ),
+      //       child: const Icon(
+      //         Icons.arrow_back_ios_rounded,
+      //         color: Colors.blue,
+      //         size: 18,
+      //       ),
+      //     ),
       //   ),
       // ),
       // ),
       body: Column(
         children: [
-          // AppBar
-
           AnimatedBuilder(
             animation: transitionAnimation,
             builder: (context, child) {
@@ -81,41 +106,68 @@ class Brands extends StatelessWidget {
                 child: child,
               );
             },
-            child: Container(
-              height: 175,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.vertical(
-                      bottom: Radius.elliptical(200, 100))),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40),
-                    child: Image.asset(
-                      img,
-                      width: 80,
+            child: Column(
+              children: [
+                Container(
+                  height: 190,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.elliptical(200, 100),
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  child: Column(
+                    children: [
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 25),
+                          child: Container(
+                            alignment: Alignment.topLeft,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: const Padding(
+                              padding: EdgeInsets.all(5),
+                              child: Icon(
+                                Icons.arrow_back_ios_rounded,
+                                color: Colors.blue,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Image.asset(
+                        img,
+                        width: 80,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        label,
+                        style: GoogleFonts.comfortaa(
+                          color: Colors.white,
+                          textStyle: const TextStyle(
+                              fontSize: 22, fontWeight: FontWeight.bold),
+                        ),
+                      )
+                    ],
                   ),
-                  Text(
-                    label,
-                    style: GoogleFonts.comfortaa(
-                      color: Colors.white,
-                      textStyle: const TextStyle(
-                          fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                  )
-                ],
-              ),
+                ),
+              ],
             ),
           ),
 
           // AppBar
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           // for (final cars in data)
           //     for (Cars carItem in (Cars.carItems))
@@ -222,7 +274,7 @@ class Brands extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Theme.of(context).primaryColor,
                 borderRadius: const BorderRadius.horizontal(
-                  left: Radius.elliptical(50, 50),
+                  left: Radius.elliptical(30, 30),
                 ),
               ),
               child: Padding(
@@ -281,7 +333,7 @@ class Brands extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
                   borderRadius: const BorderRadius.horizontal(
-                    right: Radius.elliptical(50, 50),
+                    right: Radius.elliptical(30, 30),
                   ),
                 ),
                 child: Padding(
