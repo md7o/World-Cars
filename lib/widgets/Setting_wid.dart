@@ -36,47 +36,54 @@ class modeWidget extends StatelessWidget {
           },
         ),
       ),
-      child: Container(
-        height: 45,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(5),
+      child: Column(
+        children: [
+          Container(
+            height: 45,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(5),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.dark_mode,
+                        color: Colors.white,
+                        size: 25,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Dark mode',
+                        style: GoogleFonts.josefinSans(
+                          textStyle: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                ],
+              ),
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Row(
-            children: [
-              const Icon(
-                Icons.dark_mode,
-                color: Colors.white,
-                size: 25,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                'Dark mode',
-                style: GoogleFonts.josefinSans(
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 125),
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
-                  size: 25,
-                ),
-              ),
-            ],
-          ),
-        ),
+        ],
       ),
     );
   }
@@ -119,33 +126,36 @@ class sourcesWidget extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.library_books,
+              Row(
+                children: [
+                  Icon(
+                    Icons.library_books_outlined,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Sources',
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                ],
+              ),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
                 color: Colors.white,
                 size: 25,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                'Sources',
-                style: GoogleFonts.josefinSans(
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 155),
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
-                  size: 25,
-                ),
               ),
             ],
           ),
@@ -192,33 +202,36 @@ class contantWidget extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.phone,
+              Row(
+                children: [
+                  Icon(
+                    Icons.phone,
+                    color: Colors.white,
+                    size: 25,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Connect with us',
+                    style: GoogleFonts.josefinSans(
+                      textStyle: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                ],
+              ),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
                 color: Colors.white,
                 size: 25,
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                'Connect with us',
-                style: GoogleFonts.josefinSans(
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 80),
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
-                  size: 25,
-                ),
               ),
             ],
           ),
@@ -243,33 +256,36 @@ class shareWidget extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.share,
+            Row(
+              children: [
+                Icon(
+                  Icons.share,
+                  color: Colors.white,
+                  size: 25,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Share the app',
+                  style: GoogleFonts.josefinSans(
+                    textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal),
+                  ),
+                ),
+              ],
+            ),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
               color: Colors.white,
               size: 25,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Text(
-              'Share the app',
-              style: GoogleFonts.josefinSans(
-                textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 95),
-              child: Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.white,
-                size: 25,
-              ),
             ),
           ],
         ),
