@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
           ),
 
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
 
           for (final category in data)
@@ -113,17 +113,19 @@ class _HomeState extends State<Home> {
                         children: [
                           Align(
                             child: Container(
-                              margin: const EdgeInsets.only(top: 10.5),
+                              margin: const EdgeInsets.only(top: 8),
                               width: 200,
-                              height: 54,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Theme.of(context).primaryColor,
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(5),
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(50),
+                                  bottomRight: Radius.circular(20),
+                                  topRight: Radius.circular(50),
                                 ),
                               ),
                               child: Align(
-                                alignment: const Alignment(0.3, 0),
+                                alignment: Alignment.center,
                                 child: Text(
                                   category.label,
                                   style: GoogleFonts.comfortaa(
@@ -137,7 +139,7 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                           Align(
-                            alignment: const Alignment(-0.45, 0),
+                            alignment: const Alignment(-0.60, 0),
                             child: Image.asset(
                               category.img,
                               width: 76,

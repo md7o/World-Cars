@@ -279,7 +279,7 @@ final data = {
   ),
   Category(
     img: "images/usa.png",
-    label: "Usa",
+    label: "America",
     items: const [
       WorldCar(
         imageUrl: "images/GMC.png",
