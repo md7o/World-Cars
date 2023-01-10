@@ -5,6 +5,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:world_car/screens/Home.dart';
 import 'package:world_car/screens/famousCar.dart';
 import 'package:world_car/screens/setting.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 // ignore: camel_case_types
 class naviBar extends StatefulWidget {
@@ -38,37 +39,58 @@ class _naviBarState extends State<naviBar> {
         : 'LightTheme';
     return Scaffold(
       body: pages[selectedIndex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
         color: Theme.of(context).primaryColor,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-          child: GNav(
-            iconSize: 28,
-            duration: const Duration(milliseconds: 500),
-            tabBorderRadius: 10,
-            backgroundColor: Theme.of(context).primaryColor,
+        height: 60,
+        animationDuration: const Duration(milliseconds: 800),
+        onTap: navigatedBottomBar,
+        items: const [
+          Icon(
+            Icons.home,
             color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            gap: 8,
-            onTabChange: navigatedBottomBar,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-              ),
-              GButton(
-                icon: Icons.star,
-                text: 'Famous',
-              ),
-              GButton(
-                icon: Icons.settings,
-                text: 'Setting',
-              ),
-            ],
+            size: 30,
           ),
-        ),
+          Icon(
+            Icons.star,
+            color: Colors.white,
+            size: 30,
+          ),
+          Icon(
+            Icons.settings,
+            color: Colors.white,
+            size: 30,
+          ),
+        ],
+        // child: Padding(
+        //   padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
+        //   child: GNav(
+        //     iconSize: 28,
+        //     duration: const Duration(milliseconds: 500),
+        //     tabBorderRadius: 10,
+        //     backgroundColor: Theme.of(context).primaryColor,
+        //     color: Colors.white,
+        //     activeColor: Colors.white,
+        //     tabBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        //     gap: 8,
+        //     onTabChange: navigatedBottomBar,
+        //     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+        //     tabs: const [
+        //       GButton(
+        //         icon: Icons.home,
+        //         text: 'Home',
+        //       ),
+        //       GButton(
+        //         icon: Icons.star,
+        //         text: 'Famous',
+        //       ),
+        //       GButton(
+        //         icon: Icons.settings,
+        //         text: 'Setting',
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ),
     );
   }
