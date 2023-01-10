@@ -80,24 +80,30 @@ class _ConnectionState extends State<Connection> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                "images/github.png",
-                                width: 25,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Github',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal),
-                                ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    "images/github.png",
+                                    width: 25,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Github',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -127,24 +133,30 @@ class _ConnectionState extends State<Connection> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image.asset(
-                                "images/twitter.png",
-                                width: 25,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Twitter',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal),
-                                ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    "images/twitter.png",
+                                    width: 25,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Twitter',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),

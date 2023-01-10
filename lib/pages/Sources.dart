@@ -75,25 +75,31 @@ class _SourcesState extends State<Sources> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 20),
+                        padding: const EdgeInsets.symmetric(horizontal: 25),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            const Icon(
-                              Icons.book,
-                              color: Colors.white,
-                              size: 25,
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'wikipedia',
-                              style: GoogleFonts.josefinSans(
-                                textStyle: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.normal),
-                              ),
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.book,
+                                  color: Colors.white,
+                                  size: 25,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'Wikipedia',
+                                  style: GoogleFonts.josefinSans(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.normal),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -122,33 +128,36 @@ class _SourcesState extends State<Sources> {
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.directions_car,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Statista',
+                                    style: GoogleFonts.josefinSans(
+                                      textStyle: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.normal),
+                                    ),
+                                  ),
+                                ],
+                              ),
                               const Icon(
-                                Icons.directions_car,
+                                Icons.arrow_forward_ios_rounded,
                                 color: Colors.white,
                                 size: 25,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Statista',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(left: 160),
-                                child: Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  color: Colors.white,
-                                  size: 25,
-                                ),
                               ),
                             ],
                           ),
