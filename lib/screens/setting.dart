@@ -3,20 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
-
 import '../widgets/Setting_wid.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
-
   @override
   Widget build(BuildContext context) {
     final text = MediaQuery.of(context).platformBrightness == Brightness.dark
         ? 'darkTheme'
         : 'LightTheme';
     return Scaffold(
-      // Body
-
       body: Column(
         children: [
           Center(
@@ -51,60 +47,52 @@ class Setting extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(5),
-                  ),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(5),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Column(
-                    children: [
-                      //  Dark mode
-                      const modeWidget(),
-                      //  Dark mode
-
-                      const Divider(
-                        indent: 30,
-                        endIndent: 30,
-                        thickness: 1,
-                        color: Color(0x73FFFFFF),
-                      ),
-
-                      const sourcesWidget(),
-
-                      const Divider(
-                        indent: 30,
-                        endIndent: 30,
-                        thickness: 1,
-                        color: Color(0x73FFFFFF),
-                      ),
-
-                      const contantWidget(),
-
-                      const Divider(
-                        indent: 30,
-                        endIndent: 30,
-                        thickness: 1,
-                        color: Color(0x73FFFFFF),
-                      ),
-
-                      InkWell(
-                          onTap: () async {
-                            await Share.share('Omk 3nde');
-                          },
-                          child: const shareWidget()),
-                    ],
-                  ),
-                )),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Column(
+                  children: [
+                    //  Dark mode
+                    const modeWidget(),
+                    const Divider(
+                      indent: 30,
+                      endIndent: 30,
+                      thickness: 1,
+                      color: Color(0x73FFFFFF),
+                    ),
+                    const sourcesWidget(),
+                    const Divider(
+                      indent: 30,
+                      endIndent: 30,
+                      thickness: 1,
+                      color: Color(0x73FFFFFF),
+                    ),
+                    const contantWidget(),
+                    const Divider(
+                      indent: 30,
+                      endIndent: 30,
+                      thickness: 1,
+                      color: Color(0x73FFFFFF),
+                    ),
+                    InkWell(
+                        onTap: () async {
+                          await Share.share('sharing');
+                        },
+                        child: const shareWidget()),
+                  ],
+                ),
+              ),
+            ),
           ),
           //  Last General code
         ],
       ),
-
-      // bottomNavigationBar: const naviBar(),
     );
   }
 }

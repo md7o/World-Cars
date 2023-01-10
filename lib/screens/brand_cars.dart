@@ -111,11 +111,13 @@ class brand_cars extends StatelessWidget {
                         position: Tween<Offset>(
                           begin: const Offset(0, 1),
                           end: const Offset(0, 0),
-                        ).animate(CurvedAnimation(
-                          curve:
-                              const Interval(0, 1, curve: Curves.easeOutCubic),
-                          parent: transitionAnimation,
-                        )),
+                        ).animate(
+                          CurvedAnimation(
+                            curve: const Interval(0, 1,
+                                curve: Curves.easeOutCubic),
+                            parent: transitionAnimation,
+                          ),
+                        ),
                         child: child,
                       );
                     },

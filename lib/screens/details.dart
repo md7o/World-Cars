@@ -63,7 +63,7 @@ class Details_car extends StatelessWidget {
               builder: (context, child) {
                 return SlideTransition(
                   position: Tween<Offset>(
-                    begin: const Offset(0, -1),
+                    begin: const Offset(0.5, 1),
                     end: const Offset(0, 0),
                   ).animate(CurvedAnimation(
                     curve: const Interval(0, 1, curve: Curves.easeOutCubic),
@@ -107,13 +107,20 @@ class Details_car extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20, top: 10),
-            child: ScaleTransition(
-              scale: Tween<double>(begin: 0.5, end: 1).animate(
-                CurvedAnimation(
-                  parent: transitionAnimation,
-                  curve: Curves.easeOutCubic,
-                ),
-              ),
+            child: AnimatedBuilder(
+              animation: transitionAnimation,
+              builder: (context, child) {
+                return SlideTransition(
+                  position: Tween<Offset>(
+                    begin: const Offset(0.8, 1),
+                    end: const Offset(0, 0),
+                  ).animate(CurvedAnimation(
+                    curve: const Interval(0, 1, curve: Curves.easeOutCubic),
+                    parent: transitionAnimation,
+                  )),
+                  child: child,
+                );
+              },
               child: Text(
                 carItem.carName,
                 style: GoogleFonts.josefinSans(

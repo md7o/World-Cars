@@ -17,8 +17,23 @@ class modeWidget extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (context) => DarkMode(),
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return DarkMode();
+          },
+          transitionDuration: const Duration(milliseconds: 700),
+          transitionsBuilder: (context, animation, animationTime, child) {
+            const begin = Offset(0, 1);
+            const end = Offset.zero;
+            const curve = Curves.easeOutCubic;
+            var tween = Tween(begin: begin, end: end).chain(
+              CurveTween(curve: curve),
+            );
+            return SlideTransition(
+              position: animation.drive(tween),
+              child: child,
+            );
+          },
         ),
       ),
       child: Container(
@@ -75,8 +90,23 @@ class sourcesWidget extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (context) => Sources(),
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return Sources();
+          },
+          transitionDuration: const Duration(milliseconds: 700),
+          transitionsBuilder: (context, animation, animationTime, child) {
+            const begin = Offset(0, 1);
+            const end = Offset.zero;
+            const curve = Curves.easeOutCubic;
+            var tween = Tween(begin: begin, end: end).chain(
+              CurveTween(curve: curve),
+            );
+            return SlideTransition(
+              position: animation.drive(tween),
+              child: child,
+            );
+          },
         ),
       ),
       child: Container(
@@ -133,8 +163,23 @@ class contantWidget extends StatelessWidget {
     return InkWell(
       onTap: () => Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (context) => const Connection(),
+        PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) {
+            return Connection();
+          },
+          transitionDuration: const Duration(milliseconds: 700),
+          transitionsBuilder: (context, animation, animationTime, child) {
+            const begin = Offset(0, 1);
+            const end = Offset.zero;
+            const curve = Curves.easeOutCubic;
+            var tween = Tween(begin: begin, end: end).chain(
+              CurveTween(curve: curve),
+            );
+            return SlideTransition(
+              position: animation.drive(tween),
+              child: child,
+            );
+          },
         ),
       ),
       child: Container(
