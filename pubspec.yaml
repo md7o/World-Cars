@@ -21,6 +21,7 @@ dependencies:
   share_plus: ^6.3.0
   flutter_native_splash: ^2.2.16
   curved_navigation_bar: ^1.0.3
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   flutter_test:

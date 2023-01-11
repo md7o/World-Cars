@@ -57,7 +57,8 @@ final data = {
             ],
           ),
           Cars(
-            carImage: 'images/BenzG.jpg',
+            carImage:
+                'https://www.bmw.com.ph/content/dam/bmw/common/all-models/x-series/x1/2021/Highlights/bmw-x1-sp-desktop.jpg',
             carName: 'Mercedes G-class',
             details: [
               Details(

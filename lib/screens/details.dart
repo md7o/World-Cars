@@ -63,7 +63,7 @@ class Details_car extends StatelessWidget {
               builder: (context, child) {
                 return SlideTransition(
                   position: Tween<Offset>(
-                    begin: const Offset(0.5, 1),
+                    begin: const Offset(0, -1),
                     end: const Offset(0, 0),
                   ).animate(CurvedAnimation(
                     curve: const Interval(0, 1, curve: Curves.easeOutCubic),
@@ -112,7 +112,7 @@ class Details_car extends StatelessWidget {
               builder: (context, child) {
                 return SlideTransition(
                   position: Tween<Offset>(
-                    begin: const Offset(0.8, 1),
+                    begin: const Offset(0, 1),
                     end: const Offset(0, 0),
                   ).animate(CurvedAnimation(
                     curve: const Interval(0, 1, curve: Curves.easeOutCubic),

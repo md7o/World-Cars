@@ -136,7 +136,8 @@ class Brands extends StatelessWidget {
                               transitionAnimation: animation,
                             );
                           },
-                          transitionDuration: const Duration(milliseconds: 800),
+                          transitionDuration:
+                              const Duration(milliseconds: 1300),
                         ),
                       ),
                       child: Container(

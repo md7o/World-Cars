@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
@@ -126,8 +127,10 @@ class brand_cars extends StatelessWidget {
                         Positioned.fill(
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(carItem[index].carImage,
-                                fit: BoxFit.cover),
+                            child: CachedNetworkImage(
+                              imageUrl: carItem[index].carImage,
+                              width: 80,
+                            ),
                           ),
                         ),
                         InkWell(
@@ -143,7 +146,7 @@ class brand_cars extends StatelessWidget {
                                 );
                               },
                               transitionDuration:
-                                  const Duration(milliseconds: 800),
+                                  const Duration(milliseconds: 1300),
                             ),
                           ),
                           child: Container(

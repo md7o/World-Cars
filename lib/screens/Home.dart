@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/data.dart';
 import 'package:world_car/models/world_car.dart';
 import 'package:world_car/screens/Brands.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -37,10 +38,11 @@ class _HomeState extends State<Home> {
             width: double.infinity,
             decoration: BoxDecoration(
               image: const DecorationImage(
-                  image: NetworkImage(
-                    'https://gifimage.net/wp-content/uploads/2018/04/pixel-space-gif-1.gif',
-                  ),
-                  fit: BoxFit.cover),
+                image: NetworkImage(
+                  'https://gifimage.net/wp-content/uploads/2018/04/pixel-space-gif-1.gif',
+                ),
+                fit: BoxFit.cover,
+              ),
               color: Theme.of(context).primaryColor,
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.elliptical(200, 100),
@@ -48,11 +50,11 @@ class _HomeState extends State<Home> {
             ),
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 40),
-                  child: Image(
-                    image: NetworkImage(
-                        'https://openseauserdata.com/files/cdcfaa7304a662705be493464763cd63.gif'),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: CachedNetworkImage(
+                    imageUrl:
+                        "https://openseauserdata.com/files/cdcfaa7304a662705be493464763cd63.gif",
                     width: 80,
                   ),
                 ),
