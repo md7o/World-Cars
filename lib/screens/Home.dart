@@ -150,13 +150,14 @@ class _HomeState extends State<Home> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        vertical: 30, horizontal: 10),
+                                      vertical: 20,
+                                    ),
                                     child: Text(
                                       category.label,
                                       style: GoogleFonts.josefinSans(
                                         textStyle: const TextStyle(
                                             color: Colors.white,
-                                            fontSize: 25,
+                                            fontSize: 30,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       textAlign: TextAlign.left,

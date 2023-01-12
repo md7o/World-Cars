@@ -170,7 +170,7 @@ final data = {
     ],
   ),
   Category(
-    img: "images/japan.png",
+    img: "images/JapanC.png",
     label: "Japan",
     items: const [
       WorldCar(
@@ -279,7 +279,7 @@ final data = {
     ],
   ),
   Category(
-    img: "images/usa.png",
+    img: "images/AmericaC.png",
     label: "America",
     items: const [
       WorldCar(
@@ -388,7 +388,7 @@ final data = {
     ],
   ),
   Category(
-    img: "images/korea.png",
+    img: "images/KoreaC.png",
     label: "Korea",
     items: const [
       WorldCar(
