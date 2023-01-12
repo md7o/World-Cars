@@ -140,31 +140,33 @@ class Brands extends StatelessWidget {
                               const Duration(milliseconds: 1300),
                         ),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              item[index].imageUrl,
-                              width: 52,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: Text(
-                                item[index].name,
-                                style: GoogleFonts.comfortaa(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                      child: Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                item[index].imageUrl,
+                                width: 52,
                               ),
-                            )
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text(
+                                  item[index].name,
+                                  style: GoogleFonts.comfortaa(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     );
@@ -206,7 +208,7 @@ class Brands extends StatelessWidget {
             },
             child: Container(
               margin: const EdgeInsets.only(left: 55),
-              height: 100,
+              height: MediaQuery.of(context).size.width * 0.25,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Theme.of(context).primaryColor,
@@ -265,7 +267,7 @@ class Brands extends StatelessWidget {
               },
               child: Container(
                 margin: const EdgeInsets.only(right: 55),
-                height: 100,
+                height: MediaQuery.of(context).size.width * 0.25,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,

@@ -133,74 +133,63 @@ class Details_car extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 440,
-            child: Padding(
-              padding: const EdgeInsets.all(
-                5,
-              ),
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 5,
-                  crossAxisSpacing: 5,
-                  crossAxisCount: 2,
-                  mainAxisExtent: 95,
+          Expanded(
+            child: SizedBox(
+              height: 440,
+              child: Padding(
+                padding: const EdgeInsets.all(
+                  5,
                 ),
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: detail.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 3, horizontal: 3),
-                    child: AnimatedBuilder(
-                      animation: transitionAnimation,
-                      builder: (context, child) {
-                        return SlideTransition(
-                          position: Tween<Offset>(
-                            begin: const Offset(0.5, 1),
-                            end: const Offset(0, 0),
-                          ).animate(CurvedAnimation(
-                            curve: const Interval(0, 1,
-                                curve: Curves.easeOutCubic),
-                            parent: transitionAnimation,
-                          )),
-                          child: child,
-                        );
-                      },
-                      child: Container(
-                        height: 80,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 20),
-                                child: Image.asset(
-                                  detail[index].detailPhoto,
-                                  width: 40,
-                                ),
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    detail[index].detailName,
-                                    style: GoogleFonts.josefinSans(
-                                      textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                    ),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 5,
+                    crossAxisCount: 2,
+                    mainAxisExtent: 95,
+                  ),
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: detail.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 3, horizontal: 3),
+                      child: AnimatedBuilder(
+                        animation: transitionAnimation,
+                        builder: (context, child) {
+                          return SlideTransition(
+                            position: Tween<Offset>(
+                              begin: const Offset(0.5, 1),
+                              end: const Offset(0, 0),
+                            ).animate(CurvedAnimation(
+                              curve: const Interval(0, 1,
+                                  curve: Curves.easeOutCubic),
+                              parent: transitionAnimation,
+                            )),
+                            child: child,
+                          );
+                        },
+                        child: Container(
+                          height: 80,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).primaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 20),
+                                  child: Image.asset(
+                                    detail[index].detailPhoto,
+                                    width: 40,
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Text(
-                                      detail[index].detailInfo,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      detail[index].detailName,
                                       style: GoogleFonts.josefinSans(
                                         textStyle: const TextStyle(
                                           color: Colors.white,
@@ -209,16 +198,29 @@ class Details_car extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ],
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10),
+                                      child: Text(
+                                        detail[index].detailInfo,
+                                        style: GoogleFonts.josefinSans(
+                                          textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
           )

@@ -96,103 +96,105 @@ class brand_cars extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          SizedBox(
-            height: 550,
-            child: ListView.builder(
-              physics: const BouncingScrollPhysics(),
-              itemCount: carItem.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: AnimatedBuilder(
-                    animation: transitionAnimation,
-                    builder: (context, child) {
-                      return SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(0, 1),
-                          end: const Offset(0, 0),
-                        ).animate(
-                          CurvedAnimation(
-                            curve: const Interval(0, 1,
-                                curve: Curves.easeOutCubic),
-                            parent: transitionAnimation,
-                          ),
-                        ),
-                        child: child,
-                      );
-                    },
-                    child: Stack(
-                      children: [
-                        Positioned.fill(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: CachedNetworkImage(
-                              imageUrl: carItem[index].carImage,
-                              width: 80,
+          Expanded(
+            child: SizedBox(
+              height: 550,
+              child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: carItem.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 25),
+                    child: AnimatedBuilder(
+                      animation: transitionAnimation,
+                      builder: (context, child) {
+                        return SlideTransition(
+                          position: Tween<Offset>(
+                            begin: const Offset(0, 1),
+                            end: const Offset(0, 0),
+                          ).animate(
+                            CurvedAnimation(
+                              curve: const Interval(0, 1,
+                                  curve: Curves.easeOutCubic),
+                              parent: transitionAnimation,
                             ),
                           ),
-                        ),
-                        InkWell(
-                          onTap: () => Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) {
-                                return Details_car(
-                                  detail: carItem[index].details,
-                                  carItem: carItem[index],
-                                  transitionAnimation: animation,
-                                );
-                              },
-                              transitionDuration:
-                                  const Duration(milliseconds: 1300),
-                            ),
-                          ),
-                          child: Container(
-                            height: 200,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(5),
-                                bottomRight: Radius.circular(5),
+                          child: child,
+                        );
+                      },
+                      child: Stack(
+                        children: [
+                          Positioned.fill(
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: CachedNetworkImage(
+                                imageUrl: carItem[index].carImage,
+                                width: 80,
                               ),
-                              gradient: LinearGradient(
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                                colors: [
-                                  Colors.black.withOpacity(0.7),
-                                  Colors.transparent
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () => Navigator.push(
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) {
+                                  return Details_car(
+                                    detail: carItem[index].details,
+                                    carItem: carItem[index],
+                                    transitionAnimation: animation,
+                                  );
+                                },
+                                transitionDuration:
+                                    const Duration(milliseconds: 1300),
+                              ),
+                            ),
+                            child: Container(
+                              height: 200,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(5),
+                                  bottomRight: Radius.circular(5),
+                                ),
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.transparent
+                                  ],
+                                ),
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 30, horizontal: 10),
+                                    child: Text(
+                                      carItem[index].carName,
+                                      style: GoogleFonts.josefinSans(
+                                        textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      vertical: 30, horizontal: 10),
-                                  child: Text(
-                                    carItem[index].carName,
-                                    style: GoogleFonts.josefinSans(
-                                      textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                              ],
-                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
         ],

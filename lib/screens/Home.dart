@@ -74,18 +74,20 @@ class _HomeState extends State<Home> {
             ),
           ),
 
-          const SizedBox(
-            height: 30,
-          ),
+          // const SizedBox(
+          //   height: 30,
+          // ),
 
-          for (final category in data)
-            Stack(
+          Expanded(
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
               children: [
                 // ignore: unused_local_variable
-                for (WorldCar item in (category.items))
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    child: InkWell(
+                for (final category in data)
+                  for (WorldCar item in (category.items.length > 1
+                      ? category.items.sublist(0, 1)
+                      : category.items))
+                    InkWell(
                       splashColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () => Navigator.push(
@@ -111,48 +113,65 @@ class _HomeState extends State<Home> {
                           // }
                         ),
                       ),
-                      child: Stack(
-                        children: [
-                          Align(
-                            child: Container(
-                              margin: const EdgeInsets.only(top: 8),
-                              width: 200,
-                              height: 80,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 20, horizontal: 20),
+                        child: Stack(
+                          children: [
+                            Positioned.fill(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  category.img,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: double.infinity,
                               decoration: BoxDecoration(
-                                color: Theme.of(context).primaryColor,
                                 borderRadius: const BorderRadius.only(
-                                  bottomLeft: Radius.circular(50),
-                                  bottomRight: Radius.circular(20),
-                                  topRight: Radius.circular(50),
+                                  bottomLeft: Radius.circular(5),
+                                  bottomRight: Radius.circular(5),
+                                ),
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.transparent
+                                  ],
                                 ),
                               ),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text(
-                                  category.label,
-                                  style: GoogleFonts.comfortaa(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 30, horizontal: 10),
+                                    child: Text(
+                                      category.label,
+                                      style: GoogleFonts.josefinSans(
+                                        textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      textAlign: TextAlign.left,
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: const Alignment(-0.60, 0),
-                            child: Image.asset(
-                              category.img,
-                              width: 76,
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
               ],
             ),
+          ),
         ],
       ),
 

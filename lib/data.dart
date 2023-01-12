@@ -3,7 +3,7 @@ import 'package:world_car/models/world_car.dart';
 
 final data = {
   Category(
-    img: "images/germany.png",
+    img: "images/GermanyC.png",
     label: "Germany",
     items: const [
       WorldCar(
@@ -152,7 +152,7 @@ final data = {
       WorldCar(
         imageUrl: "images/benz.png",
         name:
-            '(renamed Benz & Cie. in 1899) is founded in Mannheim by Carl Benz in October 1883 in collaboration with businessman Max Kaspar Rose.',
+            ' Benz in 1899 is founded in Mannheim by Carl Benz in October 1883 in collaboration',
         carItems: [
           Cars(
             carImage: '',
