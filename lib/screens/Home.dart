@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
               ),
               color: Theme.of(context).primaryColor,
               borderRadius: const BorderRadius.vertical(
-                bottom: Radius.elliptical(200, 100),
+                bottom: Radius.elliptical(180, 100),
               ),
             ),
             child: Column(
@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Text(
                   'Car World',
@@ -73,10 +73,6 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-
-          // const SizedBox(
-          //   height: 30,
-          // ),
 
           Expanded(
             child: ListView(
@@ -99,11 +95,12 @@ class _HomeState extends State<Home> {
                               item: category.items,
                               carItem: item.carItems,
                               label: category.label,
-                              img: category.img,
+                              CountryId: category.CountryId,
                               transitionAnimation: animation,
                             );
                           },
-                          transitionDuration: const Duration(milliseconds: 800),
+                          transitionDuration:
+                              const Duration(milliseconds: 1100),
                           // transitionsBuilder:
                           //     (context, animation, animationTime, child) {
                           //   animation = CurvedAnimation(

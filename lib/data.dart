@@ -4,6 +4,7 @@ import 'package:world_car/models/world_car.dart';
 final data = {
   Category(
     img: "images/GermanyC.png",
+    CountryId: "images/germany.png",
     label: "Germany",
     items: const [
       WorldCar(
@@ -171,6 +172,7 @@ final data = {
   ),
   Category(
     img: "images/JapanC.png",
+    CountryId: "images/japan.png",
     label: "Japan",
     items: const [
       WorldCar(
@@ -280,6 +282,7 @@ final data = {
   ),
   Category(
     img: "images/AmericaC.png",
+    CountryId: "images/usa.png",
     label: "America",
     items: const [
       WorldCar(
@@ -389,6 +392,7 @@ final data = {
   ),
   Category(
     img: "images/KoreaC.png",
+    CountryId: "images/korea.png",
     label: "Korea",
     items: const [
       WorldCar(
