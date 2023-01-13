@@ -12,7 +12,8 @@ final data = {
         name: "Mercedes ",
         carItems: [
           Cars(
-            carImage: 'images/BenzC.jpg',
+            carImage:
+                'https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/2021-Mercedes-AMG-C-63-S-1001x565_0.jpg',
             carName: 'Mercedes C-class',
             details: [
               Details(
@@ -59,7 +60,7 @@ final data = {
           ),
           Cars(
             carImage:
-                'https://www.bmw.com.ph/content/dam/bmw/common/all-models/x-series/x1/2021/Highlights/bmw-x1-sp-desktop.jpg',
+                'https://images.pistonheads.com/nimg/44784/Large-39354-G400d.jpg',
             carName: 'Mercedes G-class',
             details: [
               Details(
@@ -70,7 +71,7 @@ final data = {
             ],
           ),
           Cars(
-            carImage: 'images/BenzCLA.jpg',
+            carImage: 'https://www.elbalad.news/Upload/libfiles/887/9/756.jpg',
             carName: 'Mercedes CLA-class',
             details: [
               Details(
@@ -87,8 +88,33 @@ final data = {
         name: "Volkswagen ",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://hips.hearstapps.com/hmg-prod/images/2021-volkswagen-passat-mmp-1-1597868992.jpg',
+            carName: 'Passat',
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://hogstavaxeln.se/wp-content/uploads/2021/06/Volkswagen-Touareg-R-black-04.jpg',
+            carName: 'Touareg',
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://images.hgmsites.net/hug/2021-volkswagen-arteon_100814104_h.jpg',
+            carName: 'Arteon ',
             details: [
               Details(
                 detailName: '199',

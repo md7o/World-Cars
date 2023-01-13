@@ -42,12 +42,12 @@ class brand_cars extends StatelessWidget {
               ),
               child: Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFF1B2859),
+                    color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.arrow_back_ios_rounded,
-                    color: Colors.blue,
+                    color: Colors.purple.shade200,
                     size: 18,
                   )),
             ),
@@ -76,7 +76,7 @@ class brand_cars extends StatelessWidget {
               children: [
                 Image.asset(
                   item.imageUrl,
-                  width: 80,
+                  width: 45,
                 ),
                 const SizedBox(
                   height: 10,
@@ -86,7 +86,7 @@ class brand_cars extends StatelessWidget {
                   style: GoogleFonts.josefinSans(
                     color: Colors.white,
                     textStyle: const TextStyle(
-                        fontSize: 22, fontWeight: FontWeight.normal),
+                        fontSize: 35, fontWeight: FontWeight.normal),
                   ),
                 )
               ],
@@ -130,6 +130,7 @@ class brand_cars extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                               child: CachedNetworkImage(
                                 imageUrl: carItem[index].carImage,
+                                fit: BoxFit.cover,
                                 width: 80,
                               ),
                             ),
