@@ -59,355 +59,375 @@ class Brands extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(
-        physics: const BouncingScrollPhysics(),
-        children: [
-          Column(
+      body: Padding(
+        padding: const EdgeInsets.all(2),
+        child: Scrollbar(
+          thickness: 4,
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.width / 4,
-              ),
-              AnimatedBuilder(
-                animation: transitionAnimation,
-                builder: (context, child) {
-                  return SlideTransition(
-                    position: Tween<Offset>(
-                      begin: const Offset(-1, 0),
-                      end: const Offset(0, 0),
-                    ).animate(CurvedAnimation(
-                      curve: const Interval(0, 0.7, curve: Curves.easeOutCubic),
-                      parent: transitionAnimation,
-                    )),
-                    child: child,
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        CountryId,
-                        width: 45,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        label,
-                        style: GoogleFonts.comfortaa(
-                          color: Colors.white,
-                          textStyle: const TextStyle(
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold,
+              Column(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.width / 4,
+                  ),
+                  AnimatedBuilder(
+                    animation: transitionAnimation,
+                    builder: (context, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(-1, 0),
+                          end: const Offset(0, 0),
+                        ).animate(CurvedAnimation(
+                          curve: const Interval(0, 0.7,
+                              curve: Curves.easeOutCubic),
+                          parent: transitionAnimation,
+                        )),
+                        child: child,
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            CountryId,
+                            width: 45,
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              ScaleTransition(
-                scale: Tween<double>(begin: 0.5, end: 1).animate(
-                  CurvedAnimation(
-                    parent: transitionAnimation,
-                    curve: Curves.easeOutCubic,
-                  ),
-                ),
-                child: SizedBox(
-                  height: 160,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Scrollbar(
-                      thickness: 2,
-                      child: ListView.builder(
-                        physics: const BouncingScrollPhysics(),
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 4,
-                        itemBuilder: (BuildContext context, int index) {
-                          return InkWell(
-                            splashColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () => Navigator.push(
-                              context,
-                              PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) {
-                                  return brand_cars(
-                                    item: item[index],
-                                    carItem: item[index].carItems,
-                                    detail: carItem[index].details,
-                                    transitionAnimation: animation,
-                                  );
-                                },
-                                transitionDuration:
-                                    const Duration(milliseconds: 1300),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            label,
+                            style: GoogleFonts.comfortaa(
+                              color: Colors.white,
+                              textStyle: const TextStyle(
+                                fontSize: 35,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: Container(
-                                width: 150,
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context).primaryColor,
-                                  borderRadius: BorderRadius.circular(20),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  ScaleTransition(
+                    scale: Tween<double>(begin: 0.5, end: 1).animate(
+                      CurvedAnimation(
+                        parent: transitionAnimation,
+                        curve: Curves.easeOutCubic,
+                      ),
+                    ),
+                    child: SizedBox(
+                      height: 160,
+                      child: Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Scrollbar(
+                          thickness: 2,
+                          child: ListView.builder(
+                            physics: const BouncingScrollPhysics(),
+                            shrinkWrap: true,
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 4,
+                            itemBuilder: (BuildContext context, int index) {
+                              return InkWell(
+                                splashColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () => Navigator.push(
+                                  context,
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return brand_cars(
+                                        item: item[index],
+                                        carItem: item[index].carItems,
+                                        detail: carItem[index].details,
+                                        transitionAnimation: animation,
+                                      );
+                                    },
+                                    transitionDuration:
+                                        const Duration(milliseconds: 1300),
+                                  ),
                                 ),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Image.asset(
-                                            item[index].imageUrl,
-                                            width: 45,
-                                          ),
-                                          Row(
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.all(3),
-                                                child: Text(
-                                                  'Top',
-                                                  style: GoogleFonts.comfortaa(
-                                                    textStyle: const TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 13,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  ),
-                                                ),
-                                              ),
-                                              const Icon(
-                                                Icons.workspace_premium,
-                                                size: 20,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8),
+                                  child: Container(
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                      color: Theme.of(context).primaryColor,
+                                      borderRadius: BorderRadius.circular(20),
                                     ),
-                                    Column(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.symmetric(
                                               horizontal: 15),
-                                          child: Text(
-                                            item[index].name,
-                                            style: GoogleFonts.comfortaa(
-                                              textStyle: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Image.asset(
+                                                item[index].imageUrl,
+                                                width: 45,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(3),
+                                                    child: Text(
+                                                      'Top',
+                                                      style:
+                                                          GoogleFonts.comfortaa(
+                                                        textStyle:
+                                                            const TextStyle(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 13,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  const Icon(
+                                                    Icons.workspace_premium,
+                                                    size: 20,
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                         ),
-                                        const SizedBox(
-                                          height: 3,
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 15),
-                                          child: Text(
-                                            item[index].name,
-                                            style: GoogleFonts.comfortaa(
-                                              textStyle: const TextStyle(
-                                                  color: Colors.white38,
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.bold),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 15),
+                                              child: Text(
+                                                item[index].name,
+                                                style: GoogleFonts.comfortaa(
+                                                  textStyle: const TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ),
                                             ),
-                                          ),
-                                        ),
+                                            const SizedBox(
+                                              height: 3,
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 15),
+                                              child: Text(
+                                                item[index].name,
+                                                style: GoogleFonts.comfortaa(
+                                                  textStyle: const TextStyle(
+                                                      color: Colors.white38,
+                                                      fontSize: 13,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        )
                                       ],
-                                    )
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  AnimatedBuilder(
+                    animation: transitionAnimation,
+                    builder: (context, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(-0.5, 0),
+                          end: const Offset(0, 0),
+                        ).animate(CurvedAnimation(
+                          curve: const Interval(0, 0.7,
+                              curve: Curves.easeOutCubic),
+                          parent: transitionAnimation,
+                        )),
+                        child: child,
+                      );
+                    },
+                    child: Padding(
+                      padding:
+                          const EdgeInsets.only(top: 20, left: 20, bottom: 20),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.tips_and_updates_outlined,
+                            size: 50,
+                          ),
+                          const SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Facts",
+                            style: GoogleFonts.comfortaa(
+                              color: Colors.white,
+                              textStyle: const TextStyle(
+                                fontSize: 35,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  AnimatedBuilder(
+                    animation: transitionAnimation,
+                    builder: (context, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(1, 0),
+                          end: const Offset(0, 0),
+                        ).animate(
+                          CurvedAnimation(
+                            curve: const Interval(0, 0.6,
+                                curve: Curves.easeOutCubic),
+                            parent: transitionAnimation,
+                          ),
+                        ),
+                        child: child,
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          child: Container(
+                            height: MediaQuery.of(context).size.width * 0.3,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(20),
+                              ),
+                            ),
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    item[1].imageUrl,
+                                    width: 58,
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  Flexible(
+                                    child: Text(
+                                      item[4].name,
+                                      style: GoogleFonts.comfortaa(
+                                        textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: AnimatedBuilder(
+                          animation: transitionAnimation,
+                          builder: (context, child) {
+                            return SlideTransition(
+                              position: Tween<Offset>(
+                                begin: const Offset(-1, 0),
+                                end: const Offset(0, 0),
+                              ).animate(
+                                CurvedAnimation(
+                                  curve: const Interval(0.4, 1,
+                                      curve: Curves.easeOutCubic),
+                                  parent: transitionAnimation,
+                                ),
+                              ),
+                              child: child,
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Container(
+                              height: MediaQuery.of(context).size.width * 0.3,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: const BorderRadius.all(
+                                  Radius.circular(20),
+                                ),
+                              ),
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Flexible(
+                                      child: Text(
+                                        item[5].name,
+                                        style: GoogleFonts.comfortaa(
+                                          textStyle: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ),
+                                    Image.asset(
+                                      item[5].imageUrl,
+                                      width: 72,
+                                    ),
                                   ],
                                 ),
                               ),
                             ),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              AnimatedBuilder(
-                animation: transitionAnimation,
-                builder: (context, child) {
-                  return SlideTransition(
-                    position: Tween<Offset>(
-                      begin: const Offset(-0.5, 0),
-                      end: const Offset(0, 0),
-                    ).animate(CurvedAnimation(
-                      curve: const Interval(0, 0.7, curve: Curves.easeOutCubic),
-                      parent: transitionAnimation,
-                    )),
-                    child: child,
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20, bottom: 20),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.tips_and_updates_outlined,
-                        size: 50,
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Text(
-                        "Facts",
-                        style: GoogleFonts.comfortaa(
-                          color: Colors.white,
-                          textStyle: const TextStyle(
-                            fontSize: 35,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ],
                   ),
-                ),
-              ),
-              AnimatedBuilder(
-                animation: transitionAnimation,
-                builder: (context, child) {
-                  return SlideTransition(
-                    position: Tween<Offset>(
-                      begin: const Offset(1, 0),
-                      end: const Offset(0, 0),
-                    ).animate(
-                      CurvedAnimation(
-                        curve:
-                            const Interval(0, 0.6, curve: Curves.easeOutCubic),
-                        parent: transitionAnimation,
-                      ),
-                    ),
-                    child: child,
-                  );
-                },
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Container(
-                        height: MediaQuery.of(context).size.width * 0.3,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(20),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Row(
-                            children: [
-                              Image.asset(
-                                item[1].imageUrl,
-                                width: 58,
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Flexible(
-                                child: Text(
-                                  item[4].name,
-                                  style: GoogleFonts.comfortaa(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: AnimatedBuilder(
-                      animation: transitionAnimation,
-                      builder: (context, child) {
-                        return SlideTransition(
-                          position: Tween<Offset>(
-                            begin: const Offset(-1, 0),
-                            end: const Offset(0, 0),
-                          ).animate(
-                            CurvedAnimation(
-                              curve: const Interval(0.4, 1,
-                                  curve: Curves.easeOutCubic),
-                              parent: transitionAnimation,
-                            ),
-                          ),
-                          child: child,
-                        );
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Container(
-                          height: MediaQuery.of(context).size.width * 0.3,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(20),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Flexible(
-                                  child: Text(
-                                    item[5].name,
-                                    style: GoogleFonts.comfortaa(
-                                      textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ),
-                                Image.asset(
-                                  item[5].imageUrl,
-                                  width: 72,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
