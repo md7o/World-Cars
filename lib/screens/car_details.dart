@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 
-class Details_car extends StatelessWidget {
-  const Details_car({
+class CarDetails extends StatelessWidget {
+  const CarDetails({
     super.key,
     required this.detail,
     required this.carItem,

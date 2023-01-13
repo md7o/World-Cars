@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
-import 'package:world_car/screens/brand_cars.dart';
+import 'package:world_car/screens/car_types.dart';
 
 class Brands extends StatelessWidget {
   const Brands({
@@ -141,7 +141,7 @@ class Brands extends StatelessWidget {
                                   PageRouteBuilder(
                                     pageBuilder: (context, animation,
                                         secondaryAnimation) {
-                                      return brand_cars(
+                                      return car_types(
                                         item: item[index],
                                         carItem: item[index].carItems,
                                         detail: carItem[index].details,

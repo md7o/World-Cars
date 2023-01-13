@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:world_car/screens/Home.dart';
-import 'package:world_car/screens/famousCar.dart';
+import 'package:world_car/screens/home.dart';
+import 'package:world_car/screens/best_selling.dart';
 import 'package:world_car/screens/setting.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
@@ -27,7 +27,7 @@ class _naviBarState extends State<naviBar> {
 
   final List<Widget> pages = [
     const Home(),
-    const FamousCar(),
+    const BestSelling(),
     const Setting(),
   ];
 

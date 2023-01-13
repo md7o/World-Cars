@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 
-class FamousCar extends StatelessWidget {
-  const FamousCar({super.key});
+class BestSelling extends StatelessWidget {
+  const BestSelling({super.key});
 
   @override
   Widget build(BuildContext context) {

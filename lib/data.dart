@@ -143,8 +143,8 @@ final data = {
         ],
       ),
       WorldCar(
-        imageUrl: "images/Porsche.png",
-        name: "Porsche",
+        imageUrl: "images/audi.png",
+        name: "Audi",
         carItems: [
           Cars(
             carImage: 'images/mercedes.png',
@@ -363,7 +363,7 @@ final data = {
         ],
       ),
       WorldCar(
-        imageUrl: "images/Lencon.png",
+        imageUrl: "images/Lincoln.png",
         name: "Lincoln ",
         carItems: [
           Cars(
@@ -456,8 +456,8 @@ final data = {
         ],
       ),
       WorldCar(
-        imageUrl: "images/Rena.png",
-        name: "Renault ",
+        imageUrl: "images/ssang.png",
+        name: "SsangYong ",
         carItems: [
           Cars(
             carImage: 'images/mercedes.png',

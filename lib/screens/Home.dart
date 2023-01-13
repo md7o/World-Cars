@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/data.dart';
 import 'package:world_car/models/world_car.dart';
-import 'package:world_car/screens/Brands.dart';
+import 'package:world_car/screens/brands.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class Home extends StatefulWidget {
@@ -37,12 +37,6 @@ class _HomeState extends State<Home> {
               height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
-                image: const DecorationImage(
-                  image: NetworkImage(
-                    'https://openseauserdata.com/files/cdcfaa7304a662705be493464763cd63.gif',
-                  ),
-                  fit: BoxFit.cover,
-                ),
                 color: Theme.of(context).primaryColor,
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.elliptical(180, 100),

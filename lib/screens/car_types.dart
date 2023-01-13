@@ -2,10 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
-import 'package:world_car/screens/details.dart';
+import 'package:world_car/screens/car_details.dart';
 
-class brand_cars extends StatelessWidget {
-  const brand_cars({
+class car_types extends StatelessWidget {
+  const car_types({
     super.key,
     required this.item,
     required this.carItem,
@@ -143,7 +143,7 @@ class brand_cars extends StatelessWidget {
                                 PageRouteBuilder(
                                   pageBuilder:
                                       (context, animation, secondaryAnimation) {
-                                    return Details_car(
+                                    return CarDetails(
                                       detail: carItem[index].details,
                                       carItem: carItem[index],
                                       transitionAnimation: animation,
