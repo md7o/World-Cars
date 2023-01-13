@@ -65,128 +65,168 @@ class FamousCar extends StatelessWidget {
       ),
     ];
 
-    return Scaffold(
-      body: Column(
-        children: [
-          Wrap(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                    top: 60, bottom: 30, left: 30, right: 30),
-                child: Text('Best selling cars worldwide in (2021)',
-                    style: GoogleFonts.comfortaa(
-                      color: Theme.of(context).iconTheme.color,
-                      textStyle: const TextStyle(
-                          fontSize: 19, fontWeight: FontWeight.bold),
-                    ),
-                    textAlign: TextAlign.center),
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: Scrollbar(
+        thickness: 3,
+        child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
+          slivers: [
+            SliverAppBar(
+              backgroundColor: const Color(0xFF2C2348),
+              pinned: false,
+              shape: const ContinuousRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(200),
+                ),
               ),
-            ],
-          ),
-          Expanded(
-            child: ListView(
-                physics: const BouncingScrollPhysics(),
-                children: popular.map(
-                  (po) {
-                    return Padding(
-                      padding: const EdgeInsets.only(
-                          right: 20, left: 20, bottom: 50),
-                      child: Stack(
-                        children: [
-                          Positioned.fill(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                po.backgroundImg,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 200,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(10),
-                                bottomRight: Radius.circular(10),
-                              ),
-                              gradient: LinearGradient(
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                                colors: [
-                                  Colors.black.withOpacity(0.7),
-                                  Colors.transparent
-                                ],
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 10,
-                                      horizontal: 10,
-                                    ),
-                                    child: Text(
-                                      po.title,
-                                      style: GoogleFonts.comfortaa(
-                                        textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      textAlign: TextAlign.left,
-                                    ),
-                                  ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        width: 200,
-                                        height: 20,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              (const BorderRadius.only(
-                                            bottomLeft: Radius.circular(10),
-                                            bottomRight: Radius.circular(30),
-                                            topRight: Radius.circular(30),
-                                            topLeft: Radius.circular(10),
-                                          )),
-                                          color: Colors.green.shade500,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 10),
-                                        child: Text(
-                                          po.selling,
-                                          style: GoogleFonts.comfortaa(
-                                            textStyle: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
+              title: Padding(
+                padding: const EdgeInsets.only(top: 35),
+                child: Center(
+                  child: Wrap(
+                    children: [
+                      Text(
+                        "Best selling cars worldwide in (2021)",
+                        style: GoogleFonts.josefinSans(
+                          textStyle: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal),
+                        ),
                       ),
-                    );
-                  },
-                ).toList()),
-          ),
+                    ],
+                  ),
+                ),
+              ),
+              expandedHeight: 120,
+            ),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 100 * 25.5,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: ListView(
+                          physics: const BouncingScrollPhysics(),
+                          children: popular.map(
+                            (po) {
+                              return Padding(
+                                padding: const EdgeInsets.only(
+                                    right: 20, left: 20, bottom: 50),
+                                child: Stack(
+                                  children: [
+                                    Positioned.fill(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.asset(
+                                          po.backgroundImg,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 200,
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        borderRadius: const BorderRadius.only(
+                                          bottomLeft: Radius.circular(10),
+                                          bottomRight: Radius.circular(10),
+                                        ),
+                                        gradient: LinearGradient(
+                                          begin: Alignment.bottomCenter,
+                                          end: Alignment.topCenter,
+                                          colors: [
+                                            Colors.black.withOpacity(0.7),
+                                            Colors.transparent
+                                          ],
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 10,
+                                              ),
+                                              child: Text(
+                                                po.title,
+                                                style: GoogleFonts.comfortaa(
+                                                  textStyle: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                textAlign: TextAlign.left,
+                                              ),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Container(
+                                                  width: 200,
+                                                  height: 20,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        (const BorderRadius
+                                                            .only(
+                                                      bottomLeft:
+                                                          Radius.circular(10),
+                                                      bottomRight:
+                                                          Radius.circular(30),
+                                                      topRight:
+                                                          Radius.circular(30),
+                                                      topLeft:
+                                                          Radius.circular(10),
+                                                    )),
+                                                    color:
+                                                        Colors.green.shade500,
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 10),
+                                                  child: Text(
+                                                    po.selling,
+                                                    style:
+                                                        GoogleFonts.comfortaa(
+                                                      textStyle:
+                                                          const TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 20,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ).toList()),
+                    ),
 
-          // country
-        ],
+                    // country
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
