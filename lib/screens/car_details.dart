@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
@@ -85,8 +86,8 @@ class CarDetails extends StatelessWidget {
                           Positioned.fill(
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.network(
-                                carItem.carImage,
+                              child: CachedNetworkImage(
+                                imageUrl: carItem.carImage,
                                 fit: BoxFit.cover,
                               ),
                             ),

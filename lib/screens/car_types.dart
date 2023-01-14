@@ -19,6 +19,8 @@ class car_types extends StatelessWidget {
   final Animation<double> transitionAnimation;
   @override
   Widget build(BuildContext context) {
+    final imageUrl =
+        "https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/2021-Mercedes-AMG-C-63-S-1001x565_0.jpg";
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -131,9 +133,21 @@ class car_types extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
                                 child: CachedNetworkImage(
-                                  imageUrl: carItem[index].carImage,
-                                  fit: BoxFit.cover,
-                                  width: 80,
+                                  imageUrl:
+                                      'https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/2021-Mercedes-AMG-C-63-S-1001x565_0.jpg',
+                                  placeholder: (context, url) =>
+                                      const CircularProgressIndicator(),
+                                  imageBuilder: ((context, imageProvider) {
+                                    return Container(
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: imageProvider,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    );
+                                  }),
+                                  width: MediaQuery.of(context).size.width,
                                 ),
                               ),
                             ),

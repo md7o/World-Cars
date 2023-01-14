@@ -15,11 +15,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Image appLogo = const Image(
-      image: ExactAssetImage("images/earth.png"),
-      width: 175,
-      height: 100,
-      alignment: FractionalOffset.center);
+  final imageUrl =
+      "https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif";
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +34,11 @@ class _HomeState extends State<Home> {
               height: 150,
               width: double.infinity,
               decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: NetworkImage(
+                      "https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif",
+                    ),
+                    fit: BoxFit.cover),
                 color: Theme.of(context).primaryColor,
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.elliptical(180, 100),
@@ -45,25 +47,15 @@ class _HomeState extends State<Home> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          "https://openseauserdata.com/files/cdcfaa7304a662705be493464763cd63.gif",
-                      width: 60,
+                    padding: const EdgeInsets.only(top: 35),
+                    child: Image.asset(
+                      "images/Logo.png",
+                      width: 140,
                     ),
                   ),
                   const SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    'Car World',
-                    style: GoogleFonts.comfortaa(
-                      textStyle: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  )
                 ],
               ),
             ),

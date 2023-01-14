@@ -31,8 +31,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter_native_splash:
-  color: "#000832"
-  image: images/bigEarth.png
+  color: "#18142F"
+  image: images/Logo.png
 
 flutter:
   uses-material-design: true
