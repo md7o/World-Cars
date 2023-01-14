@@ -144,7 +144,7 @@ class CarDetails extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 440,
+                    height: 650,
                     child: Padding(
                       padding: const EdgeInsets.all(
                         5,
@@ -152,82 +152,97 @@ class CarDetails extends StatelessWidget {
                       child: GridView.builder(
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                          mainAxisSpacing: 5,
-                          crossAxisSpacing: 5,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10,
                           crossAxisCount: 2,
-                          mainAxisExtent: 95,
+                          mainAxisExtent: 150,
                         ),
                         physics: const BouncingScrollPhysics(),
                         itemCount: detail.length,
                         itemBuilder: (BuildContext context, int index) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 3, horizontal: 3),
-                            child: AnimatedBuilder(
-                              animation: transitionAnimation,
-                              builder: (context, child) {
-                                return SlideTransition(
-                                  position: Tween<Offset>(
-                                    begin: const Offset(0.5, 1),
-                                    end: const Offset(0, 0),
-                                  ).animate(CurvedAnimation(
-                                    curve: const Interval(0, 1,
-                                        curve: Curves.easeOutCubic),
-                                    parent: transitionAnimation,
-                                  )),
-                                  child: child,
-                                );
-                              },
-                              child: Container(
-                                height: 80,
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context).primaryColor,
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 15),
-                                  child: Row(
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 20),
-                                        child: Image.asset(
-                                          detail[index].detailPhoto,
-                                          width: 30,
+                          return AnimatedBuilder(
+                            animation: transitionAnimation,
+                            builder: (context, child) {
+                              return SlideTransition(
+                                position: Tween<Offset>(
+                                  begin: const Offset(0.5, 1),
+                                  end: const Offset(0, 0),
+                                ).animate(CurvedAnimation(
+                                  curve: const Interval(0, 1,
+                                      curve: Curves.easeOutCubic),
+                                  parent: transitionAnimation,
+                                )),
+                                child: child,
+                              );
+                            },
+                            child: Container(
+                              height: 10,
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10),
+                                          child: Image.asset(
+                                            detail[index].detailPhoto,
+                                            width: 35,
+                                          ),
                                         ),
-                                      ),
-                                      Column(
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             detail[index].detailName,
                                             style: GoogleFonts.josefinSans(
                                               textStyle: const TextStyle(
                                                 color: Colors.white,
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.normal,
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w400,
                                               ),
                                             ),
                                           ),
+                                          const SizedBox(
+                                            height: 5,
+                                          ),
                                           Padding(
                                             padding:
-                                                const EdgeInsets.only(top: 10),
+                                                const EdgeInsets.only(top: 8),
                                             child: Text(
                                               detail[index].detailInfo,
                                               style: GoogleFonts.josefinSans(
                                                 textStyle: const TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.normal,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
                                               ),
                                             ),
                                           )
                                         ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
