@@ -32,9 +32,9 @@ final data = {
                 detailInfo: '250 Km/h',
               ),
               Details(
-                detailName: 'Car Fule:',
-                detailPhoto: 'images/gas.png',
-                detailInfo: 'Petrol',
+                detailName: 'Cylinder',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: '4V',
               ),
               Details(
                 detailName: 'Horsepower:',
@@ -64,10 +64,45 @@ final data = {
             carName: 'Mercedes G-class',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '191.9 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1979',
+              ),
+              Details(
+                detailName: 'Max speed:',
+                detailPhoto: 'images/speedometer.png',
+                detailInfo: '240 Km/h',
+              ),
+              Details(
+                detailName: 'Cylinders',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '577 ',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$156,450',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
           ),
           Cars(
@@ -75,10 +110,45 @@ final data = {
             carName: 'Mercedes CLA-class',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '184.6 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2013',
+              ),
+              Details(
+                detailName: 'Max speed:',
+                detailPhoto: 'images/speedometer.png',
+                detailInfo: '250 Km/h',
+              ),
+              Details(
+                detailName: 'Cylinder',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: '4V',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '221 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$39,645',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'Automatic manual',
+              ),
             ],
           )
         ],
@@ -130,7 +200,8 @@ final data = {
         name: "BMW",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
+            carImage:
+                'https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/99-bmw-m5-cs-2021-official-reveal-hero-front.jpg?itok=NUo_lK53',
             carName: 'Mercedes',
             details: [
               Details(
@@ -139,7 +210,31 @@ final data = {
                 detailInfo: '199',
               )
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://www.topgear.com/sites/default/files/2021/11/BMW%20X4M%20Sao%20Paulo%20Yellow%20013.jpg',
+            carName: 'Mercedes',
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://cdn.carbuzz.com/gallery-images/2021-bmw-m2-carbuzz-500647.jpg',
+            carName: 'Mercedes',
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          ),
         ],
       ),
       WorldCar(

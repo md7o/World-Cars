@@ -134,6 +134,8 @@ class car_types extends StatelessWidget {
                                   imageUrl: carItem[index].carImage,
                                   placeholder: (context, url) =>
                                       const CircularProgressIndicator(),
+                                  errorWidget: (context, url, error) =>
+                                      const Icon(Icons.error),
                                   imageBuilder: ((context, imageProvider) {
                                     return Container(
                                       decoration: BoxDecoration(
@@ -144,7 +146,6 @@ class car_types extends StatelessWidget {
                                       ),
                                     );
                                   }),
-                                  width: MediaQuery.of(context).size.width,
                                 ),
                               ),
                             ),

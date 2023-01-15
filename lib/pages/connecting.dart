@@ -12,14 +12,15 @@ class Connection extends StatefulWidget {
 }
 
 class _ConnectionState extends State<Connection> {
-  // ignore: unused_element
-  Future<void> _launchURL(String url) async {
-    final Uri uri = Uri(scheme: "https", host: url);
+  // ignore: unused_field
+  Future<void>? _launched;
+
+  Future<void> _launchInBrowser(Uri url) async {
     if (!await launchUrl(
-      uri,
+      url,
       mode: LaunchMode.externalApplication,
     )) {
-      throw 'Could not launch url';
+      throw 'Could not launch $url';
     }
   }
 
@@ -68,7 +69,11 @@ class _ConnectionState extends State<Connection> {
                     //  Dark mode
                     InkWell(
                       onTap: () {
-                        launchUrl(url2);
+                        setState(
+                          () {
+                            _launched = _launchInBrowser(url2);
+                          },
+                        );
                       },
                       child: Container(
                         height: 45,
@@ -121,7 +126,11 @@ class _ConnectionState extends State<Connection> {
                     //  Fonts
                     InkWell(
                       onTap: () {
-                        launchUrl(url);
+                        setState(
+                          () {
+                            _launched = _launchInBrowser(url);
+                          },
+                        );
                       },
                       child: Container(
                         height: 45,

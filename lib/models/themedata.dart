@@ -22,6 +22,6 @@ class MyThemes {
     scaffoldBackgroundColor: const Color(0xFFC9D4FF),
     colorScheme: const ColorScheme.light(),
     primaryColor: const Color(0xFF8097F1),
-    iconTheme: const IconThemeData(color: Color(0xFF1A2037)),
+    iconTheme: const IconThemeData(color: Color(0xFF2C2348)),
   );
 }

@@ -21,6 +21,7 @@ class Brands extends StatelessWidget {
   final Animation<double> transitionAnimation;
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     final text = MediaQuery.of(context).platformBrightness == Brightness.dark
         ? 'darkTheme'
         : 'LightTheme';
@@ -46,7 +47,7 @@ class Brands extends StatelessWidget {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2C2348),
+                  color: Theme.of(context).primaryColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(
@@ -346,9 +347,9 @@ class Brands extends StatelessWidget {
                                     child: Text(
                                       item[4].name,
                                       style: GoogleFonts.comfortaa(
-                                        textStyle: const TextStyle(
+                                        textStyle: TextStyle(
                                             color: Colors.white,
-                                            fontSize: 14,
+                                            fontSize: width / 25,
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ),
@@ -403,9 +404,9 @@ class Brands extends StatelessWidget {
                                       child: Text(
                                         item[5].name,
                                         style: GoogleFonts.comfortaa(
-                                          textStyle: const TextStyle(
+                                          textStyle: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 14,
+                                              fontSize: width / 28,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ),

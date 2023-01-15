@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
               width: double.infinity,
               decoration: BoxDecoration(
                 image: const DecorationImage(
-                    image: NetworkImage(
+                    image: CachedNetworkImageProvider(
                       "https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif",
                     ),
                     fit: BoxFit.cover),

@@ -12,13 +12,15 @@ class Sources extends StatefulWidget {
 }
 
 class _SourcesState extends State<Sources> {
-  Future<void> _launchURL(String url) async {
-    final Uri uri = Uri(scheme: "https", host: url);
+  // ignore: unused_field
+  Future<void>? _launched;
+
+  Future<void> _launchInBrowser(Uri url) async {
     if (!await launchUrl(
-      uri,
+      url,
       mode: LaunchMode.externalApplication,
     )) {
-      throw 'Could not launch url';
+      throw 'Could not launch $url';
     }
   }
 
@@ -31,41 +33,98 @@ class _SourcesState extends State<Sources> {
         ? 'darkTheme'
         : 'LightTheme';
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          title: Text(
-            'Soureces',
-            style: GoogleFonts.josefinSans(
-              color: Theme.of(context).iconTheme.color,
-              textStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
-            ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        title: Text(
+          'Soureces',
+          style: GoogleFonts.josefinSans(
+            color: Theme.of(context).iconTheme.color,
+            textStyle:
+                const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
           ),
-          centerTitle: true,
-          elevation: 0,
-          leading: IconButton(
-              color: Theme.of(context).iconTheme.color,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.close)),
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(5),
-                  ),
+        centerTitle: true,
+        elevation: 0,
+        leading: IconButton(
+            color: Theme.of(context).iconTheme.color,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.close)),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(5),
                 ),
-                child: Column(
-                  children: [
-                    //  Dark mode
-                    Container(
+              ),
+              child: Column(
+                children: [
+                  //  Dark mode
+                  Container(
+                    height: 45,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(5),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.book,
+                                color: Colors.white,
+                                size: 25,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Text(
+                                'Wikipedia',
+                                style: GoogleFonts.josefinSans(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const Divider(
+                    indent: 30,
+                    endIndent: 30,
+                    thickness: 1,
+                    color: Colors.white,
+                  ),
+
+                  //  Fonts
+                  InkWell(
+                    onTap: () {
+                      setState(
+                        () {
+                          _launched = _launchInBrowser(url);
+                        },
+                      );
+                    },
+                    child: Container(
                       height: 45,
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -83,7 +142,7 @@ class _SourcesState extends State<Sources> {
                             Row(
                               children: [
                                 const Icon(
-                                  Icons.book,
+                                  Icons.directions_car,
                                   color: Colors.white,
                                   size: 25,
                                 ),
@@ -91,7 +150,7 @@ class _SourcesState extends State<Sources> {
                                   width: 10,
                                 ),
                                 Text(
-                                  'Wikipedia',
+                                  'Statista',
                                   style: GoogleFonts.josefinSans(
                                     textStyle: const TextStyle(
                                         color: Colors.white,
@@ -101,75 +160,23 @@ class _SourcesState extends State<Sources> {
                                 ),
                               ],
                             ),
+                            const Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              color: Colors.white,
+                              size: 25,
+                            ),
                           ],
                         ),
                       ),
                     ),
-
-                    const Divider(
-                      indent: 30,
-                      endIndent: 30,
-                      thickness: 1,
-                      color: Colors.white,
-                    ),
-
-                    //  Fonts
-                    InkWell(
-                      onTap: () {
-                        launchUrl(url);
-                      },
-                      child: Container(
-                        height: 45,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 25),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  const Icon(
-                                    Icons.directions_car,
-                                    color: Colors.white,
-                                    size: 25,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Statista',
-                                    style: GoogleFonts.josefinSans(
-                                      textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.normal),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: Colors.white,
-                                size: 25,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    //  Fonts
-                  ],
-                ),
+                  ),
+                  //  Fonts
+                ],
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }

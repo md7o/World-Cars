@@ -82,19 +82,17 @@ class BestSelling extends StatelessWidget {
               ),
               title: Padding(
                 padding: const EdgeInsets.only(top: 35),
-                child: Center(
-                  child: Wrap(
-                    children: [
-                      Text(
-                        "Best selling cars worldwide in (2021)",
-                        style: GoogleFonts.josefinSans(
-                          textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.normal),
-                        ),
+                child: Flexible(
+                  child: Center(
+                    child: Text(
+                      "Best selling cars worldwide in (2021)",
+                      style: GoogleFonts.josefinSans(
+                        textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal),
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ),
