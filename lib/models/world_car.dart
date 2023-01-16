@@ -11,9 +11,6 @@ class WorldCar {
   });
 }
 
-//first list
-//=================
-//second list
 class Cars {
   final String carImage;
   final String carName;
@@ -26,9 +23,6 @@ class Cars {
   });
 }
 
-//second list
-//=================
-//third list
 class Details {
   final String detailPhoto;
   final String detailName;
@@ -41,8 +35,6 @@ class Details {
   });
 }
 
-//third list
-//=================
 class PopularsCar {
   final String backgroundImg;
   final String title;

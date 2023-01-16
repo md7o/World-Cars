@@ -13,13 +13,13 @@ final data = {
         carItems: [
           Cars(
             carImage:
-                'https://carsguide-res.cloudinary.com/image/upload/f_auto%2Cfl_lossy%2Cq_auto%2Ct_default/v1/editorial/2021-Mercedes-AMG-C-63-S-1001x565_0.jpg',
+                'https://media.ed.edmunds-media.com/mercedes-benz/c-class/2023/oem/2023_mercedes-benz_c-class_sedan_c-300-4matic_fq_oem_1_815.jpg',
             carName: 'Mercedes C-class',
             details: [
               Details(
                 detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '188 Inch',
+                detailInfo: '187 Inch',
               ),
               Details(
                 detailName: 'Made in:',
@@ -27,24 +27,24 @@ final data = {
                 detailInfo: 'June 1993',
               ),
               Details(
-                detailName: 'Max speed:',
-                detailPhoto: 'images/speedometer.png',
-                detailInfo: '250 Km/h',
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '17.4 gal',
               ),
               Details(
                 detailName: 'Cylinder',
                 detailPhoto: 'images/cylinder.png',
-                detailInfo: '4V',
+                detailInfo: 'V4',
               ),
               Details(
                 detailName: 'Horsepower:',
                 detailPhoto: 'images/engine.png',
-                detailInfo: '255-503 ',
+                detailInfo: '255 hp',
               ),
               Details(
                 detailName: 'Price:',
                 detailPhoto: 'images/dollar.png',
-                detailInfo: '\$42,000',
+                detailInfo: '\$44,850',
               ),
               Details(
                 detailName: 'Seating:',
@@ -66,7 +66,7 @@ final data = {
               Details(
                 detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '191.9 Inch',
+                detailInfo: '189.7 Inch',
               ),
               Details(
                 detailName: 'Made in:',
@@ -74,9 +74,9 @@ final data = {
                 detailInfo: '1979',
               ),
               Details(
-                detailName: 'Max speed:',
-                detailPhoto: 'images/speedometer.png',
-                detailInfo: '240 Km/h',
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '26.4 gal',
               ),
               Details(
                 detailName: 'Cylinders',
@@ -86,12 +86,12 @@ final data = {
               Details(
                 detailName: 'Horsepower:',
                 detailPhoto: 'images/engine.png',
-                detailInfo: '577 ',
+                detailInfo: '416 hp',
               ),
               Details(
                 detailName: 'Price:',
                 detailPhoto: 'images/dollar.png',
-                detailInfo: '\$156,450',
+                detailInfo: '\$140,950',
               ),
               Details(
                 detailName: 'Seating:',
@@ -120,14 +120,14 @@ final data = {
                 detailInfo: '2013',
               ),
               Details(
-                detailName: 'Max speed:',
-                detailPhoto: 'images/speedometer.png',
-                detailInfo: '250 Km/h',
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '13.5 gal',
               ),
               Details(
                 detailName: 'Cylinder',
                 detailPhoto: 'images/cylinder.png',
-                detailInfo: '4V',
+                detailInfo: 'V4',
               ),
               Details(
                 detailName: 'Horsepower:',
@@ -137,7 +137,7 @@ final data = {
               Details(
                 detailName: 'Price:',
                 detailPhoto: 'images/dollar.png',
-                detailInfo: '\$39,645',
+                detailInfo: '\$40,345',
               ),
               Details(
                 detailName: 'Seating:',
@@ -150,7 +150,54 @@ final data = {
                 detailInfo: 'Automatic manual',
               ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/mercedes-benz/s-class/2021/oem/2021_mercedes-benz_s-class_sedan_s-500-4matic_fq_oem_3_1600x1067.jpg',
+            carName: 'Mercedes S-Class',
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '208.2 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1954',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '22.1 gal',
+              ),
+              Details(
+                detailName: 'Cylinder',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '496 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$125,050',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
@@ -163,10 +210,45 @@ final data = {
             carName: 'Passat',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '193.6 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'january 1973',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity	:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '18.5 gal',
+              ),
+              Details(
+                detailName: 'Cylinder',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '174 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$28,570',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
           ),
           Cars(
@@ -175,24 +257,141 @@ final data = {
             carName: 'Touareg',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '192 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'August 2002',
+              ),
+              Details(
+                detailName: 'Fule tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '23.7 gal',
+              ),
+              Details(
+                detailName: 'Cylinder',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '340 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$71,450 - \$128,400',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'automatic',
+              ),
             ],
           ),
           Cars(
             carImage:
                 'https://images.hgmsites.net/hug/2021-volkswagen-arteon_100814104_h.jpg',
-            carName: 'Arteon ',
+            carName: 'Arteon',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '191.5 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2017',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity	:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '17.4 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '300 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$42,045',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/volkswagen/jetta/2022/oem/2022_volkswagen_jetta_sedan_se_fq_oem_3_815x543.jpg',
+            carName: 'Jetta',
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '186.5 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'August 1979',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity	:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '13.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '158 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$21,510',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '6-speed manual',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
@@ -202,37 +401,142 @@ final data = {
           Cars(
             carImage:
                 'https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/images/car-reviews/first-drives/legacy/99-bmw-m5-cs-2021-official-reveal-hero-front.jpg?itok=NUo_lK53',
-            carName: 'Mercedes',
+            carName: 'M5',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '196.4 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1985',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '20.1 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '600 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$109,900',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'Sport Automatic',
+              ),
             ],
           ),
           Cars(
             carImage:
                 'https://www.topgear.com/sites/default/files/2021/11/BMW%20X4M%20Sao%20Paulo%20Yellow%20013.jpg',
-            carName: 'Mercedes',
+            carName: 'X4',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '187.6 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'July 2014',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '17.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '248 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$53,400',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
           ),
           Cars(
             carImage:
-                'https://cdn.carbuzz.com/gallery-images/2021-bmw-m2-carbuzz-500647.jpg',
-            carName: 'Mercedes',
+                'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/p90481921-1665421743.jpeg?crop=0.813xw:0.610xh;0.187xw,0.316xh&resize=1200:*',
+            carName: 'M2',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '180 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2015',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '13.7 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '453 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$62,200',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '4 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '6-speed manual',
+              ),
             ],
           ),
         ],
@@ -242,32 +546,156 @@ final data = {
         name: "Audi",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://www.topgear.com/sites/default/files/2022/02/1-Audi-Q3-review.jpg',
+            carName: 'Q3',
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '176.6 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2011',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '15.9 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '184 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$37,595',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/audi/rs-5/2023/oem/2023_audi_rs-5_4dr-hatchback_base_fq_oem_1_815.jpg',
+            carName: 'RS5',
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '188.3 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2010',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '15.3 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '444 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$77,295',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/audi/tt-rs/2021/oem/2021_audi_tt-rs_coupe_base_fq_oem_1_815.jpg',
+            carName: 'TTRS',
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '165 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1985',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '14.5 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V5',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '394 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$75,000',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '4 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '6-speed manual',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
-        imageUrl: "images/KIA.png",
+        imageUrl: "",
         name: "The most popular car in Germany in 2021-2022 is Volkswagen",
         carItems: [
           Cars(
             carImage: '',
             carName: '',
-            details: [
-              Details(
-                detailName: '199',
-                detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
-            ],
+            details: [],
           )
         ],
       ),
@@ -279,13 +707,7 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
-            details: [
-              Details(
-                detailName: '199',
-                detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
-            ],
+            details: [],
           )
         ],
       ),

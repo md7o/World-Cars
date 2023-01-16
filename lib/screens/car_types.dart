@@ -9,13 +9,12 @@ class car_types extends StatelessWidget {
     super.key,
     required this.item,
     required this.carItem,
-    required this.detail,
     required this.transitionAnimation,
   });
 
   final WorldCar item;
   final List<Cars> carItem;
-  final List<Details> detail;
+
   final Animation<double> transitionAnimation;
   @override
   Widget build(BuildContext context) {

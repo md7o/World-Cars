@@ -132,7 +132,7 @@ class Brands extends StatelessWidget {
                             physics: const BouncingScrollPhysics(),
                             shrinkWrap: true,
                             scrollDirection: Axis.horizontal,
-                            itemCount: 4,
+                            itemCount: carItem.length,
                             itemBuilder: (BuildContext context, int index) {
                               return InkWell(
                                 splashColor: Colors.transparent,
@@ -145,7 +145,6 @@ class Brands extends StatelessWidget {
                                       return car_types(
                                         item: item[index],
                                         carItem: item[index].carItems,
-                                        detail: carItem[index].details,
                                         transitionAnimation: animation,
                                       );
                                     },
