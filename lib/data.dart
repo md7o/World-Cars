@@ -40,7 +40,7 @@ final data = {
                 detailInfo: '187 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'June 1993',
               ),
@@ -105,7 +105,7 @@ final data = {
                 detailInfo: '189.7 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1979',
               ),
@@ -170,7 +170,7 @@ final data = {
                 detailInfo: '184.6 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2013',
               ),
@@ -239,7 +239,7 @@ final data = {
                 detailInfo: '208.2 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1954',
               ),
@@ -310,7 +310,7 @@ final data = {
                 detailInfo: '193.6 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'january 1973',
               ),
@@ -375,7 +375,7 @@ final data = {
                 detailInfo: '192 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'August 2002',
               ),
@@ -440,7 +440,7 @@ final data = {
                 detailInfo: '191.5 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2017',
               ),
@@ -505,7 +505,7 @@ final data = {
                 detailInfo: '186.5 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'August 1979',
               ),
@@ -576,7 +576,7 @@ final data = {
                 detailInfo: '196.4 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1985',
               ),
@@ -641,7 +641,7 @@ final data = {
                 detailInfo: '187.6 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'July 2014',
               ),
@@ -706,7 +706,7 @@ final data = {
                 detailInfo: '180 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2015',
               ),
@@ -777,7 +777,7 @@ final data = {
                 detailInfo: '176.6 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2011',
               ),
@@ -842,7 +842,7 @@ final data = {
                 detailInfo: '188.3 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2010',
               ),
@@ -907,7 +907,7 @@ final data = {
                 detailInfo: '165 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1985',
               ),
@@ -1020,7 +1020,7 @@ final data = {
                 detailInfo: '182.5 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'November 1966',
               ),
@@ -1085,7 +1085,7 @@ final data = {
                 detailInfo: '192.1 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1982',
               ),
@@ -1150,7 +1150,7 @@ final data = {
                 detailInfo: '195.9 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1994',
               ),
@@ -1215,7 +1215,7 @@ final data = {
                 detailInfo: '172.5 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1978',
               ),
@@ -1294,7 +1294,7 @@ final data = {
                 detailInfo: '196.1 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1976',
               ),
@@ -1359,7 +1359,7 @@ final data = {
                 detailInfo: '184 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1972',
               ),
@@ -1428,7 +1428,7 @@ final data = {
                 detailInfo: '179.8  Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1998',
               ),
@@ -1499,7 +1499,7 @@ final data = {
                 detailInfo: '175.6 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2003',
               ),
@@ -1564,7 +1564,7 @@ final data = {
                 detailInfo: '192.7 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2002',
               ),
@@ -1633,7 +1633,7 @@ final data = {
                 detailInfo: '199.4  Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2006',
               ),
@@ -1708,7 +1708,7 @@ final data = {
                 detailInfo: '192.8 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1980',
               ),
@@ -1777,7 +1777,7 @@ final data = {
                 detailInfo: '192.9  Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1992',
               ),
@@ -1846,7 +1846,7 @@ final data = {
                 detailInfo: '183 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2007',
               ),
@@ -1973,7 +1973,7 @@ final data = {
                 detailInfo: '210.0  Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1991',
               ),
@@ -2042,7 +2042,7 @@ final data = {
                 detailInfo: '231.9 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2007',
               ),
@@ -2107,7 +2107,7 @@ final data = {
                 detailInfo: '182.3 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'August 2009',
               ),
@@ -2176,7 +2176,7 @@ final data = {
                 detailInfo: '216.8 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'November 1966',
               ),
@@ -2247,7 +2247,7 @@ final data = {
                 detailInfo: '188.9  Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'March 1964',
               ),
@@ -2316,7 +2316,7 @@ final data = {
                 detailInfo: '198.8 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1991',
               ),
@@ -2385,7 +2385,7 @@ final data = {
                 detailInfo: '210 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1996',
               ),
@@ -2460,7 +2460,7 @@ final data = {
                 detailInfo: '182.3 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1953',
               ),
@@ -2533,7 +2533,7 @@ final data = {
                 detailInfo: '210.7 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1994',
               ),
@@ -2594,7 +2594,7 @@ final data = {
                 detailInfo: '231.7 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1953',
               ),
@@ -2665,7 +2665,7 @@ final data = {
                 detailInfo: '181.4 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: 'August 2019',
               ),
@@ -2734,7 +2734,7 @@ final data = {
                 detailInfo: '210 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '1997',
               ),
@@ -2803,7 +2803,7 @@ final data = {
                 detailInfo: '199.3 Inch',
               ),
               Details(
-                detailName: 'Made in:',
+                detailName: 'Production:',
                 detailPhoto: 'images/backTime.png',
                 detailInfo: '2002',
               ),
@@ -2914,114 +2914,793 @@ final data = {
       ),
     ],
   ),
-  // Category(
-  //   img: "images/KoreaC.png",
-  //   CountryId: "images/korea.png",
-  //   label: "Korea",
-  //   items: const [
-  //     WorldCar(
-  //       imageUrl: "images/KIA.png",
-  //       name: "KIA",
-  //       carItems: [
-  //         Cars(
-  //           carImage: 'images/mercedes.png',
-  //           carName: 'Mercedes',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //     WorldCar(
-  //       imageUrl: "images/Hyundai.png",
-  //       name: "Hyundai",
-  //       carItems: [
-  //         Cars(
-  //           carImage: 'images/mercedes.png',
-  //           carName: 'Mercedes',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //     WorldCar(
-  //       imageUrl: "images/ssang.png",
-  //       name: "SsangYong ",
-  //       carItems: [
-  //         Cars(
-  //           carImage: 'images/mercedes.png',
-  //           carName: 'Mercedes',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //     WorldCar(
-  //       imageUrl: "images/Genesis.png",
-  //       name: "Genesis",
-  //       carItems: [
-  //         Cars(
-  //           carImage: 'images/mercedes.png',
-  //           carName: 'Mercedes',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //     WorldCar(
-  //       imageUrl: "images/KIA.png",
-  //       name: "The most popular car in South Korea in 2021-2022 is Hyundai.",
-  //       carItems: [
-  //         Cars(
-  //           carImage: '',
-  //           carName: '',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //     WorldCar(
-  //       imageUrl: "images/kia_founder.png",
-  //       name:
-  //           "Kia's humble history dates back to 1944. Founder Kim Chul Ho was born in Korea in 1905.",
-  //       carItems: [
-  //         Cars(
-  //           carImage: '',
-  //           carName: '',
-  //           details: [
-  //             Details(
-  //               detailName: '199',
-  //               detailPhoto: 'images/ruler.png',
-  //               detailInfo: '199',
-  //             )
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //   ],
-  // ),
+  Category(
+    img: "images/KoreaC.png",
+    CountryId: "images/korea.png",
+    label: "Korea",
+    items: const [
+      WorldCar(
+        imageUrl: "images/KIA.png",
+        name: "Kia",
+        carItems: [
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_fq_oem_2_815x543.jpg',
+            carName: 'Sportage',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_fq_oem_4_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_rq_oem_4_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_fq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/sportage/2023/oem/2023_kia_sportage_4dr-suv_x-pro_i_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '183.5  Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1993',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '14.3 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '187 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$27,615',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_fq_oem_8_815x543.jpg',
+            carName: 'Stinger',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_rq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/stinger/2022/oem/2022_kia_stinger_sedan_gt-line_ri_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '183.5  Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2017',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '190.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '300 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$37,865',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_fq_oem_1_815x543.jpg',
+            carName: 'EV6',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_r_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_s_oem_4_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_d_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/kia/ev6/2023/oem/2023_kia_ev6_4dr-suv_gt-line_ri_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '184.3 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2021',
+              ),
+              Details(
+                detailName: 'Battery capacity:',
+                detailPhoto: 'images/car-battery.png',
+                detailInfo: '	77.4 kWh',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$50,025',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '1-speed direct drive',
+              ),
+            ],
+          ),
+          // Cars(
+          //   carImage:
+          //       'https://media.ed.edmunds-media.com/kia/sorento/2022/oem/2022_kia_sorento_4dr-suv_sx_fq_oem_1_815x543.jpg',
+          //   carName: 'Sorento',
+          //   imageSlide: [
+          //     Slidering(
+          //       dimensions:
+          //           'https://media.ed.edmunds-media.com/kia/sorento/2022/oem/2022_kia_sorento_4dr-suv_sx_fq_oem_2_815x543.jpg',
+          //     ),
+          //     Slidering(
+          //       dimensions:
+          //           'https://media.ed.edmunds-media.com/kia/sorento/2022/oem/2022_kia_sorento_4dr-suv_sx_s_oem_1_815x543.jpg',
+          //     ),
+          //     Slidering(
+          //       dimensions:
+          //           'https://media.ed.edmunds-media.com/kia/sorento/2022/oem/2022_kia_sorento_4dr-suv_sx_d_oem_1_815x543.jpg',
+          //     ),
+          //     Slidering(
+          //       dimensions:
+          //           'https://media.ed.edmunds-media.com/kia/sorento/2022/oem/2022_kia_sorento_4dr-suv_sx_i_oem_1_815x543.jpg',
+          //     ),
+          //   ],
+          //   details: [
+          //     Details(
+          //       detailName: 'Lenght:',
+          //       detailPhoto: 'images/ruler.png',
+          //       detailInfo: '189.0 Inch',
+          //     ),
+          //     Details(
+          //       detailName: 'Production:',
+          //       detailPhoto: 'images/backTime.png',
+          //       detailInfo: '2002',
+          //     ),
+          //     Details(
+          //       detailName: 'Fuel tank capacity:',
+          //       detailPhoto: 'images/tank.png',
+          //       detailInfo: '17.7 gal',
+          //     ),
+          //     Details(
+          //       detailName: 'Cylinder:',
+          //       detailPhoto: 'images/cylinder.png',
+          //       detailInfo: 'V4',
+          //     ),
+          //     Details(
+          //       detailName: 'Horsepower:',
+          //       detailPhoto: 'images/engine.png',
+          //       detailInfo: '191 hp',
+          //     ),
+          //     Details(
+          //       detailName: 'Price:',
+          //       detailPhoto: 'images/dollar.png',
+          //       detailInfo: '\$31,415',
+          //     ),
+          //     Details(
+          //       detailName: 'Seating:',
+          //       detailPhoto: 'images/seat.png',
+          //       detailInfo: '7 Seats',
+          //     ),
+          //     Details(
+          //       detailName: 'Transmission:',
+          //       detailPhoto: 'images/transmission.png',
+          //       detailInfo: '8-speed automatic',
+          //     ),
+          //   ],
+          // ),
+        ],
+      ),
+      WorldCar(
+        imageUrl: "images/Hyundai.png",
+        name: "Hyundai",
+        carItems: [
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/hyundai/elantra/2021/oem/2021_hyundai_elantra_sedan_limited_fq_oem_10_815x543.jpg',
+            carName: 'Elantra',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/elantra/2021/oem/2021_hyundai_elantra_sedan_limited_f_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/elantra/2021/oem/2021_hyundai_elantra_sedan_limited_r_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/elantra/2021/oem/2021_hyundai_elantra_sedan_limited_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/elantra/2021/oem/2021_hyundai_elantra_sedan_limited_i_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '184.1 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1990',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '12.4 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '147 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$21,595',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'variable-speed automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/hyundai/sonata/2021/oem/2021_hyundai_sonata_sedan_limited_fq_oem_6_815x543.jpg',
+            carName: 'Sonata',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/sonata/2021/oem/2021_hyundai_sonata_sedan_limited_f_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/sonata/2021/oem/2021_hyundai_sonata_sedan_limited_r_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/sonata/2021/oem/2021_hyundai_sonata_sedan_limited_fq_oem_4_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/sonata/2021/oem/2021_hyundai_sonata_sedan_n-line_i_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '192.9 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1985',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '14.8 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '191 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$26,045',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_fq_oem_1_815x543.jpg',
+            carName: 'Kona ',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_rq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_limited_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/hyundai/kona/2022/oem/2022_hyundai_kona_4dr-suv_n-line_rsd_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '165.6 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2017',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '13.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '147 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$23,285',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'variable-speed automatic',
+              ),
+            ],
+          ),
+        ],
+      ),
+      WorldCar(
+        imageUrl: "images/Genesis.png",
+        name: "Genesis",
+        carItems: [
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_fq_oem_1_815x543.jpg',
+            carName: 'GV60',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_fq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_rq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv60/2023/oem/2023_genesis_gv60_4dr-suv_performance_detail_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '177.8 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2021',
+              ),
+              Details(
+                detailName: 'Battery capacity:',
+                detailPhoto: 'images/car-battery.png',
+                detailInfo: '	77.4 kWh',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$60,385',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '1-speed direct drive',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_fq_oem_1_815.jpg',
+            carName: 'GV80',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/gv80/2021/oem/2021_genesis_gv80_4dr-suv_35t-advanced-plus_detail_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '194.7 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2020',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '21.1 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '300 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$56,645',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_fq_oem_3_815x543.jpg',
+            carName: 'G90',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_fq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_rbdg_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_detail_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/genesis/g90/2020/oem/2020_genesis_g90_sedan_50-ultimate_ri_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '204.9 Inch',
+              ),
+              Details(
+                detailName: 'Production:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2015',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '21.9 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '365 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$76,045',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+        ],
+      ),
+      WorldCar(
+        imageUrl: "images/ssang.png",
+        name: "SsangYong ",
+        carItems: [
+          Cars(
+            carImage: 'images/mercedes.png',
+            carName: 'Mercedes',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_i_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          )
+        ],
+      ),
+      WorldCar(
+        imageUrl: "images/KIA.png",
+        name: "The most popular car in South Korea in 2021-2022 is Hyundai.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_i_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          )
+        ],
+      ),
+      WorldCar(
+        imageUrl: "images/kia_founder.png",
+        name:
+            "Kia's humble history dates back to 1944. Founder Kim Chul Ho was born in Korea in 1905.",
+        carItems: [
+          Cars(
+            carImage: '',
+            carName: '',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_i_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: '199',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199',
+              )
+            ],
+          )
+        ],
+      ),
+    ],
+  ),
 };
