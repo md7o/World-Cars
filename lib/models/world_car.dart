@@ -15,11 +15,21 @@ class Cars {
   final String carImage;
   final String carName;
   final List<Details> details;
+  final List<Slidering> imageSlide;
 
   const Cars({
     required this.carImage,
     required this.carName,
     required this.details,
+    required this.imageSlide,
+  });
+}
+
+class Slidering {
+  final String dimensions;
+
+  const Slidering({
+    required this.dimensions,
   });
 }
 

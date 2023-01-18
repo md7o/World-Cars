@@ -131,8 +131,20 @@ class car_types extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(10),
                                 child: CachedNetworkImage(
                                   imageUrl: carItem[index].carImage,
-                                  placeholder: (context, url) =>
-                                      const CircularProgressIndicator(),
+                                  placeholder: (context, url) => Center(
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 40),
+                                      child: Container(
+                                        color: Colors.transparent,
+                                        height: 100,
+                                        width: 100,
+                                        child: const CircularProgressIndicator(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                   errorWidget: (context, url, error) =>
                                       const Icon(Icons.error),
                                   imageBuilder: ((context, imageProvider) {
@@ -156,6 +168,7 @@ class car_types extends StatelessWidget {
                                       (context, animation, secondaryAnimation) {
                                     return CarDetails(
                                       detail: carItem[index].details,
+                                      imageSlides: carItem[index].imageSlide,
                                       carItem: carItem[index],
                                       transitionAnimation: animation,
                                     );
