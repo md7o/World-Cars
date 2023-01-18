@@ -28,41 +28,6 @@ class _CarDetailsState extends State<CarDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.transparent,
-      //   centerTitle: true,
-      //   elevation: 0,
-      //   toolbarHeight: 35,
-      //   leading: ScaleTransition(
-      //     scale: Tween<double>(begin: 0, end: 1).animate(
-      //       CurvedAnimation(
-      //         parent: widget.transitionAnimation,
-      //         curve: Curves.easeOutCubic,
-      //       ),
-      //     ),
-      //     child: InkWell(
-      //       splashColor: Colors.transparent,
-      //       highlightColor: Colors.transparent,
-      //       onTap: () {
-      //         Navigator.pop(context);
-      //       },
-      //       child: Padding(
-      //         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-      //         child: Container(
-      //           decoration: BoxDecoration(
-      //             color: const Color(0xFF1B2859),
-      //             borderRadius: BorderRadius.circular(10),
-      //           ),
-      //           child: const Icon(
-      //             Icons.arrow_back_ios_rounded,
-      //             color: Colors.blue,
-      //             size: 18,
-      //           ),
-      //         ),
-      //       ),
-      //     ),
-      //   ),
-      // ),
       body: Column(
         children: [
           ScaleTransition(

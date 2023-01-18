@@ -1941,16 +1941,277 @@ final data = {
         name: "GMC",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_fq_oem_1_1600x1067.jpg',
+            carName: 'Yukon',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_fq_oem_6_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_rq_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_s_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_i_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/yukon/2023/oem/2023_gmc_yukon_4dr-suv_at4_d_oem_1_1600x1067.jpg',
+              ),
+            ],
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '210.0  Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1991',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '24.0 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '355  hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$59,295',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '8 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_fq_oem_1_1600x1067.jpg',
+            carName: 'Sierra 1500 Crew',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_fq_oem_3_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_rq_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_fq_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_d_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/sierra-1500/2022/oem/2022_gmc_sierra-1500_crew-cab-pickup_at4x_i_oem_1_1600x1067.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '231.9 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2007',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '24.0 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '310 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$43,895',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '6 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://www.gmc.com/content/dam/gmc/na/us/english/index/vehicles/2023/suvs/terrain-mov/01-images/2023-terrain-denali-s-23PGTN00058.jpg?imwidth=960',
+            carName: 'Terrain',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://www.gmc.com/content/dam/gmc/na/us/english/index/vehicles/2023/suvs/terrain-mov/terrain-denali/01-images/2023-terrain-denali-s-23PGTN00058.jpg?imwidth=960',
+              ),
+              Slidering(
+                dimensions:
+                    'https://www.gmc.com/content/dam/gmc/na/us/english/index/vehicles/2023/suvs/terrain-mov/01-images/2023-terrain-slt-s-23PGTN00074.jpg?imwidth=960',
+              ),
+              Slidering(
+                dimensions:
+                    'https://thenewswheel.com/wp-content/uploads/2020/09/2020-gmc-terrain-1200x674.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/terrain/2022/oem/2022_gmc_terrain_4dr-suv_at4_d_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '182.3 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'August 2009',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '14.9 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '175 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$29,795',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_fq_oem_8_815x543.jpg',
+            carName: 'HUMMER EV',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_rq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_i_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/gmc/hummer-ev/2022/oem/2022_gmc_hummer-ev_crew-cab-pickup_edition-1_ri_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '216.8 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'November 1966',
+              ),
+              Details(
+                detailName: 'Battery capacity:',
+                detailPhoto: 'images/car-battery.png',
+                detailInfo: '200 kWh',
+              ),
+              Details(
+                detailName: 'Engine Type:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'Electric',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '169 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$110,295',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '1-speed direct drive',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
@@ -1958,33 +2219,417 @@ final data = {
         name: "Ford",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_fq_oem_2_815x543.jpg',
+            carName: 'Mustang',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_mach-1_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_i_oem_2_815x543.jpg',
+              ),
+            ],
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '188.9  Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'March 1964',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '15.5 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '310 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$29,165',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '4 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '6-speed manual',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_fq_oem_2_815x543.jpg',
+            carName: 'Explorer',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_detail_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '198.8 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1991',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '17.9 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '300 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$38,255',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '7 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: '10-speed automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_fq_oem_1_815x543.jpg',
+            carName: 'Expedition',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/ford/expedition/2022/oem/2022_ford_expedition_4dr-suv_limited_i_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '210 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1996',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '23.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '380 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$54,700',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
         imageUrl: "images/Sheforleh.png",
-        name: "Sheforleh",
+        name: "Chevrolet",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_fq_oem_6_815x543.jpg',
+            carName: 'Corvette',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_fq_oem_6_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_rq_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_s_oem_2_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/corvette/2020/oem/2020_chevrolet_corvette_coupe_stingray_detail_oem_1_815x543.jpg',
+              ),
+            ],
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '182.3 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1953',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '18.5 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '490 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$65,595',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '2 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'automated manual',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_high-country_fq_oem_2_1600x1067.jpg',
+            carName: 'Tahoe',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_high-country_f_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_high-country_rq_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_high-country_fq_oem_3_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_premier_d_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_rst_d_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/tahoe/2022/oem/2022_chevrolet_tahoe_4dr-suv_rst_rsd_oem_2_1600x1067.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '210.7 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1994',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '24.0 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V8',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '355 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$52,695',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '9 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/chevrolet/silverado-1500-limited/2022/oem/2022_chevrolet_silverado-1500-limited_crew-cab-pickup_lt_fq_oem_1_1600x1067.jpg',
+            carName: 'Silverado 1500 Limited Double Cab',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/silverado-1500-limited/2022/oem/2022_chevrolet_silverado-1500-limited_crew-cab-pickup_ltz_f_oem_1_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/chevrolet/silverado-1500-limited/2022/oem/2022_chevrolet_silverado-1500-limited_crew-cab-pickup_lt_rq_oem_3_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1600x900/format/jpg/quality/85/https://s.aolcdn.com/os/ab/_cms/2021/09/08155403/2022-Chevrolet-Silverado-HighCountry-015.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '231.7 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1953',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '24.0  gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '310 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$35,995',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '6 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
@@ -1992,16 +2637,208 @@ final data = {
         name: "Lincoln ",
         carItems: [
           Cars(
-            carImage: 'images/mercedes.png',
-            carName: 'Mercedes',
+            carImage:
+                'https://media.ed.edmunds-media.com/lincoln/corsair/2021/oem/2021_lincoln_corsair_4dr-suv_grand-touring_fq_oem_4_500.jpg',
+            carName: ' Corsair',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/corsair/2021/oem/2021_lincoln_corsair_4dr-suv_reserve_fq_oem_4_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/corsair/2021/oem/2021_lincoln_corsair_4dr-suv_grand-touring_rq_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/corsair/2021/oem/2021_lincoln_corsair_4dr-suv_reserve_fq_oem_2_1600x1067.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/corsair/2021/oem/2021_lincoln_corsair_4dr-suv_reserve_d_oem_1_1600x1067.jpg',
+              ),
+            ],
             details: [
               Details(
-                detailName: '199',
+                detailName: 'Lenght:',
                 detailPhoto: 'images/ruler.png',
-                detailInfo: '199',
-              )
+                detailInfo: '181.4 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: 'August 2019',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '16.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V4',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '250 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$39,885',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '5 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
             ],
-          )
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_black-label_fq_oem_2_815x543.jpg',
+            carName: 'Navigator',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_black-label_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_reserve_rbdg_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_black-label_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_black-label_d_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/navigator/2022/oem/2022_lincoln_navigator_4dr-suv_black-label_i_oem_1_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '210 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '1997',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '23.6 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '440 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$79,330',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '7 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
+          Cars(
+            carImage:
+                'https://media.ed.edmunds-media.com/lincoln/aviator/2020/oem/2020_lincoln_aviator_4dr-suv_black-label_fq_oem_3_815x543.jpg',
+            carName: ' Aviator ',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/aviator/2020/oem/2020_lincoln_aviator_4dr-suv_grand-touring_fq_oem_7_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/aviator/2020/oem/2020_lincoln_aviator_4dr-suv_black-label_rq_oem_3_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/aviator/2020/oem/2020_lincoln_aviator_4dr-suv_grand-touring_fq_oem_4_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://hips.hearstapps.com/autoweek/assets/s3fs-public/2019-10/a-29.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/lincoln/aviator/2020/oem/2020_lincoln_aviator_4dr-suv_black-label_detail_oem_2_815x543.jpg',
+              ),
+            ],
+            details: [
+              Details(
+                detailName: 'Lenght:',
+                detailPhoto: 'images/ruler.png',
+                detailInfo: '199.3 Inch',
+              ),
+              Details(
+                detailName: 'Made in:',
+                detailPhoto: 'images/backTime.png',
+                detailInfo: '2002',
+              ),
+              Details(
+                detailName: 'Fuel tank capacity:',
+                detailPhoto: 'images/tank.png',
+                detailInfo: '20.2 gal',
+              ),
+              Details(
+                detailName: 'Cylinder:',
+                detailPhoto: 'images/cylinder.png',
+                detailInfo: 'V6',
+              ),
+              Details(
+                detailName: 'Horsepower:',
+                detailPhoto: 'images/engine.png',
+                detailInfo: '400 hp',
+              ),
+              Details(
+                detailName: 'Price:',
+                detailPhoto: 'images/dollar.png',
+                detailInfo: '\$56,535',
+              ),
+              Details(
+                detailName: 'Seating:',
+                detailPhoto: 'images/seat.png',
+                detailInfo: '8 Seats',
+              ),
+              Details(
+                detailName: 'Transmission:',
+                detailPhoto: 'images/transmission.png',
+                detailInfo: 'shiftable automatic',
+              ),
+            ],
+          ),
         ],
       ),
       WorldCar(
@@ -2011,6 +2848,24 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_d_oem_1_815x543.jpg',
+              ),
+            ],
             details: [
               Details(
                 detailName: '199',
@@ -2029,6 +2884,24 @@ final data = {
           Cars(
             carImage: '',
             carName: '',
+            imageSlide: [
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_f_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_rq_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_s_oem_1_815x543.jpg',
+              ),
+              Slidering(
+                dimensions:
+                    'https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_d_oem_1_815x543.jpg',
+              ),
+            ],
             details: [
               Details(
                 detailName: '199',
