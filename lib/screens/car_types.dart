@@ -19,44 +19,42 @@ class car_types extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        elevation: 0,
-        toolbarHeight: 35,
-        leading: InkWell(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
-            child: ScaleTransition(
-              scale: Tween<double>(begin: 0, end: 1).animate(
-                CurvedAnimation(
-                  parent: transitionAnimation,
-                  curve: Curves.easeOutCubic,
-                ),
-              ),
-              child: Container(
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Icon(
-                    Icons.arrow_back_ios_rounded,
-                    color: Colors.purple.shade200,
-                    size: 18,
-                  )),
-            ),
-          ),
-        ),
-      ),
       body: Column(
         children: [
-          //  ==============================================================
-
+          ScaleTransition(
+            scale: Tween<double>(begin: 0, end: 1).animate(
+              CurvedAnimation(
+                parent: transitionAnimation,
+                curve: Curves.easeOutCubic,
+              ),
+            ),
+            child: Row(
+              children: [
+                InkWell(
+                  splashColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 35, left: 25),
+                    child: Container(
+                        width: 30,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Icon(
+                          Icons.arrow_back_ios_rounded,
+                          color: Colors.purple.shade200,
+                          size: 18,
+                        )),
+                  ),
+                ),
+              ],
+            ),
+          ),
           AnimatedBuilder(
             animation: transitionAnimation,
             builder: (context, child) {
@@ -91,7 +89,6 @@ class car_types extends StatelessWidget {
               ],
             ),
           ),
-
           const SizedBox(
             height: 10,
           ),

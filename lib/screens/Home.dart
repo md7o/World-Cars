@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     image: CachedNetworkImageProvider(
-                      "https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif",
+                      "https://cutewallpaper.org/cdn-cgi/mirage/dd19f2d06ebc24f541f142b37b4289ffa7de722a7607e39984c5c6dd4ce8defd/1280/21/galaxy-background-gif/About-Massive-Galaxy-Online-Space-Trading-Adventure-Game.gif",
                     ),
                     fit: BoxFit.cover),
                 color: Theme.of(context).primaryColor,
