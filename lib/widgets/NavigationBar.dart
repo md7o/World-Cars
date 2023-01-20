@@ -62,39 +62,7 @@ class _naviBarState extends State<naviBar> {
             size: 30,
           ),
         ],
-        // child: Padding(
-        //   padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-        //   child: GNav(
-        //     iconSize: 28,
-        //     duration: const Duration(milliseconds: 500),
-        //     tabBorderRadius: 10,
-        //     backgroundColor: Theme.of(context).primaryColor,
-        //     color: Colors.white,
-        //     activeColor: Colors.white,
-        //     tabBackgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        //     gap: 8,
-        //     onTabChange: navigatedBottomBar,
-        //     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-        //     tabs: const [
-        //       GButton(
-        //         icon: Icons.home,
-        //         text: 'Home',
-        //       ),
-        //       GButton(
-        //         icon: Icons.star,
-        //         text: 'Famous',
-        //       ),
-        //       GButton(
-        //         icon: Icons.settings,
-        //         text: 'Setting',
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }
 }
-
-// debugShowCheckedModeBanner: false,
-//       home: Home(),

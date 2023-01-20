@@ -69,7 +69,34 @@ class _HomeState extends State<Home> {
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
                   children: [
-                    // ignore: unused_local_variable
+                    const Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+
+                      // child: TextField(
+                      //   decoration: InputDecoration(
+                      //     enabledBorder: OutlineInputBorder(
+                      //       borderSide: const BorderSide(
+                      //         color: Colors.transparent,
+                      //       ),
+                      //       borderRadius: BorderRadius.circular(20),
+                      //     ),
+                      //     focusedBorder: OutlineInputBorder(
+                      //       borderSide: const BorderSide(
+                      //         color: Colors.transparent,
+                      //       ),
+                      //       borderRadius: BorderRadius.circular(20),
+                      //     ),
+                      //     filled: false,
+                      //     fillColor: Theme.of(context).primaryColor,
+                      //     prefixIcon: const Icon(
+                      //       Icons.search,
+                      //       color: Colors.white,
+                      //     ),
+                      //     hintText: "Enter car name",
+                      //     hintStyle: const TextStyle(color: Colors.white54),
+                      //   ),
+                      // ),
+                    ),
                     for (final category in data)
                       for (WorldCar item in (category.items.length > 1
                           ? category.items.sublist(0, 1)
