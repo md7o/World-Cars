@@ -54,9 +54,9 @@ class _CarDetailsState extends State<CarDetails> {
                           color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back_ios_rounded,
-                          color: Colors.purple.shade200,
+                          color: Colors.white,
                           size: 18,
                         )),
                   ),

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 import 'package:world_car/screens/car_details.dart';
 
+// ignore: camel_case_types
 class car_types extends StatelessWidget {
   const car_types({
     super.key,
@@ -45,9 +46,9 @@ class car_types extends StatelessWidget {
                           color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back_ios_rounded,
-                          color: Colors.purple.shade200,
+                          color: Colors.white,
                           size: 18,
                         )),
                   ),

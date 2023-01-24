@@ -10,6 +10,7 @@ class Brands extends StatelessWidget {
     super.key,
     required this.item,
     required this.label,
+    // ignore: non_constant_identifier_names
     required this.CountryId,
     required this.carItem,
     required this.transitionAnimation,
@@ -17,6 +18,7 @@ class Brands extends StatelessWidget {
   final List<WorldCar> item;
   final List<Cars> carItem;
   final String label;
+  // ignore: non_constant_identifier_names
   final String CountryId;
   final Animation<double> transitionAnimation;
   @override
@@ -52,9 +54,9 @@ class Brands extends StatelessWidget {
                         color: Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios_rounded,
-                        color: Colors.purple.shade200,
+                        color: Colors.white,
                         size: 18,
                       ),
                     ),
@@ -240,7 +242,7 @@ class Brands extends StatelessWidget {
                                                               const TextStyle(
                                                                   color: Colors
                                                                       .white,
-                                                                  fontSize: 17,
+                                                                  fontSize: 16,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold),

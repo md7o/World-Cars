@@ -19,9 +19,9 @@ class MyThemes {
     iconTheme: const IconThemeData(color: Colors.white),
   );
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: const Color(0xFFC9D4FF),
+    scaffoldBackgroundColor: const Color(0xFFA494D0),
     colorScheme: const ColorScheme.light(),
-    primaryColor: const Color(0xFF8097F1),
-    iconTheme: const IconThemeData(color: Color(0xFF2C2348)),
+    primaryColor: const Color(0xFF7C68B4),
+    iconTheme: const IconThemeData(color: Colors.white),
   );
 }

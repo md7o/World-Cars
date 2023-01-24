@@ -71,7 +71,7 @@ class BestSelling extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
-            backgroundColor: const Color(0xFF2C2348),
+            backgroundColor: Theme.of(context).primaryColor,
             pinned: false,
             shape: const ContinuousRectangleBorder(
               borderRadius: BorderRadius.vertical(
@@ -96,7 +96,7 @@ class BestSelling extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 100 * 25.5,
+              height: 100 * 24.5,
               child: Column(
                 children: [
                   Expanded(
