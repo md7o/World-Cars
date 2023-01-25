@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.world_car">
+    package="com.world.cars.worldcars">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="world_car"
+        android:label="World Cars"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon"
         >
