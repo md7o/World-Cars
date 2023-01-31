@@ -14,7 +14,10 @@
 World Cars is an app for cars, consisting of three pages: the home page, best sellers, and settings, and the app is designed to be simple and clear to the user, Firstly, on the home page 4 countries have been added that include their own cars, such as the United States has Ford, Japan has Toyota, etc., Finaly, all the cars shown In the application it has general information and pictures of the car from more than one angle.
 
 ## Excerpt from the app
-<img src="https://user-images.githubusercontent.com/102732045/202947527-572b2903-f69e-45c0-bfad-7b0fac777d37.gif"  width="300"/> 
+<p>
+<img src="https://user-images.githubusercontent.com/102732045/215865521-279ce804-7c38-44dc-a8fc-bc183ae4fe74.gif" atl="Home" width="200"/>
+<img src="https://user-images.githubusercontent.com/102732045/215865712-be2e5f39-a7e9-484a-8313-a3e66a08b46c.gif" atl="Brand" width="200"/>
+</p>
 
 
 ## For help and proposals
