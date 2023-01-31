@@ -1,10 +1,7 @@
 # World Cars App
 
 <p>
-  <a href="https://apps.apple.com/sa/app/نور-noor/id1463334485">
-    <img src="https://user-images.githubusercontent.com/41123719/117558302-db848980-b084-11eb-8ef8-1dac2eb5ea56.png" atl="app-store-badge" width="125"/>     
-  </a>
-  <a href="https://play.google.com/store/apps/details?id=com.noor.sa">
+  <a href="https://play.google.com/store/apps/details?id=com.world.cars.worldcars">
     <img src="https://user-images.githubusercontent.com/41123719/117558323-243c4280-b085-11eb-857d-219e2c9d88c6.png" atl="google-play-badge" width="125"/>     
   </a>
 </p>
