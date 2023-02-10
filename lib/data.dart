@@ -566,7 +566,7 @@ final data = {
               ),
               Slidering(
                 dimensions:
-                    'https://media.ed.edmunds-media.com/bmw/m5/2021/oem/2021_bmw_m5_sedan_base_d_oem_1_1600x1067.jpgw',
+                    'https://media.ed.edmunds-media.com/bmw/m5/2021/oem/2021_bmw_m5_sedan_base_d_oem_1_1600x1067.jpg',
               ),
             ],
             details: [
@@ -2294,7 +2294,7 @@ final data = {
               ),
               Slidering(
                 dimensions:
-                    'https://media.ed.edmunds-media.com/ford/mustang/2022/oem/2022_ford_mustang_coupe_gt-premium_rq_oem_3_815x543.jpg',
+                    'https://media.ed.edmunds-media.com/ford/explorer/2021/oem/2021_ford_explorer_4dr-suv_king-ranch_s_oem_1_1280x855.jpg',
               ),
               Slidering(
                 dimensions:
