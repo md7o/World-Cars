@@ -76,169 +76,128 @@ class BestSelling extends StatelessWidget {
       ),
     ];
 
-    return Scrollbar(
-      thickness: 3,
-      child: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverAppBar(
-            backgroundColor: Theme.of(context).primaryColor,
-            pinned: false,
-            shape: const ContinuousRectangleBorder(
-              borderRadius: BorderRadius.vertical(
-                bottom: Radius.circular(80),
-              ),
-            ),
-            title: Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Center(
-                child: Text(
-                  "Best selling cars worldwide",
-                  style: GoogleFonts.josefinSans(
-                    textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal),
-                  ),
-                ),
-              ),
-            ),
-            expandedHeight: 90,
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 100 * 24.5,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        children: popular.map(
-                          (po) {
-                            return Padding(
-                              padding: const EdgeInsets.only(
-                                  right: 20, left: 20, bottom: 40),
-                              child: Stack(
-                                children: [
-                                  Positioned.fill(
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: CachedNetworkImage(
-                                        imageUrl: po.backgroundImg,
-                                        fit: BoxFit.cover,
-                                        placeholder: (context, url) => Center(
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                bottom: 40),
-                                            child: Container(
-                                              color: Colors.transparent,
-                                              height: 100,
-                                              width: 100,
-                                              child:
-                                                  const CircularProgressIndicator(
-                                                color: Colors.white,
-                                              ),
-                                            ),
-                                          ),
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Scrollbar(
+              child: ListView(
+                  physics: const BouncingScrollPhysics(),
+                  children: popular.map(
+                    (po) {
+                      return Padding(
+                        padding: const EdgeInsets.only(
+                            right: 20, left: 20, bottom: 40),
+                        child: Stack(
+                          children: [
+                            Positioned.fill(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: CachedNetworkImage(
+                                  imageUrl: po.backgroundImg,
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) => Center(
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsets.only(bottom: 40),
+                                      child: Container(
+                                        color: Colors.transparent,
+                                        height: 100,
+                                        width: 100,
+                                        child: const CircularProgressIndicator(
+                                          color: Colors.white,
                                         ),
                                       ),
                                     ),
                                   ),
-                                  Container(
-                                    height: 200,
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      borderRadius: const BorderRadius.only(
-                                        bottomLeft: Radius.circular(10),
-                                        bottomRight: Radius.circular(10),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(10),
+                                  bottomRight: Radius.circular(10),
+                                ),
+                                gradient: LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  colors: [
+                                    Colors.black.withOpacity(0.7),
+                                    Colors.transparent
+                                  ],
+                                ),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 10,
+                                        horizontal: 10,
                                       ),
-                                      gradient: LinearGradient(
-                                        begin: Alignment.bottomCenter,
-                                        end: Alignment.topCenter,
-                                        colors: [
-                                          Colors.black.withOpacity(0.7),
-                                          Colors.transparent
-                                        ],
+                                      child: Text(
+                                        po.title,
+                                        style: GoogleFonts.comfortaa(
+                                          textStyle: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        textAlign: TextAlign.left,
                                       ),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(10),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              vertical: 10,
-                                              horizontal: 10,
-                                            ),
-                                            child: Text(
-                                              po.title,
-                                              style: GoogleFonts.comfortaa(
-                                                textStyle: const TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          width: 180,
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                (const BorderRadius.only(
+                                              bottomLeft: Radius.circular(10),
+                                              bottomRight: Radius.circular(30),
+                                              topRight: Radius.circular(30),
+                                              topLeft: Radius.circular(10),
+                                            )),
+                                            color: Colors.green.shade500,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 10),
+                                          child: Text(
+                                            po.selling,
+                                            style: GoogleFonts.comfortaa(
+                                              textStyle: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold,
                                               ),
-                                              textAlign: TextAlign.left,
                                             ),
                                           ),
-                                          Row(
-                                            children: [
-                                              Container(
-                                                width: 180,
-                                                height: 20,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      (const BorderRadius.only(
-                                                    bottomLeft:
-                                                        Radius.circular(10),
-                                                    bottomRight:
-                                                        Radius.circular(30),
-                                                    topRight:
-                                                        Radius.circular(30),
-                                                    topLeft:
-                                                        Radius.circular(10),
-                                                  )),
-                                                  color: Colors.green.shade500,
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 10),
-                                                child: Text(
-                                                  po.selling,
-                                                  style: GoogleFonts.comfortaa(
-                                                    textStyle: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 20,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            );
-                          },
-                        ).toList()),
-                  ),
-
-                  // country
-                ],
-              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ).toList()),
             ),
           ),
+
+          // country
         ],
       ),
     );

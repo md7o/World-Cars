@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, unused_local_variable
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
@@ -76,7 +77,7 @@ class Brands extends StatelessWidget {
                     Column(
                       children: [
                         SizedBox(
-                          height: MediaQuery.of(context).size.width / 4.5,
+                          height: MediaQuery.of(context).size.width / 6.5,
                         ),
                         AnimatedBuilder(
                           animation: transitionAnimation,
@@ -99,8 +100,8 @@ class Brands extends StatelessWidget {
                             padding: const EdgeInsets.only(left: 20),
                             child: Row(
                               children: [
-                                Image.asset(
-                                  CountryId,
+                                CachedNetworkImage(
+                                  imageUrl: CountryId,
                                   width: 45,
                                 ),
                                 const SizedBox(

@@ -70,24 +70,26 @@ class car_types extends StatelessWidget {
                 child: child,
               );
             },
-            child: Column(
-              children: [
-                Image.asset(
-                  item.imageUrl,
-                  width: 45,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  item.name,
-                  style: GoogleFonts.josefinSans(
-                    color: Colors.white,
-                    textStyle: const TextStyle(
-                        fontSize: 35, fontWeight: FontWeight.normal),
+            child: Container(
+              child: Column(
+                children: [
+                  Image.asset(
+                    item.imageUrl,
+                    width: 45,
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    item.name,
+                    style: GoogleFonts.josefinSans(
+                      color: Colors.white,
+                      textStyle: const TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.normal),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
           const SizedBox(
@@ -104,7 +106,7 @@ class car_types extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 25),
+                          vertical: 15, horizontal: 30),
                       child: AnimatedBuilder(
                         animation: transitionAnimation,
                         builder: (context, child) {
@@ -122,99 +124,112 @@ class car_types extends StatelessWidget {
                             child: child,
                           );
                         },
-                        child: Stack(
-                          children: [
-                            Positioned.fill(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: CachedNetworkImage(
-                                  imageUrl: carItem[index].carImage,
-                                  placeholder: (context, url) => Center(
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 40),
-                                      child: Container(
-                                        color: Colors.transparent,
-                                        height: 100,
-                                        width: 100,
-                                        child: const CircularProgressIndicator(
-                                          color: Colors.white,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.5),
+                                blurRadius: 20,
+                              ),
+                            ],
+                          ),
+                          child: Stack(
+                            children: [
+                              Positioned.fill(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: CachedNetworkImage(
+                                    imageUrl: carItem[index].carImage,
+                                    placeholder: (context, url) => Center(
+                                      child: Padding(
+                                        padding:
+                                            const EdgeInsets.only(bottom: 40),
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 100,
+                                          width: 100,
+                                          child:
+                                              const CircularProgressIndicator(
+                                            color: Colors.white,
+                                          ),
                                         ),
                                       ),
                                     ),
+                                    errorWidget: (context, url, error) =>
+                                        const Icon(Icons.error),
+                                    imageBuilder: ((context, imageProvider) {
+                                      return Container(
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            image: imageProvider,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      );
+                                    }),
                                   ),
-                                  errorWidget: (context, url, error) =>
-                                      const Icon(Icons.error),
-                                  imageBuilder: ((context, imageProvider) {
-                                    return Container(
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: imageProvider,
-                                          fit: BoxFit.cover,
+                                ),
+                              ),
+                              InkWell(
+                                onTap: () => Navigator.push(
+                                  context,
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation,
+                                        secondaryAnimation) {
+                                      return CarDetails(
+                                        detail: carItem[index].details,
+                                        imageSlides: carItem[index].imageSlide,
+                                        carItem: carItem[index],
+                                        transitionAnimation: animation,
+                                      );
+                                    },
+                                    transitionDuration:
+                                        const Duration(milliseconds: 1300),
+                                  ),
+                                ),
+                                child: Container(
+                                  height: 200,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(10),
+                                      bottomRight: Radius.circular(10),
+                                    ),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.bottomCenter,
+                                      end: Alignment.topCenter,
+                                      colors: [
+                                        Colors.black.withOpacity(0.7),
+                                        Colors.transparent
+                                      ],
+                                    ),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 30, horizontal: 10),
+                                        child: Text(
+                                          carItem[index].carName,
+                                          style: GoogleFonts.josefinSans(
+                                            textStyle: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 25,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          textAlign: TextAlign.left,
                                         ),
                                       ),
-                                    );
-                                  }),
-                                ),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () => Navigator.push(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder:
-                                      (context, animation, secondaryAnimation) {
-                                    return CarDetails(
-                                      detail: carItem[index].details,
-                                      imageSlides: carItem[index].imageSlide,
-                                      carItem: carItem[index],
-                                      transitionAnimation: animation,
-                                    );
-                                  },
-                                  transitionDuration:
-                                      const Duration(milliseconds: 1300),
-                                ),
-                              ),
-                              child: Container(
-                                height: 200,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.only(
-                                    bottomLeft: Radius.circular(5),
-                                    bottomRight: Radius.circular(5),
-                                  ),
-                                  gradient: LinearGradient(
-                                    begin: Alignment.bottomCenter,
-                                    end: Alignment.topCenter,
-                                    colors: [
-                                      Colors.black.withOpacity(0.7),
-                                      Colors.transparent
                                     ],
                                   ),
                                 ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 30, horizontal: 10),
-                                      child: Text(
-                                        carItem[index].carName,
-                                        style: GoogleFonts.josefinSans(
-                                          textStyle: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 25,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    ),
-                                  ],
-                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     );
