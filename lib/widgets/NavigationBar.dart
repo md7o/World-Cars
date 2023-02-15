@@ -52,7 +52,7 @@ class _naviBarState extends State<naviBar> {
                           borderRadius: BorderRadius.all(
                             Radius.circular(100),
                           ),
-                          color: Color(0xFF604C9E)),
+                          color: Color(0xFF3F2E73)),
                       height: 75,
                       width: 75,
                       child: const Icon(
@@ -75,7 +75,7 @@ class _naviBarState extends State<naviBar> {
                 ],
               ),
             ),
-            backgroundColor: const Color(0xFF8671CA),
+            backgroundColor: Color(0xFF5E46A7),
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
                 Radius.circular(20),
@@ -87,7 +87,7 @@ class _naviBarState extends State<naviBar> {
                   onPressed: () => Navigator.pop(context),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                      const Color(0xFF604C9E),
+                      const Color(0xFF3F2E73),
                     ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -125,23 +125,23 @@ class _naviBarState extends State<naviBar> {
         backgroundColor: Colors.transparent,
         color: Theme.of(context).primaryColor,
         height: 60,
-        animationDuration: const Duration(milliseconds: 800),
+        animationDuration: const Duration(milliseconds: 900),
         onTap: navigatedBottomBar,
         items: const [
           Icon(
-            Icons.home,
+            Icons.home_outlined,
             color: Colors.white,
-            size: 30,
+            size: 35,
           ),
           Icon(
-            Icons.star,
+            Icons.star_border_rounded,
             color: Colors.white,
-            size: 30,
+            size: 35,
           ),
           Icon(
-            Icons.settings,
+            Icons.settings_outlined,
             color: Colors.white,
-            size: 30,
+            size: 35,
           ),
         ],
       ),

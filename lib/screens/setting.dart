@@ -82,7 +82,8 @@ class Setting extends StatelessWidget {
                     ),
                     InkWell(
                         onTap: () async {
-                          await Share.share('sharing');
+                          await Share.share(
+                              'World Cars includes many famous cars from 4 countries, America - Japan - Germany - South Korea. https://play.google.com/store/apps/details?id=com.world.cars.worldcars');
                         },
                         child: const shareWidget()),
                   ],

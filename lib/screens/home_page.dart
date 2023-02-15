@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
                   fit: BoxFit.cover),
               color: Theme.of(context).primaryColor,
               borderRadius: const BorderRadius.vertical(
-                bottom: Radius.elliptical(180, 100),
+                bottom: Radius.elliptical(70, 50),
               ),
             ),
             child: Column(
