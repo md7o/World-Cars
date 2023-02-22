@@ -13,12 +13,10 @@ class CarDetails extends StatefulWidget {
     required this.carItem,
     required this.transitionAnimation,
   });
-
   final List<Details> detail;
   final List<Slidering> imageSlides;
   final Cars carItem;
   final Animation<double> transitionAnimation;
-
   @override
   State<CarDetails> createState() => _CarDetailsState();
 }
@@ -86,11 +84,13 @@ class _CarDetailsState extends State<CarDetails> {
                                 position: Tween<Offset>(
                                   begin: const Offset(0, -1),
                                   end: const Offset(0, 0),
-                                ).animate(CurvedAnimation(
-                                  curve: const Interval(0, 1,
-                                      curve: Curves.easeOutCubic),
-                                  parent: widget.transitionAnimation,
-                                )),
+                                ).animate(
+                                  CurvedAnimation(
+                                    curve: const Interval(0, 1,
+                                        curve: Curves.easeOutCubic),
+                                    parent: widget.transitionAnimation,
+                                  ),
+                                ),
                                 child: child,
                               );
                             },
@@ -183,11 +183,13 @@ class _CarDetailsState extends State<CarDetails> {
                                 position: Tween<Offset>(
                                   begin: const Offset(0, 1),
                                   end: const Offset(0, 0),
-                                ).animate(CurvedAnimation(
-                                  curve: const Interval(0, 1,
-                                      curve: Curves.easeOutCubic),
-                                  parent: widget.transitionAnimation,
-                                )),
+                                ).animate(
+                                  CurvedAnimation(
+                                    curve: const Interval(0, 1,
+                                        curve: Curves.easeOutCubic),
+                                    parent: widget.transitionAnimation,
+                                  ),
+                                ),
                                 child: child,
                               );
                             },
@@ -227,11 +229,13 @@ class _CarDetailsState extends State<CarDetails> {
                                       position: Tween<Offset>(
                                         begin: const Offset(0.5, 1),
                                         end: const Offset(0, 0),
-                                      ).animate(CurvedAnimation(
-                                        curve: const Interval(0, 1,
-                                            curve: Curves.easeOutCubic),
-                                        parent: widget.transitionAnimation,
-                                      )),
+                                      ).animate(
+                                        CurvedAnimation(
+                                          curve: const Interval(0, 1,
+                                              curve: Curves.easeOutCubic),
+                                          parent: widget.transitionAnimation,
+                                        ),
+                                      ),
                                       child: child,
                                     );
                                   },

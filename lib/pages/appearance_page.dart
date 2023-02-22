@@ -1,9 +1,6 @@
-// ignore_for_file: file_names, unused_local_variable
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'package:world_car/widgets/change.dart';
+import 'package:world_car/widgets/change_widget.dart';
 
 class DarkMode extends StatefulWidget {
   const DarkMode({super.key});
@@ -17,9 +14,6 @@ class _DarkModeState extends State<DarkMode> {
 
   @override
   Widget build(BuildContext context) {
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -34,14 +28,17 @@ class _DarkModeState extends State<DarkMode> {
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
-            color: Theme.of(context).iconTheme.color,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios_rounded)),
+          color: Theme.of(context).iconTheme.color,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.close,
+          ),
+        ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(

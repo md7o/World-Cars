@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:world_car/widgets/NavigationBar.dart';
+import 'package:world_car/widgets/bnb_widget.dart';
 import 'package:world_car/models/themedata.dart';
 import 'package:device_preview/device_preview.dart';
 

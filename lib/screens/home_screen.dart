@@ -1,10 +1,8 @@
-// ignore_for_file: file_names, unused_local_variable, duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/data.dart';
 import 'package:world_car/models/world_car.dart';
-import 'package:world_car/screens/brands_page.dart';
+import 'package:world_car/screens/brands_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class Home extends StatefulWidget {
@@ -15,14 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final imageUrl =
-      "https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif";
-
   @override
   Widget build(BuildContext context) {
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
     return Scaffold(
       body: Column(
         children: [
@@ -41,13 +33,11 @@ class _HomeState extends State<Home> {
               ),
             ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 35),
-                  child: Image.asset(
-                    "images/Logo.png",
-                    width: 140,
-                  ),
+                Image.asset(
+                  "images/Logo.png",
+                  width: 140,
                 ),
               ],
             ),
@@ -80,13 +70,6 @@ class _HomeState extends State<Home> {
                             },
                             transitionDuration:
                                 const Duration(milliseconds: 1300),
-                            // transitionsBuilder:
-                            //     (context, animation, animationTime, child) {
-                            //   animation = CurvedAnimation(
-                            //       parent: animation, curve: Curves.ease);
-                            //   return ScaleTransition(
-                            //       scale: animation, child: child);
-                            // }
                           ),
                         ),
                         child: Padding(
@@ -122,7 +105,6 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
@@ -132,11 +114,11 @@ class _HomeState extends State<Home> {
                                         category.label,
                                         style: GoogleFonts.josefinSans(
                                           textStyle: const TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.bold),
+                                            color: Colors.white,
+                                            fontSize: 30,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
-                                        textAlign: TextAlign.left,
                                       ),
                                     ),
                                   ],

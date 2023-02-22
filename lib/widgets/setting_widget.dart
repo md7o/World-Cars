@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:world_car/pages/connecting.dart';
-import 'package:world_car/pages/Sources.dart';
-import '../pages/dark_mode.dart';
+import 'package:world_car/pages/connecting_page.dart';
+import 'package:world_car/pages/sources_page.dart';
+import '../pages/appearance_page.dart';
 
 class modeWidget extends StatelessWidget {
   const modeWidget({super.key});

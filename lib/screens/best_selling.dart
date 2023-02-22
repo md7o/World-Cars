@@ -1,5 +1,3 @@
-// ignore_for_file: file_names, unused_local_variable
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,9 +8,6 @@ class BestSelling extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
     final List<PopularsCar> popular = [
       const PopularsCar(
         title: '1- Toyota Corolla',
@@ -75,7 +70,6 @@ class BestSelling extends StatelessWidget {
         selling: '550K',
       ),
     ];
-
     return Scaffold(
       appBar: AppBar(
         title: Center(
@@ -155,8 +149,7 @@ class BestSelling extends StatelessWidget {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                        vertical: 10,
-                                        horizontal: 10,
+                                        vertical: 5,
                                       ),
                                       child: Text(
                                         po.title,
@@ -164,17 +157,16 @@ class BestSelling extends StatelessWidget {
                                           textStyle: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 18,
-                                            fontWeight: FontWeight.bold,
+                                            fontWeight: FontWeight.w900,
                                           ),
                                         ),
-                                        textAlign: TextAlign.left,
                                       ),
                                     ),
                                     Row(
                                       children: [
                                         Container(
                                           width: 180,
-                                          height: 20,
+                                          height: 15,
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 (const BorderRadius.only(

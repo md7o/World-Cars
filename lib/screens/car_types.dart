@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:world_car/models/world_car.dart';
 import 'package:world_car/screens/car_details.dart';
 
-// ignore: camel_case_types
 class car_types extends StatelessWidget {
   const car_types({
     super.key,
@@ -12,10 +11,8 @@ class car_types extends StatelessWidget {
     required this.carItem,
     required this.transitionAnimation,
   });
-
   final WorldCar item;
   final List<Cars> carItem;
-
   final Animation<double> transitionAnimation;
   @override
   Widget build(BuildContext context) {
@@ -40,17 +37,18 @@ class car_types extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 35, left: 25),
                     child: Container(
-                        width: 30,
-                        height: 30,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Icon(
-                          Icons.arrow_back_ios_rounded,
-                          color: Colors.white,
-                          size: 18,
-                        )),
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back_ios_rounded,
+                        color: Colors.white,
+                        size: 18,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -63,10 +61,12 @@ class car_types extends StatelessWidget {
                 position: Tween<Offset>(
                   begin: const Offset(0, -1),
                   end: const Offset(0, 0),
-                ).animate(CurvedAnimation(
-                  curve: const Interval(0, 1, curve: Curves.easeOutCubic),
-                  parent: transitionAnimation,
-                )),
+                ).animate(
+                  CurvedAnimation(
+                    curve: const Interval(0, 1, curve: Curves.easeOutCubic),
+                    parent: transitionAnimation,
+                  ),
+                ),
                 child: child,
               );
             },
@@ -85,15 +85,14 @@ class car_types extends StatelessWidget {
                     style: GoogleFonts.josefinSans(
                       color: Colors.white,
                       textStyle: const TextStyle(
-                          fontSize: 35, fontWeight: FontWeight.normal),
+                        fontSize: 35,
+                        fontWeight: FontWeight.normal,
+                      ),
                     ),
                   )
                 ],
               ),
             ),
-          ),
-          const SizedBox(
-            height: 10,
           ),
           Expanded(
             child: Padding(

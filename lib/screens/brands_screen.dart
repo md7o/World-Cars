@@ -11,7 +11,6 @@ class Brands extends StatelessWidget {
     super.key,
     required this.item,
     required this.label,
-    // ignore: non_constant_identifier_names
     required this.CountryId,
     required this.carItem,
     required this.transitionAnimation,
@@ -19,7 +18,6 @@ class Brands extends StatelessWidget {
   final List<WorldCar> item;
   final List<Cars> carItem;
   final String label;
-  // ignore: non_constant_identifier_names
   final String CountryId;
   final Animation<double> transitionAnimation;
   @override
@@ -47,7 +45,7 @@ class Brands extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 35, left: 25),
+                    padding: const EdgeInsets.only(top: 40, left: 20),
                     child: Container(
                       width: 30,
                       height: 30,
@@ -192,9 +190,8 @@ class Brands extends StatelessWidget {
                                                             .spaceBetween,
                                                     children: [
                                                       Image.asset(
-                                                        item[index].imageUrl,
-                                                        width: 45,
-                                                      ),
+                                                          item[index].imageUrl,
+                                                          width: 45),
                                                       Row(
                                                         children: [
                                                           Padding(

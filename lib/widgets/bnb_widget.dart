@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:world_car/screens/home_page.dart';
+import 'package:world_car/screens/home_screen.dart';
 import 'package:world_car/screens/best_selling.dart';
 import 'package:world_car/screens/setting.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
