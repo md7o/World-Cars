@@ -205,6 +205,74 @@ class _CarDetailsState extends State<CarDetails> {
                             ),
                           ),
                         ),
+                        // SizedBox(
+                        //   height: 160,
+                        //   child: ListView.builder(
+                        //     itemCount: 2,
+                        //     physics: const BouncingScrollPhysics(),
+                        //     itemBuilder: (BuildContext context, int index) {
+                        //       return Padding(
+                        //         padding: const EdgeInsets.symmetric(
+                        //             vertical: 5, horizontal: 5),
+                        //         child: Container(
+                        //           width: double.infinity,
+                        //           decoration: BoxDecoration(
+                        //             color: Theme.of(context).primaryColor,
+                        //             borderRadius: const BorderRadius.all(
+                        //               Radius.circular(20),
+                        //             ),
+                        //           ),
+                        //           child: Padding(
+                        //             padding: const EdgeInsets.symmetric(
+                        //                 horizontal: 20),
+                        //             child: Row(
+                        //               mainAxisAlignment:
+                        //                   MainAxisAlignment.spaceBetween,
+                        //               children: [
+                        //                 Row(
+                        //                   children: [
+                        //                     Image.asset(
+                        //                       widget.detail[index].detailPhoto,
+                        //                       width: 35,
+                        //                     ),
+                        //                     SizedBox(
+                        //                       width: 10,
+                        //                     ),
+                        //                     Text(
+                        //                       widget.detail[index].detailName,
+                        //                       style: GoogleFonts.josefinSans(
+                        //                         textStyle: const TextStyle(
+                        //                           color: Colors.white,
+                        //                           fontSize: 20,
+                        //                           fontWeight: FontWeight.normal,
+                        //                         ),
+                        //                       ),
+                        //                     ),
+                        //                   ],
+                        //                 ),
+                        //                 Padding(
+                        //                   padding: const EdgeInsets.symmetric(
+                        //                     vertical: 20,
+                        //                   ),
+                        //                   child: Text(
+                        //                     widget.detail[index].detailInfo,
+                        //                     style: GoogleFonts.josefinSans(
+                        //                       textStyle: const TextStyle(
+                        //                         color: Colors.white,
+                        //                         fontSize: 20,
+                        //                         fontWeight: FontWeight.normal,
+                        //                       ),
+                        //                     ),
+                        //                   ),
+                        //                 ),
+                        //               ],
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       );
+                        //     },
+                        //   ),
+                        // ),
                         SizedBox(
                           height: 650,
                           child: Padding(
