@@ -35,143 +35,145 @@ class _CarDetailsState extends State<CarDetails> {
                 curve: Curves.easeOutCubic,
               ),
             ),
-            child: Row(
-              children: [
-                InkWell(
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 35, left: 25),
-                    child: Container(
-                      width: 30,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios_rounded,
-                        color: Colors.white,
-                        size: 18,
-                      ),
-                    ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    icon: Icon(Icons.arrow_back_ios_rounded),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    // child: Container(
+                    //   width: 30,
+                    //   height: 30,
+                    //   decoration: BoxDecoration(
+                    //     color: Theme.of(context).primaryColor,
+                    //     borderRadius: BorderRadius.circular(10),
+                    //   ),
+                    //   child: const Icon(
+                    //     Icons.arrow_back_ios_rounded,
+                    //     color: Colors.white,
+                    //     size: 18,
+                    //   ),
+                    // ),
                   ),
-                ),
-              ],
+                  IconButton(
+                    highlightColor: Colors.transparent,
+                    splashColor: Colors.transparent,
+                    icon: Icon(
+                      Icons.favorite_border_rounded,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8),
               child: Scrollbar(
-                thickness: 4,
+                thickness: 3,
                 child: ListView(
                   physics: const BouncingScrollPhysics(),
                   children: [
                     Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 20,
-                          ),
-                          child: AnimatedBuilder(
-                            animation: widget.transitionAnimation,
-                            builder: (context, child) {
-                              return SlideTransition(
-                                position: Tween<Offset>(
-                                  begin: const Offset(0, -1),
-                                  end: const Offset(0, 0),
-                                ).animate(
-                                  CurvedAnimation(
-                                    curve: const Interval(0, 1,
-                                        curve: Curves.easeOutCubic),
-                                    parent: widget.transitionAnimation,
-                                  ),
+                        AnimatedBuilder(
+                          animation: widget.transitionAnimation,
+                          builder: (context, child) {
+                            return SlideTransition(
+                              position: Tween<Offset>(
+                                begin: const Offset(0, -1),
+                                end: const Offset(0, 0),
+                              ).animate(
+                                CurvedAnimation(
+                                  curve: const Interval(0, 1,
+                                      curve: Curves.easeOutCubic),
+                                  parent: widget.transitionAnimation,
                                 ),
-                                child: child,
-                              );
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                CarouselSlider.builder(
-                                  options: CarouselOptions(
-                                    height:
-                                        MediaQuery.of(context).size.height / 5,
-                                    enlargeCenterPage: true,
-                                    enableInfiniteScroll: false,
-                                    onPageChanged: (index, reason) =>
-                                        setState(() => activeIndex = index),
-                                  ),
-                                  itemCount: widget.imageSlides.length,
-                                  itemBuilder: (BuildContext context,
-                                      int itemIndex, int pageViewIndex) {
-                                    return Stack(
-                                      children: [
-                                        Positioned.fill(
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(20),
-                                            child: CachedNetworkImage(
-                                              imageUrl: widget
-                                                  .imageSlides[itemIndex]
-                                                  .dimensions,
-                                              fit: BoxFit.cover,
-                                              placeholder: (context, url) =>
-                                                  Center(
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          bottom: 40),
-                                                  child: Container(
-                                                    color: Colors.transparent,
-                                                    height: 100,
-                                                    width: 100,
-                                                    child:
-                                                        const CircularProgressIndicator(
-                                                      color: Colors.white,
-                                                    ),
+                              ),
+                              child: child,
+                            );
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CarouselSlider.builder(
+                                options: CarouselOptions(
+                                  height:
+                                      MediaQuery.of(context).size.height / 5,
+                                  enlargeCenterPage: true,
+                                  enableInfiniteScroll: false,
+                                  onPageChanged: (index, reason) =>
+                                      setState(() => activeIndex = index),
+                                ),
+                                itemCount: widget.imageSlides.length,
+                                itemBuilder: (BuildContext context,
+                                    int itemIndex, int pageViewIndex) {
+                                  return Stack(
+                                    children: [
+                                      Positioned.fill(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: CachedNetworkImage(
+                                            imageUrl: widget
+                                                .imageSlides[itemIndex]
+                                                .dimensions,
+                                            fit: BoxFit.cover,
+                                            placeholder: (context, url) =>
+                                                Center(
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    bottom: 40),
+                                                child: Container(
+                                                  color: Colors.transparent,
+                                                  height: 100,
+                                                  width: 100,
+                                                  child:
+                                                      const CircularProgressIndicator(
+                                                    color: Colors.white,
                                                   ),
                                                 ),
                                               ),
                                             ),
                                           ),
                                         ),
-                                        Container(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
-                                              5,
-                                          width: double.infinity,
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                const BorderRadius.only(
-                                              bottomLeft: Radius.circular(20),
-                                              bottomRight: Radius.circular(20),
-                                            ),
-                                            gradient: LinearGradient(
-                                              begin: Alignment.bottomCenter,
-                                              end: Alignment.topCenter,
-                                              colors: [
-                                                Colors.black.withOpacity(0.7),
-                                                Colors.transparent
-                                              ],
-                                            ),
+                                      ),
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                5,
+                                        width: double.infinity,
+                                        decoration: BoxDecoration(
+                                          borderRadius: const BorderRadius.only(
+                                            bottomLeft: Radius.circular(20),
+                                            bottomRight: Radius.circular(20),
+                                          ),
+                                          gradient: LinearGradient(
+                                            begin: Alignment.bottomCenter,
+                                            end: Alignment.topCenter,
+                                            colors: [
+                                              Colors.black.withOpacity(0.7),
+                                              Colors.transparent
+                                            ],
                                           ),
                                         ),
-                                      ],
-                                    );
-                                  },
-                                ),
-                                const SizedBox(
-                                  height: 32,
-                                ),
-                                buildIndicator(),
-                              ],
-                            ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              ),
+                              const SizedBox(
+                                height: 32,
+                              ),
+                              buildIndicator(),
+                            ],
                           ),
                         ),
                         Padding(
@@ -205,74 +207,6 @@ class _CarDetailsState extends State<CarDetails> {
                             ),
                           ),
                         ),
-                        // SizedBox(
-                        //   height: 160,
-                        //   child: ListView.builder(
-                        //     itemCount: 2,
-                        //     physics: const BouncingScrollPhysics(),
-                        //     itemBuilder: (BuildContext context, int index) {
-                        //       return Padding(
-                        //         padding: const EdgeInsets.symmetric(
-                        //             vertical: 5, horizontal: 5),
-                        //         child: Container(
-                        //           width: double.infinity,
-                        //           decoration: BoxDecoration(
-                        //             color: Theme.of(context).primaryColor,
-                        //             borderRadius: const BorderRadius.all(
-                        //               Radius.circular(20),
-                        //             ),
-                        //           ),
-                        //           child: Padding(
-                        //             padding: const EdgeInsets.symmetric(
-                        //                 horizontal: 20),
-                        //             child: Row(
-                        //               mainAxisAlignment:
-                        //                   MainAxisAlignment.spaceBetween,
-                        //               children: [
-                        //                 Row(
-                        //                   children: [
-                        //                     Image.asset(
-                        //                       widget.detail[index].detailPhoto,
-                        //                       width: 35,
-                        //                     ),
-                        //                     SizedBox(
-                        //                       width: 10,
-                        //                     ),
-                        //                     Text(
-                        //                       widget.detail[index].detailName,
-                        //                       style: GoogleFonts.josefinSans(
-                        //                         textStyle: const TextStyle(
-                        //                           color: Colors.white,
-                        //                           fontSize: 20,
-                        //                           fontWeight: FontWeight.normal,
-                        //                         ),
-                        //                       ),
-                        //                     ),
-                        //                   ],
-                        //                 ),
-                        //                 Padding(
-                        //                   padding: const EdgeInsets.symmetric(
-                        //                     vertical: 20,
-                        //                   ),
-                        //                   child: Text(
-                        //                     widget.detail[index].detailInfo,
-                        //                     style: GoogleFonts.josefinSans(
-                        //                       textStyle: const TextStyle(
-                        //                         color: Colors.white,
-                        //                         fontSize: 20,
-                        //                         fontWeight: FontWeight.normal,
-                        //                       ),
-                        //                     ),
-                        //                   ),
-                        //                 ),
-                        //               ],
-                        //             ),
-                        //           ),
-                        //         ),
-                        //       );
-                        //     },
-                        //   ),
-                        // ),
                         SizedBox(
                           height: 650,
                           child: Padding(
@@ -350,14 +284,10 @@ class _CarDetailsState extends State<CarDetails> {
                                                 Text(
                                                   widget
                                                       .detail[index].detailName,
-                                                  style:
-                                                      GoogleFonts.josefinSans(
-                                                    textStyle: const TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 18,
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                    ),
+                                                  style: const TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 18,
+                                                    fontWeight: FontWeight.w400,
                                                   ),
                                                 ),
                                                 const SizedBox(

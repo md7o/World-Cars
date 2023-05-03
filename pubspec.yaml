@@ -39,7 +39,7 @@ flutter_icons:
   flutter_lints: ^2.0.0
 
 flutter_native_splash:
-  color: "#181531"
+  color: "#181721"
   image: images/Logo.png
 
 flutter:
@@ -59,6 +59,3 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
