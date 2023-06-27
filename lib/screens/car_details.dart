@@ -23,6 +23,15 @@ class CarDetails extends StatefulWidget {
 
 class _CarDetailsState extends State<CarDetails> {
   int activeIndex = 0;
+
+  bool _isClicked = false;
+
+  void _toggleClick() {
+    setState(() {
+      _isClicked = !_isClicked;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,12 +71,15 @@ class _CarDetailsState extends State<CarDetails> {
                     // ),
                   ),
                   IconButton(
-                    highlightColor: Colors.transparent,
+                    splashRadius: 20,
                     splashColor: Colors.transparent,
+                    color: _isClicked ? Colors.red : Colors.white,
                     icon: Icon(
-                      Icons.favorite_border_rounded,
+                      _isClicked
+                          ? Icons.favorite
+                          : Icons.favorite_border_outlined,
                     ),
-                    onPressed: () {},
+                    onPressed: _toggleClick,
                   ),
                 ],
               ),

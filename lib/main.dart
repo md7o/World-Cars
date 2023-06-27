@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:world_car/widgets/bnb_widget.dart';
 import 'package:world_car/models/themedata.dart';
@@ -11,6 +12,15 @@ void main() => runApp(
         builder: (context) => const MyApp(), // Wrap your app
       ),
     );
+
+final theme = ThemeData(
+  useMaterial3: true,
+  colorScheme: ColorScheme.fromSeed(
+    brightness: Brightness.dark,
+    seedColor: const Color(0xFF3083C3),
+  ),
+  textTheme: GoogleFonts.latoTextTheme(),
+);
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -31,7 +41,7 @@ class _MyAppState extends State<MyApp> {
             builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,
             themeMode: themeProvider.themeMode,
-            theme: MyThemes.lightTheme,
+            theme: theme,
             darkTheme: MyThemes.darkTheme,
             home: const naviBar(),
           );
