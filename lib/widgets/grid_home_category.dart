@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:world_car/models/category.dart';
+import 'package:world_car/models/world_car.dart';
 
 class GridHomeCategory extends StatelessWidget {
-  const GridHomeCategory({super.key, required this.category});
+  const GridHomeCategory(
+      {super.key,
+      required this.category,
+      required this.onSelectCategory,
+      required this.wordlcar});
 
   final Category category;
+  final WorldCar wordlcar;
+  final void Function() onSelectCategory;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onSelectCategory,
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(16),
       child: Stack(
@@ -34,7 +41,10 @@ class GridHomeCategory extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
-                colors: [Colors.black.withOpacity(0.7), Colors.transparent],
+                colors: [
+                  Colors.black.withOpacity(0.7),
+                  Colors.transparent,
+                ],
               ),
             ),
           ),
@@ -55,19 +65,5 @@ class GridHomeCategory extends StatelessWidget {
         ],
       ),
     );
-
-    //   Container(
-    //     padding: const EdgeInsets.all(16),
-    //     decoration: BoxDecoration(
-    //       borderRadius: BorderRadius.circular(16),
-    //     ),
-    //     child: Text(
-    //       category.label,
-    //       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-    //             color: Theme.of(context).colorScheme.onBackground,
-    //           ),
-    //     ),
-    //   ),
-    // );
   }
 }

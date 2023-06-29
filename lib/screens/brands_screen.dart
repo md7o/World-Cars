@@ -10,16 +10,16 @@ class Brands extends StatelessWidget {
   const Brands({
     super.key,
     required this.item,
-    required this.label,
-    required this.CountryId,
+    this.label,
+    this.CountryId,
     required this.carItem,
-    required this.transitionAnimation,
+    this.transitionAnimation,
   });
   final List<WorldCar> item;
   final List<Cars> carItem;
-  final String label;
-  final String CountryId;
-  final Animation<double> transitionAnimation;
+  final String? label;
+  final String? CountryId;
+  final Animation<double>? transitionAnimation;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -32,7 +32,7 @@ class Brands extends StatelessWidget {
           ScaleTransition(
             scale: Tween<double>(begin: 0, end: 1).animate(
               CurvedAnimation(
-                parent: transitionAnimation,
+                parent: transitionAnimation!!,
                 curve: Curves.easeOutCubic,
               ),
             ),
@@ -78,7 +78,7 @@ class Brands extends StatelessWidget {
                           height: MediaQuery.of(context).size.width / 6.5,
                         ),
                         AnimatedBuilder(
-                          animation: transitionAnimation,
+                          animation: transitionAnimation!,
                           builder: (context, child) {
                             return SlideTransition(
                               position: Tween<Offset>(
@@ -88,7 +88,7 @@ class Brands extends StatelessWidget {
                                 CurvedAnimation(
                                   curve: const Interval(0, 0.7,
                                       curve: Curves.easeOutCubic),
-                                  parent: transitionAnimation,
+                                  parent: transitionAnimation!,
                                 ),
                               ),
                               child: child,
@@ -99,14 +99,14 @@ class Brands extends StatelessWidget {
                             child: Row(
                               children: [
                                 CachedNetworkImage(
-                                  imageUrl: CountryId,
+                                  imageUrl: CountryId!,
                                   width: 45,
                                 ),
                                 const SizedBox(
                                   width: 10,
                                 ),
                                 Text(
-                                  label,
+                                  label!,
                                   style: GoogleFonts.comfortaa(
                                     color: Colors.white,
                                     textStyle: const TextStyle(
@@ -125,7 +125,7 @@ class Brands extends StatelessWidget {
                         ScaleTransition(
                           scale: Tween<double>(begin: 0.5, end: 1).animate(
                             CurvedAnimation(
-                              parent: transitionAnimation,
+                              parent: transitionAnimation!,
                               curve: Curves.easeOutCubic,
                             ),
                           ),
@@ -265,7 +265,7 @@ class Brands extends StatelessWidget {
                           height: 20,
                         ),
                         AnimatedBuilder(
-                          animation: transitionAnimation,
+                          animation: transitionAnimation!,
                           builder: (context, child) {
                             return SlideTransition(
                               position: Tween<Offset>(
@@ -275,7 +275,7 @@ class Brands extends StatelessWidget {
                                 CurvedAnimation(
                                   curve: const Interval(0, 0.7,
                                       curve: Curves.easeOutCubic),
-                                  parent: transitionAnimation,
+                                  parent: transitionAnimation!,
                                 ),
                               ),
                               child: child,
@@ -308,7 +308,7 @@ class Brands extends StatelessWidget {
                           ),
                         ),
                         AnimatedBuilder(
-                          animation: transitionAnimation,
+                          animation: transitionAnimation!,
                           builder: (context, child) {
                             return SlideTransition(
                               position: Tween<Offset>(
@@ -318,7 +318,7 @@ class Brands extends StatelessWidget {
                                 CurvedAnimation(
                                   curve: const Interval(0, 0.6,
                                       curve: Curves.easeOutCubic),
-                                  parent: transitionAnimation,
+                                  parent: transitionAnimation!,
                                 ),
                               ),
                               child: child,
@@ -377,7 +377,7 @@ class Brands extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 20),
                               child: AnimatedBuilder(
-                                animation: transitionAnimation,
+                                animation: transitionAnimation!,
                                 builder: (context, child) {
                                   return SlideTransition(
                                     position: Tween<Offset>(
@@ -387,7 +387,7 @@ class Brands extends StatelessWidget {
                                       CurvedAnimation(
                                         curve: const Interval(0.4, 1,
                                             curve: Curves.easeOutCubic),
-                                        parent: transitionAnimation,
+                                        parent: transitionAnimation!,
                                       ),
                                     ),
                                     child: child,

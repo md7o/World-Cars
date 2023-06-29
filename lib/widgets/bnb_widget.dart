@@ -25,9 +25,9 @@ class _naviBarState extends State<naviBar> {
   }
 
   final List<Widget> activePage = [
-    const HomeScreen(
-      avalibaleMeals: [],
-    ),
+    // const HomeScreen(
+    //   avalibaleMeals: [],
+    // ),
     const BestSelling(),
     const Setting(),
   ];
