@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'package:world_car/screens/home_categories.dart';
 import 'package:world_car/screens/best_selling.dart';
@@ -25,9 +23,9 @@ class _naviBarState extends State<naviBar> {
   }
 
   final List<Widget> activePage = [
-    // const HomeScreen(
-    //   avalibaleMeals: [],
-    // ),
+    const HomeScreen(
+      avalibaleMeals: [],
+    ),
     const BestSelling(),
     const Setting(),
   ];

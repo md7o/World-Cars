@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:world_car/widgets/bnb_widget.dart';
+import 'package:world_car/screens/bnb_widget.dart';
 import 'package:world_car/models/themedata.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
             themeMode: themeProvider.themeMode,
             theme: theme,
             darkTheme: MyThemes.darkTheme,
-            home: const naviBar(),
+            home: naviBar(),
           );
         },
       );

@@ -3,14 +3,13 @@ import 'package:world_car/models/category.dart';
 import 'package:world_car/models/world_car.dart';
 
 class GridHomeCategory extends StatelessWidget {
-  const GridHomeCategory(
-      {super.key,
-      required this.category,
-      required this.onSelectCategory,
-      required this.wordlcar});
+  const GridHomeCategory({
+    super.key,
+    required this.categoryT,
+    required this.onSelectCategory,
+  });
 
-  final Category category;
-  final WorldCar wordlcar;
+  final CategoryT categoryT;
   final void Function() onSelectCategory;
 
   @override
@@ -25,7 +24,7 @@ class GridHomeCategory extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Image.asset(
-                category.img,
+                categoryT.img,
                 fit: BoxFit.cover,
               ),
             ),
@@ -55,7 +54,7 @@ class GridHomeCategory extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                category.label,
+                categoryT.title,
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontWeight: FontWeight.bold),

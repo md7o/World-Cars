@@ -15,3 +15,17 @@ class Category {
     required this.items,
   });
 }
+
+class CategoryT {
+  const CategoryT({
+    required this.id,
+    required this.title,
+    required this.cityLogo,
+    required this.img,
+  });
+
+  final String id;
+  final String title;
+  final String cityLogo;
+  final String img;
+}

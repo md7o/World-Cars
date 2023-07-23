@@ -1,81 +1,82 @@
-// import 'package:flutter/material.dart';
-// import 'package:world_car/data.dart';
-// import 'package:world_car/models/category.dart';
-// import 'package:world_car/models/world_car.dart';
-// import 'package:world_car/screens/brands_screen.dart';
-// import 'package:world_car/widgets/grid_home_category.dart';
+import 'package:flutter/material.dart';
+import 'package:world_car/data.dart';
+import 'package:world_car/models/category.dart';
+import 'package:world_car/models/world_car.dart';
+import 'package:world_car/screens/brands.dart';
+import 'package:world_car/widgets/grid_home_category.dart';
 
-// class HomeScreen extends StatefulWidget {
-//   const HomeScreen({super.key, required this.avalibaleMeals});
+import '../data/details_data.dart';
+import '../models/car.dart';
 
-//   final List<WorldCar> avalibaleMeals;
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key, required this.avalibaleMeals});
 
-//   @override
-//   State<HomeScreen> createState() => _HomeScreenState();
-// }
+  final List<Car> avalibaleMeals;
 
-// class _HomeScreenState extends State<HomeScreen> {
-//   void _selectCategory(BuildContext context, Category category, WorldCar item,
-//       animation, secondaryAnimation) {
-//     Navigator.of(context).push(
-//       MaterialPageRoute(
-//         builder: (ctx) => Brands(
-//           CountryId: category.CountryId,
-//           carItem: item.carItems,
-//           item: category.items,
-//           label: category.label,
-//           transitionAnimation: animation,
-//         ),
-//       ),
-//     );
-//   }
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         backgroundColor: Colors.transparent,
-//         elevation: 0,
-//         leading: const Padding(
-//           padding: EdgeInsets.symmetric(horizontal: 20),
-//           child: Icon(
-//             Icons.bar_chart_rounded,
-//             size: 30,
-//             color: Colors.white,
-//           ),
-//         ),
-//         actions: const <Widget>[
-//           Padding(
-//             padding: EdgeInsets.symmetric(horizontal: 20),
-//             child: Icon(
-//               Icons.search_rounded,
-//               size: 30,
-//               color: Colors.white,
-//             ),
-//           )
-//         ],
-//       ),
-//       body: GridView(
-//         padding: const EdgeInsets.all(20),
-//         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//           mainAxisSpacing: 10,
-//           crossAxisSpacing: 10,
-//           crossAxisCount: 2,
-//           mainAxisExtent: 120,
-//         ),
-//         children: [
-//           for (final category in data)
-//             for (WorldCar item in (category.items))
-//               GridHomeCategory(
-//                 category: category,
-//                 wordlcar: item,
-//                 onSelectCategory: () {
-//                   _selectCategory(context, category, item);
-//                 },
-//               )
-//         ],
-//       ),
-//     );
+class _HomeScreenState extends State<HomeScreen> {
+  void _selectCategory(BuildContext context, CategoryT categoryT) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => Brands(
+          title: categoryT.title,
+          cityLogo: categoryT.cityLogo,
+          cars: [],
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Icon(
+            Icons.bar_chart_rounded,
+            size: 30,
+            color: Colors.white,
+          ),
+        ),
+        actions: const <Widget>[
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Icon(
+              Icons.search_rounded,
+              size: 30,
+              color: Colors.white,
+            ),
+          )
+        ],
+      ),
+      body: GridView(
+        padding: const EdgeInsets.all(20),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          crossAxisCount: 2,
+          mainAxisExtent: 120,
+        ),
+        children: [
+          for (final categoryT in availableCategories)
+            GridHomeCategory(
+              categoryT: categoryT,
+              onSelectCategory: () {
+                _selectCategory(
+                  context,
+                  categoryT,
+                );
+              },
+            )
+        ],
+      ),
+    );
 
 // //     return Scaffold(
 // //       appBar: AppBar(
@@ -413,5 +414,5 @@
 // //         ],
 // //       ),
 // //     );
-//   }
-// }
+  }
+}
