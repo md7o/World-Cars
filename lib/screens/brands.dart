@@ -48,15 +48,22 @@ class Brands extends StatelessWidget {
         ],
       ),
     );
-    if (cars.isNotEmpty)
+    if (cars.isNotEmpty) {
       content = ListView.builder(
+          scrollDirection: Axis.horizontal,
           itemCount: cars.length,
           itemBuilder: (ctx, index) => BrandsItem(
                 car: cars[index],
-
-                // carDefinition: carDefinition[index],
               ));
+    }
 
+    // if (cars.isNotEmpty) {
+    //   content = ListView.builder(
+    //       itemCount: cars.length,
+    //       itemBuilder: (ctx, index) => BrandsItem(
+    //             car: cars[index],
+    //           ));
+    // }
     if (title == null) {
       return content;
     }
@@ -167,130 +174,130 @@ class Brands extends StatelessWidget {
 //                         const SizedBox(
 //                           height: 15,
 //                         ),
-//                         SizedBox(
-//                           height: 160,
-//                           child: Padding(
-//                             padding: const EdgeInsets.all(5),
-//                             child: Scrollbar(
-//                               thickness: 2,
-//                               child: ListView.builder(
-//                                 physics: const BouncingScrollPhysics(),
-//                                 shrinkWrap: true,
-//                                 scrollDirection: Axis.horizontal,
-//                                 itemCount: carItem.length,
-//                                 itemBuilder: (BuildContext context, int index) {
-//                                   return InkWell(
-//                                     splashColor: Colors.transparent,
-//                                     highlightColor: Colors.transparent,
-//                                     onTap: () => Navigator.push(
-//                                       context,
-//                                       PageRouteBuilder(
-//                                         pageBuilder: (context, animation,
-//                                             secondaryAnimation) {
-//                                           return car_types(
-//                                             item: worldItem[index],
-//                                             carItem: worldItem[index].carItems,
-//                                             transitionAnimation: animation,
-//                                           );
-//                                         },
-//                                         transitionDuration:
-//                                             const Duration(milliseconds: 1300),
-//                                       ),
-//                                     ),
-//                                     child: Padding(
-//                                       padding: const EdgeInsets.all(8),
-//                                       child: Container(
-//                                         width: 150,
-//                                         decoration: BoxDecoration(
-//                                           color: Theme.of(context).primaryColor,
-//                                           borderRadius:
-//                                               BorderRadius.circular(20),
-//                                         ),
-//                                         child: Padding(
-//                                           padding: const EdgeInsets.symmetric(
-//                                               vertical: 5),
-//                                           child: Column(
-//                                             mainAxisAlignment:
-//                                                 MainAxisAlignment.spaceAround,
-//                                             crossAxisAlignment:
-//                                                 CrossAxisAlignment.start,
-//                                             children: [
-//                                               Padding(
-//                                                 padding:
-//                                                     const EdgeInsets.symmetric(
-//                                                   horizontal: 15,
-//                                                 ),
-//                                                 child: Row(
-//                                                   mainAxisAlignment:
-//                                                       MainAxisAlignment
-//                                                           .spaceBetween,
-//                                                   children: [
-//                                                     Image.asset(
-//                                                         worldItem[index]
-//                                                             .imageUrl,
-//                                                         width: 45),
-//                                                     Row(
-//                                                       children: [
-//                                                         Padding(
-//                                                           padding:
-//                                                               const EdgeInsets
-//                                                                   .all(3),
-//                                                           child: Text(
-//                                                             'Top',
-//                                                             style: GoogleFonts
-//                                                                 .comfortaa(
-//                                                               textStyle: const TextStyle(
-//                                                                   color: Colors
-//                                                                       .white,
-//                                                                   fontSize: 13,
-//                                                                   fontWeight:
-//                                                                       FontWeight
-//                                                                           .bold),
-//                                                             ),
-//                                                           ),
-//                                                         ),
-//                                                         const Icon(
-//                                                           Icons
-//                                                               .workspace_premium,
-//                                                           size: 20,
-//                                                         ),
-//                                                       ],
-//                                                     ),
-//                                                   ],
-//                                                 ),
-//                                               ),
-//                                               Column(
-//                                                 crossAxisAlignment:
-//                                                     CrossAxisAlignment.start,
-//                                                 children: [
-//                                                   Padding(
-//                                                     padding: const EdgeInsets
-//                                                         .symmetric(
-//                                                       horizontal: 15,
-//                                                     ),
-//                                                     child: Text(
-//                                                       worldItem[index].name,
-//                                                       style:
-//                                                           GoogleFonts.comfortaa(
-//                                                         textStyle:
-//                                                             const TextStyle(
-//                                                                 color: Colors
-//                                                                     .white,
-//                                                                 fontSize: 16,
-//                                                                 fontWeight:
-//                                                                     FontWeight
-//                                                                         .bold),
-//                                                       ),
-//                                                     ),
-//                                                   ),
-//                                                 ],
-//                                               )
-//                                             ],
-//                                           ),
-//                                         ),
-//                                       ),
-//                                     ),
-//                                   );
+                        // SizedBox(
+                        //   height: 160,
+                        //   child: Padding(
+                        //     padding: const EdgeInsets.all(5),
+                        //     child: Scrollbar(
+                        //       thickness: 2,
+                        //       child: ListView.builder(
+                        //         physics: const BouncingScrollPhysics(),
+                        //         shrinkWrap: true,
+                        //         scrollDirection: Axis.horizontal,
+                        //         itemCount: carItem.length,
+                        //         itemBuilder: (BuildContext context, int index) {
+                        //           return InkWell(
+                        //             splashColor: Colors.transparent,
+                        //             highlightColor: Colors.transparent,
+                        //             onTap: () => Navigator.push(
+                        //               context,
+                        //               PageRouteBuilder(
+                        //                 pageBuilder: (context, animation,
+                        //                     secondaryAnimation) {
+                        //                   return car_types(
+                        //                     item: worldItem[index],
+                        //                     carItem: worldItem[index].carItems,
+                        //                     transitionAnimation: animation,
+                        //                   );
+                        //                 },
+                        //                 transitionDuration:
+                        //                     const Duration(milliseconds: 1300),
+                        //               ),
+                        //             ),
+                        //             child: Padding(
+                        //               padding: const EdgeInsets.all(8),
+                        //               child: Container(
+                        //                 width: 150,
+                        //                 decoration: BoxDecoration(
+                        //                   color: Theme.of(context).primaryColor,
+                        //                   borderRadius:
+                        //                       BorderRadius.circular(20),
+                        //                 ),
+                        //                 child: Padding(
+                        //                   padding: const EdgeInsets.symmetric(
+                        //                       vertical: 5),
+                        //                   child: Column(
+                        //                     mainAxisAlignment:
+                        //                         MainAxisAlignment.spaceAround,
+                        //                     crossAxisAlignment:
+                        //                         CrossAxisAlignment.start,
+                        //                     children: [
+                        //                       Padding(
+                        //                         padding:
+                        //                             const EdgeInsets.symmetric(
+                        //                           horizontal: 15,
+                        //                         ),
+                        //                         child: Row(
+                        //                           mainAxisAlignment:
+                        //                               MainAxisAlignment
+                        //                                   .spaceBetween,
+                        //                           children: [
+                        //                             Image.asset(
+                        //                                 worldItem[index]
+                        //                                     .imageUrl,
+                        //                                 width: 45),
+                        //                             Row(
+                        //                               children: [
+                        //                                 Padding(
+                        //                                   padding:
+                        //                                       const EdgeInsets
+                        //                                           .all(3),
+                        //                                   child: Text(
+                        //                                     'Top',
+                        //                                     style: GoogleFonts
+                        //                                         .comfortaa(
+                        //                                       textStyle: const TextStyle(
+                        //                                           color: Colors
+                        //                                               .white,
+                        //                                           fontSize: 13,
+                        //                                           fontWeight:
+                        //                                               FontWeight
+                        //                                                   .bold),
+                        //                                     ),
+                        //                                   ),
+                        //                                 ),
+                        //                                 const Icon(
+                        //                                   Icons
+                        //                                       .workspace_premium,
+                        //                                   size: 20,
+                        //                                 ),
+                        //                               ],
+                        //                             ),
+                        //                           ],
+                        //                         ),
+                        //                       ),
+                        //                       Column(
+                        //                         crossAxisAlignment:
+                        //                             CrossAxisAlignment.start,
+                        //                         children: [
+                        //                           Padding(
+                        //                             padding: const EdgeInsets
+                        //                                 .symmetric(
+                        //                               horizontal: 15,
+                        //                             ),
+                        //                             child: Text(
+                        //                               worldItem[index].name,
+                        //                               style:
+                        //                                   GoogleFonts.comfortaa(
+                        //                                 textStyle:
+                        //                                     const TextStyle(
+                        //                                         color: Colors
+                        //                                             .white,
+                        //                                         fontSize: 16,
+                        //                                         fontWeight:
+                        //                                             FontWeight
+                        //                                                 .bold),
+                        //                               ),
+                        //                             ),
+                        //                           ),
+                        //                         ],
+                        //                       )
+                        //                     ],
+                        //                   ),
+                        //                 ),
+                        //               ),
+                        //             ),
+                        //           );
 //                                 },
 //                               ),
 //                             ),

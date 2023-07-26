@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:world_car/models/category.dart';
-import 'package:world_car/models/world_car.dart';
 
 class GridHomeCategory extends StatelessWidget {
   const GridHomeCategory({

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:world_car/data.dart';
 import 'package:world_car/models/category.dart';
-import 'package:world_car/models/world_car.dart';
 import 'package:world_car/screens/brands.dart';
 import 'package:world_car/widgets/grid_home_category.dart';
 
@@ -19,12 +17,16 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   void _selectCategory(BuildContext context, CategoryT categoryT) {
+    final filteredMeals = detailsCar
+        .where((car) => car.categories.contains(categoryT.id))
+        .toList();
+
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => Brands(
           title: categoryT.title,
           cityLogo: categoryT.cityLogo,
-          cars: [],
+          cars: filteredMeals,
         ),
       ),
     );
