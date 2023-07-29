@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 import 'package:world_car/widgets/brands_item.dart';
 
 import '../models/car.dart';
+import '../models/category.dart';
+import '../widgets/brand_facts.dart';
 
 class Brands extends StatelessWidget {
   const Brands({
@@ -9,9 +12,11 @@ class Brands extends StatelessWidget {
     this.title,
     this.cityLogo,
     required this.cars,
+    required this.categoryT,
   });
 
   final String? title;
+  final CategoryT categoryT;
   final String? cityLogo;
   final List<Car> cars;
   // void SelectMeal(BuildContext context, WorldCar meal) {
@@ -49,30 +54,70 @@ class Brands extends StatelessWidget {
       ),
     );
     if (cars.isNotEmpty) {
-      content = ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: cars.length,
-          itemBuilder: (ctx, index) => BrandsItem(
-                car: cars[index],
-              ));
+      content = Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 30, top: 80, bottom: 20),
+            child: Row(
+              children: [
+                FadeInImage(
+                  placeholder: MemoryImage(kTransparentImage),
+                  image: NetworkImage(categoryT.cityLogo),
+                  fit: BoxFit.cover,
+                  height: 50,
+                ),
+                const SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  categoryT.cityName,
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Scrollbar(
+              thickness: 2,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: cars.length,
+                  itemBuilder: (ctx, index) => Column(
+                    children: [
+                      BrandsItem(
+                        car: cars[index],
+                        cityName: categoryT.cityName,
+                        cityLogo: categoryT.cityLogo,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          BrandFacts(
+            categoryT: categoryT,
+          )
+        ],
+      );
     }
 
-    // if (cars.isNotEmpty) {
-    //   content = ListView.builder(
-    //       itemCount: cars.length,
-    //       itemBuilder: (ctx, index) => BrandsItem(
-    //             car: cars[index],
-    //           ));
-    // }
     if (title == null) {
       return content;
     }
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title!),
-        ),
-        body: content);
+      appBar: AppBar(
+        title: Text(title!),
+      ),
+      body: content,
+    );
   }
 }
 
@@ -303,136 +348,4 @@ class Brands extends StatelessWidget {
 //                             ),
 //                           ),
 //                         ),
-//                         const SizedBox(
-//                           height: 20,
-//                         ),
-//                         Padding(
-//                           padding: const EdgeInsets.only(
-//                               top: 20, left: 20, bottom: 20),
-//                           child: Row(
-//                             children: [
-//                               const Icon(
-//                                 Icons.tips_and_updates_outlined,
-//                                 size: 50,
-//                               ),
-//                               const SizedBox(
-//                                 width: 15,
-//                               ),
-//                               Text(
-//                                 "Facts",
-//                                 style: GoogleFonts.comfortaa(
-//                                   color: Colors.white,
-//                                   textStyle: const TextStyle(
-//                                     fontSize: 35,
-//                                     fontWeight: FontWeight.bold,
-//                                   ),
-//                                 ),
-//                               ),
-//                             ],
-//                           ),
-//                         ),
-//                         Column(
-//                           children: [
-//                             Padding(
-//                               padding:
-//                                   const EdgeInsets.symmetric(horizontal: 20),
-//                               child: Container(
-//                                 height: MediaQuery.of(context).size.width * 0.3,
-//                                 width: double.infinity,
-//                                 decoration: BoxDecoration(
-//                                   color: Theme.of(context).primaryColor,
-//                                   borderRadius: const BorderRadius.all(
-//                                     Radius.circular(20),
-//                                   ),
-//                                 ),
-//                                 child: Padding(
-//                                   padding: const EdgeInsets.symmetric(
-//                                     horizontal: 20,
-//                                   ),
-//                                   child: Row(
-//                                     children: [
-//                                       Image.asset(
-//                                         worldItem[1].imageUrl,
-//                                         width: 58,
-//                                       ),
-//                                       const SizedBox(
-//                                         width: 20,
-//                                       ),
-//                                       Flexible(
-//                                         child: Text(
-//                                           worldItem[4].name,
-//                                           style: GoogleFonts.comfortaa(
-//                                             textStyle: TextStyle(
-//                                               color: Colors.white,
-//                                               fontSize: width / 25,
-//                                               fontWeight: FontWeight.bold,
-//                                             ),
-//                                           ),
-//                                         ),
-//                                       ),
-//                                     ],
-//                                   ),
-//                                 ),
-//                               ),
-//                             ),
-//                           ],
-//                         ),
-//                         Column(
-//                           children: [
-//                             Padding(
-//                               padding: const EdgeInsets.symmetric(vertical: 20),
-//                               child: Padding(
-//                                 padding:
-//                                     const EdgeInsets.symmetric(horizontal: 20),
-//                                 child: Container(
-//                                   height:
-//                                       MediaQuery.of(context).size.width * 0.3,
-//                                   width: double.infinity,
-//                                   decoration: BoxDecoration(
-//                                     color: Theme.of(context).primaryColor,
-//                                     borderRadius: const BorderRadius.all(
-//                                       Radius.circular(20),
-//                                     ),
-//                                   ),
-//                                   child: Padding(
-//                                     padding: const EdgeInsets.symmetric(
-//                                         horizontal: 20),
-//                                     child: Row(
-//                                       mainAxisAlignment:
-//                                           MainAxisAlignment.start,
-//                                       children: [
-//                                         Flexible(
-//                                           child: Text(
-//                                             worldItem[5].name,
-//                                             style: GoogleFonts.comfortaa(
-//                                               textStyle: TextStyle(
-//                                                   color: Colors.white,
-//                                                   fontSize: width / 28,
-//                                                   fontWeight: FontWeight.bold),
-//                                             ),
-//                                           ),
-//                                         ),
-//                                         Image.asset(
-//                                           worldItem[5].imageUrl,
-//                                           width: 72,
-//                                         ),
-//                                       ],
-//                                     ),
-//                                   ),
-//                                 ),
-//                               ),
-//                             ),
-//                           ],
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
+//                           

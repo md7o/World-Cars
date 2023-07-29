@@ -24,9 +24,10 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => Brands(
-          title: categoryT.title,
+          title: categoryT.cityName,
           cityLogo: categoryT.cityLogo,
           cars: filteredMeals,
+          categoryT: categoryT,
         ),
       ),
     );
