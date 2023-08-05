@@ -4,12 +4,11 @@ import 'package:world_car/screens/brands.dart';
 import 'package:world_car/widgets/grid_home_category.dart';
 
 import '../data/details_data.dart';
-import '../models/car.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.avalibaleMeals});
-
-  final List<Car> avalibaleMeals;
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -17,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   void _selectCategory(BuildContext context, CategoryT categoryT) {
-    final filteredMeals = detailsCar
+    final filteredCars = detailsCar
         .where((car) => car.categories.contains(categoryT.id))
         .toList();
 
@@ -26,8 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (ctx) => Brands(
           title: categoryT.cityName,
           cityLogo: categoryT.cityLogo,
-          cars: filteredMeals,
           categoryT: categoryT,
+          cars: filteredCars,
         ),
       ),
     );

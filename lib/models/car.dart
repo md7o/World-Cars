@@ -1,12 +1,37 @@
-class definitionCar {
+class Assortment {
   final String carImage;
   final String carName;
-
-  const definitionCar({
+  final List<Sliding> slideAblum;
+  final List<Details> details;
+  const Assortment({
     required this.carImage,
     required this.carName,
+    required this.details,
+    required this.slideAblum,
   });
 }
+
+///////// Inside Assortment //////////
+class Sliding {
+  final String sliding;
+
+  const Sliding({
+    required this.sliding,
+  });
+}
+
+class Details {
+  final String detailPhoto;
+  final String detailName;
+  final String detailInfo;
+
+  const Details({
+    required this.detailPhoto,
+    required this.detailName,
+    required this.detailInfo,
+  });
+}
+///////// Inside Assortment //////////
 
 class Car {
   const Car({
@@ -14,14 +39,12 @@ class Car {
     required this.categories,
     required this.title,
     required this.imgAssets,
-    required this.definition,
-    required this.steps,
+    required this.assortment,
   });
 
   final String id;
   final List<String> categories;
   final String title;
   final String imgAssets;
-  final List<definitionCar> definition;
-  final List<String> steps;
+  final List<Assortment> assortment;
 }

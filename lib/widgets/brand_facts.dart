@@ -14,20 +14,20 @@ class BrandFacts extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20, left: 20, bottom: 20),
+          padding: const EdgeInsets.only(left: 20, bottom: 20),
           child: Row(
             children: [
               const Icon(
-                Icons.tips_and_updates_outlined,
-                size: 50,
+                Icons.lightbulb_outline,
+                size: 30,
               ),
               const SizedBox(
-                width: 15,
+                width: 5,
               ),
               Text(
                 "Facts",
                 style: const TextStyle(
-                  fontSize: 35,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -37,7 +37,7 @@ class BrandFacts extends StatelessWidget {
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.3,
                 width: double.infinity,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:world_car/widgets/brands_item.dart';
-
+import '../data/details_data.dart';
 import '../models/car.dart';
 import '../models/category.dart';
 import '../widgets/brand_facts.dart';
+import 'car_groups.dart';
 
 class Brands extends StatelessWidget {
   const Brands({
@@ -19,11 +20,17 @@ class Brands extends StatelessWidget {
   final CategoryT categoryT;
   final String? cityLogo;
   final List<Car> cars;
-  // void SelectMeal(BuildContext context, WorldCar meal) {
+
+  // void _SelectCar(
+  //   BuildContext context,
+  //   Car car,
+  // ) {
   //   Navigator.of(context).push(
   //     MaterialPageRoute(
-  //       builder: (ctx) => MealDetailsScreen(
-  //         meal: meal,
+  //       builder: (ctx) => CarsGroups(
+  //         categoryT: categoryT,
+  //         cars: car,
+  //         definition: cars.definition[index],
   //       ),
   //     ),
   //   );
@@ -31,86 +38,86 @@ class Brands extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget content = Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'Uh oh ... nothing here!',
-            style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                  color: Theme.of(context).colorScheme.onBackground,
-                ),
-          ),
-          const SizedBox(
-            height: 60,
-          ),
-          Text(
-            'Try selecting a diffrent category!',
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.onBackground,
-                ),
-          ),
-        ],
-      ),
-    );
-    if (cars.isNotEmpty) {
-      content = Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 30, top: 80, bottom: 20),
-            child: Row(
+    Widget content = Column(
+      children: [
+        Expanded(
+          child: Scrollbar(
+            thickness: 3,
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
+              shrinkWrap: true,
               children: [
-                FadeInImage(
-                  placeholder: MemoryImage(kTransparentImage),
-                  image: NetworkImage(categoryT.cityLogo),
-                  fit: BoxFit.cover,
-                  height: 50,
-                ),
-                const SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  categoryT.cityName,
-                  style: TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Scrollbar(
-              thickness: 2,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: cars.length,
-                  itemBuilder: (ctx, index) => Column(
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 90, bottom: 10),
+                  child: Row(
                     children: [
-                      BrandsItem(
-                        car: cars[index],
-                        cityName: categoryT.cityName,
-                        cityLogo: categoryT.cityLogo,
+                      FadeInImage(
+                        placeholder: MemoryImage(kTransparentImage),
+                        image: NetworkImage(categoryT.cityLogo),
+                        fit: BoxFit.cover,
+                        height: 30,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        categoryT.cityName,
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
+                SizedBox(
+                  height: 150,
+                  child: Scrollbar(
+                    thickness: 2,
+                    radius: Radius.circular(50),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ListView.builder(
+                        physics: BouncingScrollPhysics(),
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: cars.length,
+                        itemBuilder: (ctx, index) => Column(
+                          children: [
+                            BrandsItem(
+                              car: cars[index],
+                              cityName: categoryT.cityName,
+                              cityLogo: categoryT.cityLogo,
+                              onSelectBrand: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (ctx) => CarsGroups(
+                                      categoryT: categoryT,
+                                      cars: cars[index],
+                                      assortment: cars[index].assortment,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                BrandFacts(
+                  categoryT: categoryT,
+                )
+              ],
             ),
           ),
-          BrandFacts(
-            categoryT: categoryT,
-          )
-        ],
-      );
-    }
-
-    if (title == null) {
-      return content;
-    }
+        ),
+      ],
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -349,3 +356,4 @@ class Brands extends StatelessWidget {
 //                           ),
 //                         ),
 //                           
+
