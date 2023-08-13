@@ -18,6 +18,8 @@ class BrandsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      splashFactory: NoSplash.splashFactory,
+      highlightColor: Colors.transparent,
       onTap: onSelectBrand,
       child: Column(
         children: [

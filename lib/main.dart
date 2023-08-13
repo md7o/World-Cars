@@ -1,29 +1,36 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:world_car/screens/bnb_widget.dart';
-import 'package:world_car/models/themedata.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:world_car/screens/home_categories.dart';
+import 'package:world_car/screens/tabs.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => const MyApp(), // Wrap your app
+        builder: (context) =>
+            ProviderScope(child: const MyApp()), // Wrap your app
       ),
     );
 
 final theme = ThemeData(
   useMaterial3: true,
+  primaryColor: Color.fromARGB(255, 44, 54, 88),
   colorScheme: ColorScheme.fromSeed(
     brightness: Brightness.dark,
-    seedColor: const Color(0xFF3083C3),
+    seedColor: Color(0xFF253166),
   ),
-  textTheme: GoogleFonts.latoTextTheme(),
+  fontFamily: GoogleFonts.cairo().fontFamily,
+  textTheme: TextTheme(
+    bodyMedium: TextStyle(color: Colors.white),
+  ),
 );
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({
+    super.key,
+  });
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -31,20 +38,9 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => ThemeProvider(),
-        builder: (context, _) {
-          final themeProvider = Provider.of<ThemeProvider>(context);
-          return MaterialApp(
-            // useInheritedMediaQuery: true,
-            locale: DevicePreview.locale(context),
-            builder: DevicePreview.appBuilder,
-            debugShowCheckedModeBanner: false,
-            themeMode: themeProvider.themeMode,
-            theme: theme,
-            darkTheme: MyThemes.darkTheme,
-            home: naviBar(),
-          );
-        },
+  Widget build(BuildContext context) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: theme,
+        home: TabsScreen(),
       );
 }

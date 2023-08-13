@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'package:world_car/widgets/brands_item.dart';
-import '../data/details_data.dart';
 import '../models/car.dart';
 import '../models/category.dart';
-import '../widgets/brand_facts.dart';
+import '../widgets/brands_facts.dart';
 import 'car_groups.dart';
 
 class Brands extends StatelessWidget {

@@ -5,16 +5,16 @@ import 'package:world_car/widgets/grid_home_category.dart';
 
 import '../data/details_data.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({
+class HomeCategories extends StatefulWidget {
+  const HomeCategories({
     super.key,
   });
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeCategories> createState() => _HomeCategoriesState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeCategoriesState extends State<HomeCategories> {
   void _selectCategory(BuildContext context, CategoryT categoryT) {
     final filteredCars = detailsCar
         .where((car) => car.categories.contains(categoryT.id))

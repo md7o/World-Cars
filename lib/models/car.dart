@@ -1,9 +1,11 @@
 class Assortment {
+  final String id;
   final String carImage;
   final String carName;
   final List<Sliding> slideAblum;
   final List<Details> details;
   const Assortment({
+    required this.id,
     required this.carImage,
     required this.carName,
     required this.details,
