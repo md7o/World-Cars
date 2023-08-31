@@ -26,13 +26,13 @@ final favoriteAssortmentProvider =
 
 // =====================================================================
 
-class FavortieCarsNotifier extends StateNotifier<List<Car>> {
-  FavortieCarsNotifier() : super([]);
-}
+// class FavortieCarsNotifier extends StateNotifier<List<Car>> {
+//   FavortieCarsNotifier() : super([]);
+// }
 
-final favoriteCarsProvider =
-    StateNotifierProvider<FavortieCarsNotifier, List<Car>>(
-  (ref) {
-    return FavortieCarsNotifier();
-  },
-);
+// final favoriteCarsProvider =
+//     StateNotifierProvider<FavortieCarsNotifier, List<Car>>(
+//   (ref) {
+//     return FavortieCarsNotifier();
+//   },
+// );

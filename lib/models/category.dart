@@ -14,8 +14,8 @@ class Category {
   });
 }
 
-class CategoryT {
-  const CategoryT({
+class CategoryC {
+  const CategoryC({
     required this.id,
     required this.cityName,
     required this.cityLogo,

@@ -3,10 +3,11 @@ import 'package:world_car/models/category.dart';
 import '../models/car.dart';
 
 const availableCategories = [
-  CategoryT(
+  CategoryC(
     id: 'c1',
     cityName: 'Germany',
-    cityLogo: "https://cdn-icons-png.flaticon.com/512/197/197571.png",
+    cityLogo:
+        "https://cdn4.iconfinder.com/data/icons/material-circular-world-flags/180/circle_germany_flag_nation_country-512.png",
     img: "images/GermanyC.png",
     facts: [
       'The most popular car in Germany in 2021-2023 is Volkswagen',
@@ -17,37 +18,55 @@ const availableCategories = [
       'images/benz.png',
     ],
   ),
-  CategoryT(
+  CategoryC(
     id: 'c2',
     cityName: 'Japan',
     cityLogo: "https://cdn-icons-png.flaticon.com/512/197/197604.png",
     img: "images/JapanC.png",
     facts: [
-      'Cook the oil, garlic, 1/2 teaspoon salt',
-      'Octane is the best car in rocket league',
+      'The best-selling car in the world is the Toyota Corolla.',
+      'It was founded by Kiichiro Toyoda and incorporated on August 28, 1937 (1937-08-28).',
     ],
     cardFace: [
-      'Cook the oil, garlic, 1/2 teaspoon salt',
-      'Octane is the best car in rocket league',
+      'images/Toyota.png',
+      'images/toyota_founder.png',
     ],
   ),
-  // Category(
-  //   id: 'c3',
-  //   title: 'Burgers',
-  //   cityLogo: cityLogos.orange,
-  // ),
-  // Category(
-  //   id: 'c4',
-  //   title: 'German',
-  //   cityLogo: cityLogos.amber,
-  // ),
+  CategoryC(
+    id: 'c3',
+    cityName: 'America',
+    cityLogo: "https://cdn-icons-png.flaticon.com/512/5373/5373324.png",
+    img: "images/AmericaC.png",
+    facts: [
+      'The second best selling car in the world Ford F-series.',
+      'Henry Leland, a founder of the Cadillac auto brand, established the Lincoln Motor Company in 1917.',
+    ],
+    cardFace: [
+      'images/Ford.png',
+      'images/lincon_founder.png',
+    ],
+  ),
+  CategoryC(
+    id: 'c4',
+    cityName: 'Korea',
+    cityLogo: "https://cdn-icons-png.flaticon.com/512/5111/5111586.png",
+    img: "images/KoreaC.png",
+    facts: [
+      'The most popular car in South Korea in 2021-2022 is Hyundai.',
+      'Kia\'s humble history dates back to 1944. Founder Kim Chul Ho was born in Korea in 1905.',
+    ],
+    cardFace: [
+      'images/KIA.png',
+      'images/kia_founder.png',
+    ],
+  ),
 ];
 
 const detailsCar = [
 // Mercedes ===================
 
   Car(
-    id: 'd1',
+    id: 'Car1',
     categories: [
       'c1',
     ],
@@ -653,9 +672,9 @@ const detailsCar = [
       ),
     ],
   ),
-// BMW ===================
-  // ---------------------------------------------------------
-// Audi ==================
+// // BMW ===================
+//   // ---------------------------------------------------------
+// // Audi ==================
   Car(
     id: 'd4',
     categories: [

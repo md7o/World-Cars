@@ -8,7 +8,7 @@ class GridHomeCategory extends StatelessWidget {
     required this.onSelectCategory,
   });
 
-  final CategoryT categoryT;
+  final CategoryC categoryT;
   final void Function() onSelectCategory;
 
   @override
@@ -21,7 +21,7 @@ class GridHomeCategory extends StatelessWidget {
         children: [
           Positioned.fill(
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
               child: Image.asset(
                 categoryT.img,
                 fit: BoxFit.cover,
@@ -32,10 +32,7 @@ class GridHomeCategory extends StatelessWidget {
             height: 160,
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
-              ),
+              borderRadius: BorderRadius.circular(20),
               gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
@@ -54,9 +51,10 @@ class GridHomeCategory extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 categoryT.cityName,
-                style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground,
-                    fontWeight: FontWeight.bold),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
             ),
           ),

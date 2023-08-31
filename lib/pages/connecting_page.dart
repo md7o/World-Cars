@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Connection extends StatefulWidget {
-  const Connection({super.key});
+class connectionPage extends StatefulWidget {
+  const connectionPage({super.key});
 
   @override
-  State<Connection> createState() => _ConnectionState();
+  State<connectionPage> createState() => _connectionPageState();
 }
 
-class _ConnectionState extends State<Connection> {
+class _connectionPageState extends State<connectionPage> {
   // ignore: unused_field
   Future<void>? _launched;
 
@@ -29,66 +29,78 @@ class _ConnectionState extends State<Connection> {
     final Uri url = Uri.parse('https://twitter.com/Md7oHe');
     final Uri url2 = Uri.parse('https://github.com/md7o');
 
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          title: Text(
-            'Social Media',
-            style: GoogleFonts.josefinSans(
-              color: Theme.of(context).iconTheme.color,
-              textStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
-            ),
-          ),
-          centerTitle: true,
-          elevation: 0,
-          leading: IconButton(
-              color: Theme.of(context).iconTheme.color,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.close)),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
         ),
+        gradient: LinearGradient(
+          colors: [
+            Theme.of(context).colorScheme.primary,
+            Theme.of(context).colorScheme.secondary,
+          ],
+          begin: Alignment.bottomRight,
+          end: Alignment.topCenter,
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Column(
           children: [
+            SizedBox(
+              height: 10,
+            ),
+            Opacity(
+              opacity: 0.4,
+              child: Container(
+                width: 30,
+                height: 3,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Social media",
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium!
+                  .copyWith(fontWeight: FontWeight.bold),
+            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.onBackground,
                   borderRadius: const BorderRadius.all(
-                    Radius.circular(5),
+                    Radius.circular(20),
                   ),
                 ),
-                child: Column(
-                  children: [
-                    //  Dark mode
-                    InkWell(
-                      onTap: () {
-                        setState(
-                          () {
-                            _launched = _launchInBrowser(url2);
-                          },
-                        );
-                      },
-                      child: Container(
-                        height: 45,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                        ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20,
+                  ),
+                  child: Column(
+                    children: [
+                      //  Dark mode
+                      InkWell(
+                        onTap: () {
+                          setState(
+                            () {
+                              _launched = _launchInBrowser(url2);
+                            },
+                          );
+                        },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Row(
                                 children: [
@@ -97,87 +109,87 @@ class _ConnectionState extends State<Connection> {
                                     width: 25,
                                   ),
                                   const SizedBox(
-                                    width: 10,
+                                    width: 15,
                                   ),
                                   Text(
                                     'Github',
-                                    style: GoogleFonts.josefinSans(
-                                      textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.normal),
-                                    ),
+                                    style:
+                                        Theme.of(context).textTheme.titleLarge,
                                   ),
                                 ],
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                                size: 20,
                               ),
                             ],
                           ),
                         ),
                       ),
-                    ),
-
-                    const Divider(
-                      indent: 30,
-                      endIndent: 30,
-                      thickness: 1,
-                      color: Colors.white,
-                    ),
-
-                    //  Fonts
-                    InkWell(
-                      onTap: () {
-                        setState(
-                          () {
-                            _launched = _launchInBrowser(url);
+                      SizedBox(
+                        height: 25,
+                      ),
+                      //  Fonts
+                      InkWell(
+                        onTap: () {
+                          setState(
+                            () {
+                              _launched = _launchInBrowser(url);
+                            },
+                          );
+                        },
+                        child: InkWell(
+                          onTap: () {
+                            setState(
+                              () {
+                                _launched = _launchInBrowser(url);
+                              },
+                            );
                           },
-                        );
-                      },
-                      child: Container(
-                        height: 45,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 25),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  Image.asset(
-                                    "images/twitter.png",
-                                    width: 25,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Twitter',
-                                    style: GoogleFonts.josefinSans(
-                                      textStyle: const TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.normal),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 25),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      "images/twitter.png",
+                                      width: 25,
                                     ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    const SizedBox(
+                                      width: 15,
+                                    ),
+                                    Text(
+                                      'Twitter',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleLarge,
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.arrow_forward_ios_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    //  Fonts
-                  ],
+                      //  Fonts
+                    ],
+                  ),
                 ),
               ),
             ),
           ],
-        ));
+        ),
+      ),
+    );
+
+    //  Fonts
   }
 }

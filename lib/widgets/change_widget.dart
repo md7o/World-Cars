@@ -1,22 +1,31 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:world_car/models/themedata.dart';
+import 'package:world_car/provider/theme_provider.dart';
 
-class ChangeThemeButtonWidget extends StatelessWidget {
+class ChangeThemeButtonWidget extends ConsumerWidget {
   const ChangeThemeButtonWidget({
     super.key,
   });
   @override
-  Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
+  Widget build(BuildContext context, WidgetRef ref) {
+    var darkMode = ref.watch(darkModeProvider);
 
-    return Switch.adaptive(
-      value: themeProvider.isDarkMode,
-      activeColor: const Color(0xFFB292FF),
-      onChanged: (value) {
-        final provider = Provider.of<ThemeProvider>(context, listen: false);
-        provider.toggleTheme(value);
-      },
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Switch(
+            activeColor: Colors.amber,
+            inactiveThumbColor: Colors.white,
+            value: darkMode,
+            onChanged: (val) {
+              ref.read(darkModeProvider.notifier).toggle();
+            },
+          ),
+        ],
+      ),
     );
   }
 }

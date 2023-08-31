@@ -1,30 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ThemeProvider extends ChangeNotifier {
-  ThemeMode themeMode = ThemeMode.dark;
-
-  bool get isDarkMode => themeMode == ThemeMode.dark;
-
-  void toggleTheme(bool isOn) {
-    themeMode = isOn ? ThemeMode.dark : ThemeMode.light;
-    notifyListeners();
-  }
-}
-
-class MyThemes {
+class AppTheme {
   static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: Color(0xFF181721),
-    colorScheme: const ColorScheme.dark(),
-    primaryColor: Color(0xFF322E3D),
-    iconTheme: const IconThemeData(color: Colors.white),
-    fontFamily: GoogleFonts.comfortaa().fontFamily,
+    useMaterial3: true,
+    shadowColor: Color(0xFF024659),
+    colorScheme: ColorScheme.fromSeed(
+      primary: Color(0xFF087165),
+      secondary: Color(0xFF1E4179),
+      brightness: Brightness.dark,
+      seedColor: Color(0xFF181F26),
+      background: Color(0xFF012B37),
+      onBackground: Color(0xFF001B2B),
+      tertiary: Color(0xFF00050E),
+    ),
+    fontFamily: GoogleFonts.cairo().fontFamily,
+    textTheme: TextTheme(
+      bodyMedium: TextStyle(color: Colors.white),
+    ),
   );
+
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: const Color(0xFFA494D0),
-    colorScheme: const ColorScheme.light(),
-    primaryColor: const Color(0xFF7C68B4),
-    iconTheme: const IconThemeData(color: Colors.white),
-    fontFamily: GoogleFonts.comfortaa().fontFamily,
+    useMaterial3: true,
+    shadowColor: Color(0xFF024659),
+    colorScheme: ColorScheme.fromSeed(
+      primary: Color(0xFF0568A1),
+      secondary: Color(0xFF3B8DB3),
+      brightness: Brightness.dark,
+      seedColor: Color(0xFF181F26),
+      background: Color(0xFF102346),
+      onBackground: Color(0xFF174E6F),
+      tertiary: Color(0xFF3C859A),
+    ),
+    fontFamily: GoogleFonts.cairo().fontFamily,
+    textTheme: TextTheme(
+      bodyMedium: TextStyle(color: Colors.white),
+    ),
   );
 }

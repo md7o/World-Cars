@@ -26,10 +26,17 @@ class BrandsItem extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5),
             child: Container(
-              width: 150,
+              width: 140,
               height: 130,
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
+                gradient: LinearGradient(
+                  colors: [
+                    Theme.of(context).colorScheme.primary,
+                    Theme.of(context).colorScheme.secondary,
+                  ],
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topCenter,
+                ),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
@@ -40,23 +47,23 @@ class BrandsItem extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 15,
+                        horizontal: 10,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(car.imgAssets, width: 45),
+                          Image.asset(
+                            car.imgAssets,
+                            width: 45,
+                          ),
                           Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.all(3),
-                                child: Text(
-                                  'Top',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                              Text(
+                                'Top',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const Icon(
                                 Icons.workspace_premium,
@@ -68,14 +75,26 @@ class BrandsItem extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 15),
-                      child: Text(
-                        car.title,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            car.title,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            car.title,
+                            style: TextStyle(
+                              color: Colors.white30,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
                       ),
                     )
                   ],

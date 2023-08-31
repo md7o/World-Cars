@@ -1,3 +1,19 @@
+class Car {
+  const Car({
+    required this.id,
+    required this.categories,
+    required this.title,
+    required this.imgAssets,
+    required this.assortment,
+  });
+
+  final String id;
+  final List<String> categories;
+  final String title;
+  final String imgAssets;
+  final List<Assortment> assortment;
+}
+
 class Assortment {
   final String id;
   final String carImage;
@@ -23,11 +39,13 @@ class Sliding {
 }
 
 class Details {
+  // final String id;
   final String detailPhoto;
   final String detailName;
   final String detailInfo;
 
   const Details({
+    // required this.id,
     required this.detailPhoto,
     required this.detailName,
     required this.detailInfo,
@@ -35,18 +53,22 @@ class Details {
 }
 ///////// Inside Assortment //////////
 
-class Car {
-  const Car({
-    required this.id,
-    required this.categories,
-    required this.title,
-    required this.imgAssets,
-    required this.assortment,
-  });
+// ==================================================================== //
 
+class topSeller {
   final String id;
-  final List<String> categories;
   final String title;
-  final String imgAssets;
-  final List<Assortment> assortment;
+  final String sales;
+  final String backgroundImg;
+  final String country;
+  final String countryImg;
+
+  const topSeller({
+    required this.id,
+    required this.title,
+    required this.sales,
+    required this.backgroundImg,
+    required this.country,
+    required this.countryImg,
+  });
 }

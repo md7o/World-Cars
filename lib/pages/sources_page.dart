@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Sources extends StatefulWidget {
-  const Sources({super.key});
+class sourcesPage extends StatefulWidget {
+  const sourcesPage({super.key});
 
   @override
-  State<Sources> createState() => _SourcesState();
+  State<sourcesPage> createState() => _sourcesPageState();
 }
 
-class _SourcesState extends State<Sources> {
+class _sourcesPageState extends State<sourcesPage> {
   // ignore: unused_field
   Future<void>? _launched;
 
@@ -29,153 +29,141 @@ class _SourcesState extends State<Sources> {
     final Uri url = Uri.parse(
         'https://www.statista.com/statistics/239229/most-sold-car-models-worldwide/');
 
-    final text = MediaQuery.of(context).platformBrightness == Brightness.dark
-        ? 'darkTheme'
-        : 'LightTheme';
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(
-          'Soureces',
-          style: GoogleFonts.josefinSans(
-            color: Theme.of(context).iconTheme.color,
-            textStyle:
-                const TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
         ),
-        centerTitle: true,
-        elevation: 0,
-        leading: IconButton(
-            color: Theme.of(context).iconTheme.color,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.close)),
+        gradient: LinearGradient(
+          colors: [
+            Theme.of(context).colorScheme.primary,
+            Theme.of(context).colorScheme.secondary,
+          ],
+          begin: Alignment.bottomRight,
+          end: Alignment.topCenter,
+        ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(5),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Column(
+          children: [
+            SizedBox(
+              height: 10,
+            ),
+            Opacity(
+              opacity: 0.4,
+              child: Container(
+                width: 30,
+                height: 3,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              child: Column(
-                children: [
-                  //  Dark mode
-                  Container(
-                    height: 45,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(5),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Row(
-                            children: [
-                              const Icon(
-                                Icons.book,
-                                color: Colors.white,
-                                size: 25,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'Wikipedia',
-                                style: GoogleFonts.josefinSans(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Sources",
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium!
+                  .copyWith(fontWeight: FontWeight.bold),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.onBackground,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(20),
                   ),
-
-                  const Divider(
-                    indent: 30,
-                    endIndent: 30,
-                    thickness: 1,
-                    color: Colors.white,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20,
                   ),
-
-                  //  Fonts
-                  InkWell(
-                    onTap: () {
-                      setState(
-                        () {
-                          _launched = _launchInBrowser(url);
-                        },
-                      );
-                    },
-                    child: Container(
-                      height: 45,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(5),
-                        ),
-                      ),
-                      child: Padding(
+                  child: Column(
+                    children: [
+                      //  Dark mode
+                      Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 25),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Row(
                               children: [
-                                const Icon(
-                                  Icons.directions_car,
+                                Icon(
+                                  Icons.sunny,
                                   color: Colors.white,
                                   size: 25,
                                 ),
                                 const SizedBox(
-                                  width: 10,
+                                  width: 15,
                                 ),
                                 Text(
-                                  'Statista',
-                                  style: GoogleFonts.josefinSans(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.normal),
-                                  ),
+                                  'Wikipedia',
+                                  style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ],
-                            ),
-                            const Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              color: Colors.white,
-                              size: 25,
                             ),
                           ],
                         ),
                       ),
-                    ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      //  Fonts
+                      InkWell(
+                        onTap: () {
+                          setState(
+                            () {
+                              _launched = _launchInBrowser(url);
+                            },
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.directions_car_rounded,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                  const SizedBox(
+                                    width: 15,
+                                  ),
+                                  Text(
+                                    'Statista',
+                                    style:
+                                        Theme.of(context).textTheme.titleLarge,
+                                  ),
+                                ],
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      //  Fonts
+                    ],
                   ),
-                  //  Fonts
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

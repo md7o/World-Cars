@@ -7,7 +7,7 @@ class BrandFacts extends StatelessWidget {
     required this.categoryT,
   });
 
-  final CategoryT categoryT;
+  final CategoryC categoryT;
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +17,12 @@ class BrandFacts extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20, bottom: 20),
           child: Row(
             children: [
-              const Icon(
-                Icons.lightbulb_outline,
-                size: 30,
-              ),
-              const SizedBox(
-                width: 5,
-              ),
               Text(
                 "Facts",
-                style: const TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium!
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -37,12 +30,20 @@ class BrandFacts extends StatelessWidget {
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               child: Container(
                 height: MediaQuery.of(context).size.width * 0.3,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+                  gradient: LinearGradient(
+                    colors: [
+                      Theme.of(context).colorScheme.primary,
+                      Theme.of(context).colorScheme.secondary,
+                      // Theme.of(context).colorScheme.tertiary,
+                    ],
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topCenter,
+                  ),
                   borderRadius: const BorderRadius.all(
                     Radius.circular(20),
                   ),
@@ -64,7 +65,7 @@ class BrandFacts extends StatelessWidget {
                         child: Text(
                           categoryT.facts[0],
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -76,41 +77,49 @@ class BrandFacts extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(
+          height: 5,
+        ),
         Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  height: MediaQuery.of(context).size.width * 0.3,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20),
-                    ),
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Container(
+                height: MediaQuery.of(context).size.width * 0.3,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Theme.of(context).colorScheme.primary,
+                      Theme.of(context).colorScheme.secondary,
+                      // Theme.of(context).colorScheme.tertiary,
+                    ],
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topCenter,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Flexible(
-                          child: Text(
-                            categoryT.facts[1],
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          categoryT.facts[1],
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Image.asset(
-                          categoryT.cardFace[1],
-                          width: 72,
-                        ),
-                      ],
-                    ),
+                      ),
+                      Image.asset(
+                        categoryT.cardFace[1],
+                        width: 72,
+                      ),
+                    ],
                   ),
                 ),
               ),
