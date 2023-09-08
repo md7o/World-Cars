@@ -18,23 +18,6 @@ void main() {
   );
 }
 
-final theme = ThemeData(
-  useMaterial3: true,
-  shadowColor: Color(0xFF024659),
-  colorScheme: ColorScheme.fromSeed(
-    primary: Color(0xFF087165),
-    secondary: Color(0xFF1E4179),
-    seedColor: Color(0xFF181F26),
-    background: Color(0xFF012B37),
-    onBackground: Color(0xFF001B2B),
-    tertiary: Color(0xFF00050E),
-  ),
-  fontFamily: GoogleFonts.cairo().fontFamily,
-  textTheme: TextTheme(
-    bodyMedium: TextStyle(color: Colors.white),
-  ),
-);
-
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 

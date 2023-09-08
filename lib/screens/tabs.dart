@@ -19,33 +19,40 @@ class TabsScreen extends ConsumerStatefulWidget {
 }
 
 class _TabsScreenState extends ConsumerState<TabsScreen> {
-  int _selectedPageIndex = 0;
+  // wow() {
+  //   Route _createRoute() {
+  //     final favoriteCars = ref.watch(favoriteAssortmentProvider);
+  //     return PageRouteBuilder(
+  //       transitionDuration: Duration(milliseconds: 600),
+  //       reverseTransitionDuration: Duration(milliseconds: 400),
+  //       pageBuilder: (context, animation, secondaryAnimation) => Favorite(
+  //         assortment: favoriteCars,
+  //         transitionAnimation: animation,
+  //       ),
+  //       transitionsBuilder: (context, animation, secondaryAnimation, child) {
+  //         const begin = Offset(0, 1.0);
+  //         const end = Offset.zero;
+  //         const curve = Curves.ease;
 
-  // final List<Car> _favoriteCars = [];
+  //         var tween = Tween(begin: begin, end: end).chain(
+  //           CurveTween(curve: curve),
+  //         );
 
-  // void _toggleCarFavoriteStatus(Car car) {
-  //   final isExisting = _favoriteCars.contains(car);
-
-  //   if (isExisting) {
-  //     _favoriteCars.remove(car);
-  //   } else {
-  //     _favoriteCars.add(car);
+  //         return SlideTransition(
+  //           position: animation.drive(tween),
+  //           child: child,
+  //         );
+  //       },
+  //     );
   //   }
   // }
+  int _selectedPageIndex = 0;
 
   void _selectPage(int index) {
     setState(() {
       _selectedPageIndex = index;
     });
   }
-
-  // final List<Widget> activePage = [
-  //   const HomeCategories(),
-  //   const Favorite(
-  //     cars: [],
-  //   ),
-  //   const Setting(),
-  // ];
 
   @override
   Widget build(BuildContext context) {

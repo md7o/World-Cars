@@ -1,3 +1,4 @@
+import 'package:flutter/animation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:world_car/models/car.dart';
 
@@ -26,13 +27,11 @@ final favoriteAssortmentProvider =
 
 // =====================================================================
 
-// class FavortieCarsNotifier extends StateNotifier<List<Car>> {
-//   FavortieCarsNotifier() : super([]);
-// }
+// final animationProvider = Provider<Animation<double>>((ref) {
+//   final controller = AnimationController(
+//     vsync: ref.read(vsyncProvider), // You need to provide a TickerProvider
+//     duration: Duration(seconds: 1), // Set the animation duration
+//   )..forward(); // Start the animation immediately
 
-// final favoriteCarsProvider =
-//     StateNotifierProvider<FavortieCarsNotifier, List<Car>>(
-//   (ref) {
-//     return FavortieCarsNotifier();
-//   },
-// );
+//   return Tween<double>(begin: 0, end: 1).animate(controller);
+// });

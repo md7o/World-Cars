@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:world_car/models/car.dart';
 import 'package:world_car/models/category.dart';
 import 'package:world_car/screens/brands.dart';
-import 'package:world_car/screens/search.dart';
 import 'package:world_car/widgets/grid_home_category.dart';
 import 'package:world_car/widgets/home_slider.dart';
 
@@ -17,25 +15,65 @@ class HomeCategories extends StatefulWidget {
   State<HomeCategories> createState() => _HomeCategoriesState();
 }
 
-class _HomeCategoriesState extends State<HomeCategories> {
+class _HomeCategoriesState extends State<HomeCategories>
+    with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
   void _selectCategory(BuildContext context, CategoryC categoryT) {
     final filteredCars = detailsCar
         .where((car) => car.categories.contains(categoryT.id))
         .toList();
 
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (ctx) => Brands(
+    Route _createRoute() {
+      return PageRouteBuilder(
+        transitionDuration: Duration(milliseconds: 600),
+        reverseTransitionDuration: Duration(milliseconds: 400),
+        pageBuilder: (context, animation, secondaryAnimation) => Brands(
+          transitionAnimation: animation,
           title: categoryT.cityName,
           cityLogo: categoryT.cityLogo,
           categoryT: categoryT,
           cars: filteredCars,
         ),
-      ),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          const begin = Offset(0, 1.0);
+          const end = Offset.zero;
+          const curve = Curves.ease;
+
+          var tween = Tween(begin: begin, end: end).chain(
+            CurveTween(curve: curve),
+          );
+
+          return SlideTransition(
+            position: animation.drive(tween),
+            child: child,
+          );
+        },
+      );
+    }
+
+    Navigator.of(context).push(
+      _createRoute(),
     );
   }
 
-  //
+  @override
+  initState() {
+    super.initState();
+    _controller = AnimationController(
+        duration: const Duration(milliseconds: 400), vsync: this, value: 0);
+    _animation = CurvedAnimation(
+        parent: _controller, curve: Curves.fastEaseInToSlowEaseOut);
+
+    _controller.forward();
+  }
+
+  @override
+  dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,92 +115,47 @@ class _HomeCategoriesState extends State<HomeCategories> {
             )
           ],
         ),
-        body: Column(
-          children: [
-            // Expanded(
-            //   child: ListView.builder(
-            //     shrinkWrap: true,
-            //     itemCount: widget.assortments.length,
-            //     itemBuilder: (context, index) {
-            //       return Row(
-            //         children: [
-            //           IconButton(
-            //             onPressed: () {
-            //               _Searchy();
-            //               // Navigator.of(context).push(
-            //               //   MaterialPageRoute(
-            //               //     builder: (ctx) => SearchEngine(
-            //               //       // car: car,
-            //               //       assortment: widget.assortments,
-            //               //     ),
-            //               //   ),
-            //               // );
-            //             },
-            //             icon: Icon(
-            //               Icons.search,
-            //             ),
-            //           ),
-            //         ],
-            //       );
-            //     },
-            //   ),
-            // ),
-            // Row(
-            //   children: [
-            //     IconButton(
-            //       onPressed: () {
-            //         _Searchy(context, car);
-            //         // Navigator.of(context).push(
-            //         //   MaterialPageRoute(
-            //         //     builder: (ctx) => SearchEngine(
-            //         //       // car: car,
-            //         //       assortment: widget.assortments,
-            //         //     ),
-            //         //   ),
-            //         // );
-            //       },
-            //       icon: Icon(
-            //         Icons.search,
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            Expanded(
-              child: Scrollbar(
-                thickness: 2,
-                child: ListView(
-                  physics: BouncingScrollPhysics(),
-                  children: [
-                    homeSlider(),
-                    GridView(
-                      physics: NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 30, vertical: 50),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        mainAxisSpacing: 3,
-                        crossAxisSpacing: 3,
-                        crossAxisCount: 2,
-                        mainAxisExtent: 120,
+        body: ScaleTransition(
+          scale: _animation,
+          child: Column(
+            children: [
+              Expanded(
+                child: Scrollbar(
+                  thickness: 2,
+                  child: ListView(
+                    physics: BouncingScrollPhysics(),
+                    children: [
+                      homeSlider(),
+                      GridView(
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 50),
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          mainAxisSpacing: 3,
+                          crossAxisSpacing: 3,
+                          crossAxisCount: 2,
+                          mainAxisExtent: 120,
+                        ),
+                        children: [
+                          for (final categoryT in availableCategories)
+                            GridHomeCategory(
+                              categoryT: categoryT,
+                              onSelectCategory: () {
+                                _selectCategory(
+                                  context,
+                                  categoryT,
+                                );
+                              },
+                            )
+                        ],
                       ),
-                      children: [
-                        for (final categoryT in availableCategories)
-                          GridHomeCategory(
-                            categoryT: categoryT,
-                            onSelectCategory: () {
-                              _selectCategory(
-                                context,
-                                categoryT,
-                              );
-                            },
-                          )
-                      ],
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

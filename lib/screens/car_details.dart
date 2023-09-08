@@ -11,12 +11,12 @@ import '../models/car.dart';
 class CarDetails extends ConsumerStatefulWidget {
   const CarDetails({
     super.key,
-    // required this.car,
+    required this.transitionAnimation,
     required this.assortment,
     required this.details,
   });
 
-  // final Car car;
+  final Animation<double> transitionAnimation;
   final Assortment assortment;
   final List<Details> details;
 
@@ -24,8 +24,26 @@ class CarDetails extends ConsumerStatefulWidget {
   ConsumerState<CarDetails> createState() => _CarDetailsState();
 }
 
-class _CarDetailsState extends ConsumerState<CarDetails> {
+class _CarDetailsState extends ConsumerState<CarDetails>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
   int activeIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = new AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    )..forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,62 +95,84 @@ class _CarDetailsState extends ConsumerState<CarDetails> {
         ),
         body: Column(
           children: [
-            CarouselSlider.builder(
-              options: CarouselOptions(
-                height: MediaQuery.of(context).size.height / 4.5,
-                enlargeCenterPage: true,
-                onPageChanged: (index, reason) {
-                  setState(() => activeIndex = index);
-                },
-              ),
-              itemCount: widget.assortment.slideAblum.length,
-              itemBuilder:
-                  (BuildContext context, int index, int pageViewIndex) {
-                return Stack(
-                  children: [
-                    Positioned.fill(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: CachedNetworkImage(
-                          imageUrl: widget.assortment.slideAblum[index].sliding,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) => Center(
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 40),
-                              child: Container(
-                                color: Colors.transparent,
-                                height: 100,
-                                width: 100,
-                                child: const CircularProgressIndicator(
-                                  color: Colors.white,
+            AnimatedBuilder(
+              animation: widget.transitionAnimation,
+              builder: (context, child) {
+                return SlideTransition(
+                  position: Tween<Offset>(
+                    begin: Offset(0, 0.2),
+                    end: Offset(0, 0),
+                  ).animate(
+                    CurvedAnimation(
+                      parent: _controller,
+                      curve: Interval(
+                        0.2,
+                        1,
+                        curve: Curves.ease,
+                      ),
+                    ),
+                  ),
+                  child: child,
+                );
+              },
+              child: CarouselSlider.builder(
+                options: CarouselOptions(
+                  height: MediaQuery.of(context).size.height / 4.5,
+                  enlargeCenterPage: true,
+                  onPageChanged: (index, reason) {
+                    setState(() => activeIndex = index);
+                  },
+                ),
+                itemCount: widget.assortment.slideAblum.length,
+                itemBuilder:
+                    (BuildContext context, int index, int pageViewIndex) {
+                  return Stack(
+                    children: [
+                      Positioned.fill(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                widget.assortment.slideAblum[index].sliding,
+                            fit: BoxFit.cover,
+                            placeholder: (context, url) => Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 40),
+                                child: Container(
+                                  color: Colors.transparent,
+                                  height: 100,
+                                  width: 100,
+                                  child: const CircularProgressIndicator(
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height / 4.5,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
-                        ),
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                          colors: [
-                            Colors.black.withOpacity(0.7),
-                            Colors.transparent
-                          ],
+                      Container(
+                        height: MediaQuery.of(context).size.height / 4.5,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20),
+                          ),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.7),
+                              Colors.transparent
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                );
-              },
+                    ],
+                  );
+                },
+              ),
             ),
 
             const SizedBox(
@@ -154,13 +194,34 @@ class _CarDetailsState extends ConsumerState<CarDetails> {
               child: ListView.builder(
                 itemCount: 1,
                 itemBuilder: (context, index) {
-                  return Text(
-                    widget.assortment.carName,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.normal),
-                    textAlign: TextAlign.center,
+                  return AnimatedBuilder(
+                    animation: widget.transitionAnimation,
+                    builder: (context, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                          begin: Offset(0, 1),
+                          end: Offset(0, 0),
+                        ).animate(
+                          CurvedAnimation(
+                            parent: _controller,
+                            curve: Interval(
+                              0.2,
+                              1,
+                              curve: Curves.ease,
+                            ),
+                          ),
+                        ),
+                        child: child,
+                      );
+                    },
+                    child: Text(
+                      widget.assortment.carName,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.normal),
+                      textAlign: TextAlign.center,
+                    ),
                   );
                 },
               ),
@@ -179,55 +240,76 @@ class _CarDetailsState extends ConsumerState<CarDetails> {
                   return Padding(
                     padding:
                         const EdgeInsets.symmetric(horizontal: 25, vertical: 6),
-                    child: Container(
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
-                        gradient: LinearGradient(
-                          colors: [
-                            Theme.of(context).colorScheme.primary,
-                            Theme.of(context).colorScheme.secondary,
-                            // Theme.of(context).colorScheme.tertiary,
-                          ],
-                          begin: Alignment.topRight,
-                          end: Alignment.bottomLeft,
+                    child: AnimatedBuilder(
+                      animation: widget.transitionAnimation,
+                      builder: (context, child) {
+                        return SlideTransition(
+                          position: Tween<Offset>(
+                            begin: Offset(0, 2),
+                            end: Offset(0, 0),
+                          ).animate(
+                            CurvedAnimation(
+                              parent: _controller,
+                              curve: Interval(
+                                0.2,
+                                1,
+                                curve: Curves.ease,
+                              ),
+                            ),
+                          ),
+                          child: child,
+                        );
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                          gradient: LinearGradient(
+                            colors: [
+                              Theme.of(context).colorScheme.primary,
+                              Theme.of(context).colorScheme.secondary,
+                              // Theme.of(context).colorScheme.tertiary,
+                            ],
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                          ),
                         ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Row(
-                              children: [
-                                Image.asset(
-                                  widget.details[index].detailPhoto,
-                                  color: Colors.white,
-                                  height: 30,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  widget.details[index].detailName,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              widget.details[index].detailInfo,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    widget.details[index].detailPhoto,
+                                    color: Colors.white,
+                                    height: 30,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    widget.details[index].detailName,
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                              Text(
+                                widget.details[index].detailInfo,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -241,15 +323,36 @@ class _CarDetailsState extends ConsumerState<CarDetails> {
     );
   }
 
-  Widget buildIndicator() => AnimatedSmoothIndicator(
-        activeIndex: activeIndex,
-        count: widget.assortment.slideAblum.length,
-        effect: const ScrollingDotsEffect(
-          dotWidth: 8,
-          dotHeight: 8,
-          dotColor: Colors.white,
-          activeDotColor: Color(0xFF027FA5),
-          activeDotScale: 1,
+  Widget buildIndicator() => AnimatedBuilder(
+        animation: widget.transitionAnimation,
+        builder: (context, child) {
+          return SlideTransition(
+            position: Tween<Offset>(
+              begin: Offset(0, 1),
+              end: Offset(0, 0),
+            ).animate(
+              CurvedAnimation(
+                parent: _controller,
+                curve: Interval(
+                  0,
+                  1,
+                  curve: Curves.ease,
+                ),
+              ),
+            ),
+            child: child,
+          );
+        },
+        child: AnimatedSmoothIndicator(
+          activeIndex: activeIndex,
+          count: widget.assortment.slideAblum.length,
+          effect: const ScrollingDotsEffect(
+            dotWidth: 8,
+            dotHeight: 8,
+            dotColor: Colors.white,
+            activeDotColor: Color(0xFF027FA5),
+            activeDotScale: 1,
+          ),
         ),
       );
 }

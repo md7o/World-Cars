@@ -5,7 +5,7 @@ import 'package:world_car/models/car.dart';
 import 'package:world_car/screens/car_details.dart';
 import 'package:world_car/screens/compared.dart';
 
-class Favorite extends StatelessWidget {
+class Favorite extends StatefulWidget {
   const Favorite({
     super.key,
     required this.assortment,
@@ -14,27 +14,55 @@ class Favorite extends StatelessWidget {
   final List<Assortment> assortment;
 
   @override
+  State<Favorite> createState() => _FavoriteState();
+}
+
+class _FavoriteState extends State<Favorite> with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  initState() {
+    super.initState();
+    _controller = AnimationController(
+        duration: const Duration(milliseconds: 500), vsync: this, value: 0);
+    _animation =
+        CurvedAnimation(parent: _controller, curve: Curves.easeInOutQuart);
+
+    _controller.forward();
+  }
+
+  @override
+  dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    Widget FavoContent = Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'Uh oh ... nothing here!',
-            style: Theme.of(context).textTheme.headlineLarge!.copyWith(),
-          ),
-          const SizedBox(
-            height: 60,
-          ),
-          Text(
-            'Try selecting a diffrent category!',
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(),
-          ),
-        ],
+    Widget FavoContent = ScaleTransition(
+      scale: _animation,
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Uh oh ... nothing here!',
+              style: Theme.of(context).textTheme.headlineLarge!.copyWith(),
+            ),
+            const SizedBox(
+              height: 60,
+            ),
+            Text(
+              'You can add your cars to this favorite page!',
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(),
+            ),
+          ],
+        ),
       ),
     );
 
-    if (assortment.isNotEmpty) {
+    if (widget.assortment.isNotEmpty) {
       FavoContent = Column(
         children: [
           Padding(
@@ -55,7 +83,7 @@ class Favorite extends StatelessWidget {
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: assortment.length,
+                itemCount: widget.assortment.length,
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
@@ -66,14 +94,34 @@ class Favorite extends StatelessWidget {
                             splashFactory: NoSplash.splashFactory,
                             highlightColor: Colors.transparent,
                             onTap: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (ctx) => CarDetails(
-                                    assortment: assortment[index],
-                                    details: assortment[index].details,
-                                  ),
+                              Navigator.of(context).push(PageRouteBuilder(
+                                transitionDuration: Duration(milliseconds: 600),
+                                reverseTransitionDuration:
+                                    Duration(milliseconds: 400),
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) =>
+                                        CarDetails(
+                                  assortment: widget.assortment[index],
+                                  details: widget.assortment[index].details,
+                                  transitionAnimation: animation,
                                 ),
-                              );
+                                transitionsBuilder: (context, animation,
+                                    secondaryAnimation, child) {
+                                  const begin = Offset(0, 1.0);
+                                  const end = Offset.zero;
+                                  const curve = Curves.ease;
+
+                                  var tween =
+                                      Tween(begin: begin, end: end).chain(
+                                    CurveTween(curve: curve),
+                                  );
+
+                                  return SlideTransition(
+                                    position: animation.drive(tween),
+                                    child: child,
+                                  );
+                                },
+                              ));
                             },
                             child: Padding(
                               padding: const EdgeInsets.symmetric(
@@ -94,7 +142,8 @@ class Favorite extends StatelessWidget {
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: CachedNetworkImage(
-                                          imageUrl: assortment[index].carImage,
+                                          imageUrl:
+                                              widget.assortment[index].carImage,
                                           placeholder: (context, url) => Center(
                                             child: Padding(
                                               padding: const EdgeInsets.only(
@@ -150,7 +199,7 @@ class Favorite extends StatelessWidget {
                                             padding: const EdgeInsets.symmetric(
                                                 vertical: 10, horizontal: 10),
                                             child: Text(
-                                              assortment[index].carName,
+                                              widget.assortment[index].carName,
                                               style: const TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 25,

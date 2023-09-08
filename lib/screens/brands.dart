@@ -6,32 +6,50 @@ import '../models/category.dart';
 import '../widgets/brands_facts.dart';
 import 'car_groups.dart';
 
-class Brands extends StatelessWidget {
+class Brands extends StatefulWidget {
   const Brands({
     super.key,
     this.title,
     this.cityLogo,
     required this.cars,
     required this.categoryT,
+    required this.transitionAnimation,
   });
 
+  final Animation<double> transitionAnimation;
   final String? title;
   final CategoryC categoryT;
   final String? cityLogo;
   final List<Car> cars;
 
-  // void _SelectCar(
-  //   BuildContext context,
-  //   Car car,
-  // ) {
-  //   Navigator.of(context).push(
-  //     MaterialPageRoute(
-  //       builder: (ctx) => CarsGroups(
-  //         categoryT: categoryT,
-  //         cars: car,
-  //         definition: cars.definition[index],
-  //       ),
+  @override
+  State<Brands> createState() => _BrandsState();
+}
+
+class _BrandsState extends State<Brands> {
+  // Route _createRoute() {
+  //   return PageRouteBuilder(
+  //     transitionDuration: Duration(milliseconds: 600),
+  //     reverseTransitionDuration: Duration(milliseconds: 400),
+  //     pageBuilder: (context, animation, secondaryAnimation) => CarsGroups(
+  //       categoryT: widget.categoryT,
+  //       cars: widget.cars[index],
+  //       // assortment: cars[index].assortment,
   //     ),
+  //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+  //       const begin = Offset(-0.2, 1.0);
+  //       const end = Offset.zero;
+  //       const curve = Curves.ease;
+
+  //       var tween = Tween(begin: begin, end: end).chain(
+  //         CurveTween(curve: curve),
+  //       );
+
+  //       return SlideTransition(
+  //         position: animation.drive(tween),
+  //         child: child,
+  //       );
+  //     },
   //   );
   // }
 
@@ -51,28 +69,48 @@ class Brands extends StatelessWidget {
                     left: 20,
                     top: 80,
                   ),
-                  child: Row(
-                    children: [
-                      Opacity(
-                        opacity: 1,
-                        child: FadeInImage(
-                          placeholder: MemoryImage(kTransparentImage),
-                          image: NetworkImage(categoryT.cityLogo),
-                          fit: BoxFit.cover,
-                          height: 30,
+                  child: AnimatedBuilder(
+                    animation: widget.transitionAnimation,
+                    builder: (context, child) {
+                      return SlideTransition(
+                        position: Tween<Offset>(
+                                begin: Offset(0, 1), end: Offset(0, 0))
+                            .animate(
+                          CurvedAnimation(
+                            parent: widget.transitionAnimation,
+                            curve: Interval(
+                              0.2,
+                              1,
+                              curve: Curves.ease,
+                            ),
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        categoryT.cityName,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(fontWeight: FontWeight.bold),
-                      ),
-                    ],
+                        child: child,
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Opacity(
+                          opacity: 1,
+                          child: FadeInImage(
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: NetworkImage(widget.categoryT.cityLogo),
+                            fit: BoxFit.cover,
+                            height: 30,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          widget.categoryT.cityName,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium!
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -85,30 +123,72 @@ class Brands extends StatelessWidget {
                     radius: Radius.circular(50),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: ListView.builder(
-                        physics: BouncingScrollPhysics(),
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: cars.length,
-                        itemBuilder: (ctx, index) => Column(
-                          children: [
-                            BrandsItem(
-                              car: cars[index],
-                              cityName: categoryT.cityName,
-                              cityLogo: categoryT.cityLogo,
-                              onSelectBrand: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (ctx) => CarsGroups(
-                                      categoryT: categoryT,
-                                      cars: cars[index],
-                                      // assortment: cars[index].assortment,
-                                    ),
-                                  ),
-                                );
-                              },
+                      child: AnimatedBuilder(
+                        animation: widget.transitionAnimation,
+                        builder: (context, child) {
+                          return SlideTransition(
+                            position: Tween<Offset>(
+                                    begin: Offset(0, 1), end: Offset(0, 0))
+                                .animate(
+                              CurvedAnimation(
+                                parent: widget.transitionAnimation,
+                                curve: Interval(
+                                  0.2,
+                                  1,
+                                  curve: Curves.ease,
+                                ),
+                              ),
                             ),
-                          ],
+                            child: child,
+                          );
+                        },
+                        child: ListView.builder(
+                          physics: BouncingScrollPhysics(),
+                          shrinkWrap: true,
+                          scrollDirection: Axis.horizontal,
+                          itemCount: widget.cars.length,
+                          itemBuilder: (ctx, index) => Column(
+                            children: [
+                              BrandsItem(
+                                car: widget.cars[index],
+                                cityName: widget.categoryT.cityName,
+                                cityLogo: widget.categoryT.cityLogo,
+                                onSelectBrand: () {
+                                  Navigator.of(context).push(
+                                    PageRouteBuilder(
+                                      transitionDuration:
+                                          Duration(milliseconds: 600),
+                                      reverseTransitionDuration:
+                                          Duration(milliseconds: 400),
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          CarsGroups(
+                                        categoryT: widget.categoryT,
+                                        cars: widget.cars[index],
+                                        transitionAnimation: animation,
+                                      ),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        const begin = Offset(0, 1.0);
+                                        const end = Offset.zero;
+                                        const curve = Curves.ease;
+
+                                        var tween =
+                                            Tween(begin: begin, end: end).chain(
+                                          CurveTween(curve: curve),
+                                        );
+
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -117,8 +197,26 @@ class Brands extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                BrandFacts(
-                  categoryT: categoryT,
+                AnimatedBuilder(
+                  animation: widget.transitionAnimation,
+                  builder: (context, child) {
+                    return SlideTransition(
+                      position:
+                          Tween<Offset>(begin: Offset(0, 1), end: Offset(0, 0))
+                              .animate(CurvedAnimation(
+                        parent: widget.transitionAnimation,
+                        curve: Interval(
+                          0.2,
+                          1,
+                          curve: Curves.ease,
+                        ),
+                      )),
+                      child: child,
+                    );
+                  },
+                  child: BrandFacts(
+                    categoryT: widget.categoryT,
+                  ),
                 )
               ],
             ),
