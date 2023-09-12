@@ -22,7 +22,8 @@ class _homeSliderState extends State<homeSlider> {
       id: '1',
       title: 'Toyota Corolla',
       sales: '1,012,000 M',
-      backgroundImg: "images/ttt.png",
+      backgroundImg:
+          "https://mystrongad.com/MLT_PalestineToyota/Interactive/Corolla/2023/23-Toyota-Corolla-White.webp",
       country: 'Japan',
       countryImg: 'https://cdn-icons-png.flaticon.com/512/197/197604.png',
     ),
@@ -30,62 +31,71 @@ class _homeSliderState extends State<homeSlider> {
         id: '2',
         title: 'Toyota RAV4',
         sales: '870,000 K',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://s3.amazonaws.com/toyota.site.toyota-v5/tci-prod/toyota/media/build/rav/col/big/b23_b1rfv_fl1_0218_a.png?ck=09082023052311",
         country: 'Japan',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/197/197604.png'),
     const topSeller(
         id: '3',
         title: 'Ford F-Series',
         sales: '790,000 K',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://storage.googleapis.com/rp-production-public-content/0tl7u6n4s3agm9q3p5kpv2oftt96",
         country: 'America',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/5373/5373324.png'),
     const topSeller(
         id: '4',
         title: 'Tesla Model Y',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://crdms.images.consumerreports.org/c_lfill,w_470,q_auto,f_auto/prod/cars/cr/car-versions/14623-2020-tesla-model-y-long-range",
         sales: '760,000 K',
         country: 'America',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/5373/5373324.png'),
     const topSeller(
         id: '5',
         title: 'Toyota Camry',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://www.motortrend.com/uploads/sites/10/2018/09/2019-toyota-camry-se-auto-sedan-angular-front.png",
         sales: '680,000 K',
         country: 'Japan',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/197/197604.png'),
     const topSeller(
         id: '6',
         title: 'Honda CR-V',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://mystrongad.com/BLH_BobLindsayHonda/Interactive_/CR-V/2022/CR-V/22-Honda-CR-V-2WD-EX-Black-Driver-Silver-SM.png",
         sales: '600,000 K',
         country: 'Japan',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/197/197604.png'),
     const topSeller(
         id: '7',
         title: 'Chevro Silverado',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb25e46560b1e3d8e88cb10/stills_0640_png/MY2021/14770/14770_st0640_116.png",
         sales: '590,000 K',
         country: 'America',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/5373/5373324.png'),
     const topSeller(
         id: '8',
         title: 'Hyundai Tucson',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://www.motortrend.com/uploads/sites/10/2019/01/2019-hyundai-tucson-sel-suv-angular-front.png",
         sales: '570,000 K',
         country: 'Korea',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/5111/5111586.png'),
     const topSeller(
         id: '9',
         title: 'Toyota Hilux',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://i0.wp.com/hsmmotors.com/wp-content/uploads/2022/08/Toyota-Hilux-rocco-cover.png?fit=800%2C378&ssl=1",
         sales: '560,000 K',
         country: 'Japan',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/197/197604.png'),
     const topSeller(
         id: '10',
         title: 'Ram Pick-up',
-        backgroundImg: "images/ttt.png",
+        backgroundImg:
+            "https://medias.fcacanada.ca/jellies/renditions/2022/800x510/CC22_DT6S98_2TY_PSC_APA_QXJ_XXX_XXX.e8ffecc34b31493951f2b9a319cb4867.png",
         sales: '550,000 K',
         country: 'America',
         countryImg: 'https://cdn-icons-png.flaticon.com/512/5373/5373324.png'),
@@ -109,7 +119,7 @@ class _homeSliderState extends State<homeSlider> {
             autoPlayCurve: Curves.easeInOut,
             autoPlayInterval: Duration(seconds: 5),
             autoPlayAnimationDuration: Duration(milliseconds: 2000),
-            autoPlay: true,
+            autoPlay: false,
             onPageChanged: (index, reason) {
               setState(() => activeIndex = index);
             },
@@ -208,19 +218,19 @@ class _homeSliderState extends State<homeSlider> {
                     bottom: -20,
                     left: 80,
                     child: Container(
-                      decoration: BoxDecoration(
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     spreadRadius: 5,
-                          //     blurRadius: 6,
-                          //   ),
-                          // ],
-                          ),
-                      child: Image.asset(
-                        TopSeller[index].backgroundImg,
-                        scale: 4,
-                      ),
-                    ),
+                        decoration: BoxDecoration(
+                            // boxShadow: [
+                            //   BoxShadow(
+                            //     spreadRadius: 5,
+                            //     blurRadius: 6,
+                            //   ),
+                            // ],
+                            ),
+                        child: CachedNetworkImage(
+                          imageUrl: TopSeller[index].backgroundImg,
+                          width: 220,
+                          height: 150,
+                        )),
                   ),
                 ],
               ),

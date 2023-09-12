@@ -96,24 +96,17 @@ class _HomeCategoriesState extends State<HomeCategories>
           elevation: 0,
           surfaceTintColor: Colors.transparent,
           scrolledUnderElevation: 0,
-          leading: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Icon(
-              Icons.bar_chart_rounded,
-              size: 30,
-              color: Colors.white,
-            ),
-          ),
-          actions: const <Widget>[
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Icon(
-                Icons.search_rounded,
-                size: 30,
-                color: Colors.white,
-              ),
-            )
-          ],
+
+          // actions: const <Widget>[
+          //   Padding(
+          //     padding: EdgeInsets.symmetric(horizontal: 20),
+          //     child: Icon(
+          //       Icons.search_rounded,
+          //       size: 30,
+          //       color: Colors.white,
+          //     ),
+          //   )
+          // ],
         ),
         body: ScaleTransition(
           scale: _animation,

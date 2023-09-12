@@ -5,6 +5,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:world_car/models/themedata.dart';
 import 'package:world_car/provider/theme_provider.dart';
+import 'package:world_car/screens/search.dart';
 import 'package:world_car/screens/tabs.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

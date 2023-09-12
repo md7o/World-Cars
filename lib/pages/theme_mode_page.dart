@@ -76,7 +76,7 @@ class _ThemeModePageState extends ConsumerState<ThemeModePage> {
                     children: [
                       Icon(
                         darkMode ? Icons.sunny : Icons.nightlight,
-                        color: Colors.white,
+                        color: darkMode ? Colors.amber : Colors.white,
                         size: 30,
                       ),
                       const SizedBox(
