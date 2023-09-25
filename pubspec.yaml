@@ -18,7 +18,7 @@ dependencies:
   provider: ^6.0.5
   url_launcher: ^6.1.7
   share_plus: ^7.1.0
-  # flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.3.2
   curved_navigation_bar: ^1.0.3
   cached_network_image: ^3.2.3
   device_preview: ^1.1.0
@@ -37,11 +37,11 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
-# flutter_native_splash:
-#   background_image: "images/splashBackgroung.png"
-#   image: images/Mazda.png
-#   android: true
-#   ios: true
+flutter_native_splash:
+  background_image: "images/splashBackgroung.png"
+  image: images/splash-logo.png
+  android: true
+  ios: true
 
 flutter:
   uses-material-design: true
