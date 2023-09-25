@@ -1,4 +1,4 @@
-package com.world.cars.worldcars
+package com.wave.car.carwave
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,6 +1,6 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:world_car/models/car.dart';
+import 'package:Car_Wave/models/car.dart';
 
 class FavortieAssortmentNotifier extends StateNotifier<List<Assortment>> {
   FavortieAssortmentNotifier() : super([]);

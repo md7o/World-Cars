@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:world_car/models/themedata.dart';
-import 'package:world_car/provider/theme_provider.dart';
+import 'package:Car_Wave/models/themedata.dart';
+import 'package:Car_Wave/provider/theme_provider.dart';
 
 class ChangeThemeButtonWidget extends ConsumerWidget {
   const ChangeThemeButtonWidget({

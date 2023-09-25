@@ -17,7 +17,7 @@ class _SettingState extends State<Setting> with TickerProviderStateMixin {
   initState() {
     super.initState();
     _controller = AnimationController(
-        duration: const Duration(milliseconds: 400), vsync: this, value: 0);
+        duration: const Duration(milliseconds: 600), vsync: this, value: 0);
     _animation = CurvedAnimation(
         parent: _controller, curve: Curves.fastEaseInToSlowEaseOut);
 

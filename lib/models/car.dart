@@ -29,23 +29,21 @@ class Assortment {
   });
 }
 
-///////// Inside Assortment //////////
+/////// Inside Assortment //////////
 class Sliding {
-  final String sliding;
+  final String slide;
 
   const Sliding({
-    required this.sliding,
+    required this.slide,
   });
 }
 
 class Details {
-  // final String id;
   final String detailPhoto;
   final String detailName;
   final String detailInfo;
 
   const Details({
-    // required this.id,
     required this.detailPhoto,
     required this.detailName,
     required this.detailInfo,

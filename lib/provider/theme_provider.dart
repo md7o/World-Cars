@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:world_car/models/themedata.dart';
+import 'package:Car_Wave/models/themedata.dart';
 
 // final appThemeStateNotifer = ChangeNotifierProvider((ref) => AppThemeState());
 

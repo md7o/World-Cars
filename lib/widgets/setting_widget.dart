@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:world_car/pages/theme_mode_page.dart';
-import 'package:world_car/pages/connecting_page.dart';
-import 'package:world_car/pages/sources_page.dart';
+import 'package:Car_Wave/pages/theme_mode_page.dart';
+import 'package:Car_Wave/pages/connecting_page.dart';
+import 'package:Car_Wave/pages/sources_page.dart';
 
 class themeOption extends StatefulWidget {
   const themeOption({super.key});

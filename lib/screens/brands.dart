@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
-import 'package:world_car/widgets/brands_item.dart';
+import 'package:Car_Wave/widgets/brands_item.dart';
 import '../models/car.dart';
 import '../models/category.dart';
 import '../widgets/brands_facts.dart';

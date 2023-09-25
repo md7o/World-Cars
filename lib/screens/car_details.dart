@@ -3,8 +3,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:world_car/provider/favorites_provider.dart';
-import 'package:world_car/screens/compared.dart';
+import 'package:Car_Wave/provider/favorites_provider.dart';
+import 'package:Car_Wave/screens/compared.dart';
 
 import '../models/car.dart';
 
@@ -105,7 +105,7 @@ class _CarDetailsState extends ConsumerState<CarDetails>
                   ).animate(
                     CurvedAnimation(
                       parent: _controller,
-                      curve: Interval(
+                      curve: const Interval(
                         0.2,
                         1,
                         curve: Curves.ease,
@@ -115,74 +115,77 @@ class _CarDetailsState extends ConsumerState<CarDetails>
                   child: child,
                 );
               },
-              child: CarouselSlider.builder(
-                options: CarouselOptions(
-                  height: MediaQuery.of(context).size.height / 4.5,
-                  enlargeCenterPage: true,
-                  onPageChanged: (index, reason) {
-                    setState(() => activeIndex = index);
-                  },
-                ),
-                itemCount: widget.assortment.slideAblum.length,
-                itemBuilder:
-                    (BuildContext context, int index, int pageViewIndex) {
-                  return Stack(
-                    children: [
-                      Positioned.fill(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                widget.assortment.slideAblum[index].sliding,
-                            fit: BoxFit.cover,
-                            placeholder: (context, url) => Center(
-                              child: Padding(
-                                padding: const EdgeInsets.only(bottom: 40),
-                                child: Container(
-                                  color: Colors.transparent,
-                                  height: 100,
-                                  width: 100,
-                                  child: const CircularProgressIndicator(
-                                    color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: CarouselSlider.builder(
+                  options: CarouselOptions(
+                    height: MediaQuery.of(context).size.height / 4.5,
+                    enlargeCenterPage: true,
+                    onPageChanged: (index, reason) {
+                      setState(() => activeIndex = index);
+                    },
+                  ),
+                  itemCount: widget.assortment.slideAblum.length,
+                  itemBuilder:
+                      (BuildContext context, int index, int pageViewIndex) {
+                    return Stack(
+                      children: [
+                        Positioned.fill(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: CachedNetworkImage(
+                              imageUrl:
+                                  widget.assortment.slideAblum[index].slide,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) => Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 40),
+                                  child: Container(
+                                    color: Colors.transparent,
+                                    height: 50,
+                                    width: 50,
+                                    child: const CircularProgressIndicator(
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      Container(
-                        height: MediaQuery.of(context).size.height / 4.5,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                            bottomLeft: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                          ),
-                          gradient: LinearGradient(
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                            colors: [
-                              Colors.black.withOpacity(0.7),
-                              Colors.transparent
-                            ],
+                        Container(
+                          height: MediaQuery.of(context).size.height / 4.5,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(20),
+                              bottomRight: Radius.circular(20),
+                            ),
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              colors: [
+                                Colors.black.withOpacity(0.7),
+                                Colors.transparent
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  );
-                },
+                      ],
+                    );
+                  },
+                ),
               ),
             ),
 
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Center(
               child: buildIndicator(),
             ),
             const SizedBox(
-              height: 20,
+              height: 15,
             ),
 
             //  =======================================
@@ -190,7 +193,7 @@ class _CarDetailsState extends ConsumerState<CarDetails>
             //  =======================================
 
             SizedBox(
-              height: 40,
+              height: 50,
               child: ListView.builder(
                 itemCount: 1,
                 itemBuilder: (context, index) {
@@ -204,7 +207,7 @@ class _CarDetailsState extends ConsumerState<CarDetails>
                         ).animate(
                           CurvedAnimation(
                             parent: _controller,
-                            curve: Interval(
+                            curve: const Interval(
                               0.2,
                               1,
                               curve: Curves.ease,

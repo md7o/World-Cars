@@ -1,7 +1,6 @@
 // ignore_for_file: file_names, unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class connectionPage extends StatefulWidget {

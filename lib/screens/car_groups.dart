@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
-import 'package:world_car/models/category.dart';
-import 'package:world_car/screens/car_details.dart';
-import 'package:world_car/screens/compared.dart';
+import 'package:Car_Wave/models/category.dart';
+import 'package:Car_Wave/screens/car_details.dart';
+import 'package:Car_Wave/screens/compared.dart';
 
 import '../models/car.dart';
 

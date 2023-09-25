@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:world_car/models/car.dart';
-import 'package:world_car/models/category.dart';
+import 'package:Car_Wave/models/car.dart';
+import 'package:Car_Wave/models/category.dart';
 
 class homeSlider extends StatefulWidget {
   const homeSlider({
@@ -149,10 +149,10 @@ class _homeSliderState extends State<homeSlider> {
                               TopSeller[index].title,
                               style: Theme.of(context)
                                   .textTheme
-                                  .headlineLarge!
+                                  .headlineMedium!
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Text(
@@ -175,12 +175,13 @@ class _homeSliderState extends State<homeSlider> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 5,
                                 ),
-                                Image.network(
-                                  TopSeller[index].countryImg,
-                                  scale: 31,
+                                CachedNetworkImage(
+                                  imageUrl: TopSeller[index].countryImg,
+                                  width: 15,
+                                  height: 15,
                                 )
                               ],
                             ),
@@ -218,26 +219,27 @@ class _homeSliderState extends State<homeSlider> {
                     bottom: -20,
                     left: 80,
                     child: Container(
-                        decoration: BoxDecoration(
-                            // boxShadow: [
-                            //   BoxShadow(
-                            //     spreadRadius: 5,
-                            //     blurRadius: 6,
-                            //   ),
-                            // ],
-                            ),
-                        child: CachedNetworkImage(
-                          imageUrl: TopSeller[index].backgroundImg,
-                          width: 220,
-                          height: 150,
-                        )),
+                      decoration: const BoxDecoration(
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     spreadRadius: 5,
+                          //     blurRadius: 6,
+                          //   ),
+                          // ],
+                          ),
+                      child: CachedNetworkImage(
+                        imageUrl: TopSeller[index].backgroundImg,
+                        width: 220,
+                        height: 150,
+                      ),
+                    ),
                   ),
                 ],
               ),
             );
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         buildIndicator()

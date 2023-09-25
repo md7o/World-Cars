@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:world_car/models/category.dart';
+import 'package:Car_Wave/models/category.dart';
 
 class BrandFacts extends StatelessWidget {
   const BrandFacts({

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:world_car/provider/theme_provider.dart';
-import 'package:world_car/widgets/change_widget.dart';
+import 'package:Car_Wave/provider/theme_provider.dart';
+import 'package:Car_Wave/widgets/change_widget.dart';
 
 class ThemeModePage extends ConsumerStatefulWidget {
   const ThemeModePage({super.key});
@@ -26,7 +25,7 @@ class _ThemeModePageState extends ConsumerState<ThemeModePage> {
 
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(30),
           topRight: Radius.circular(30),
         ),

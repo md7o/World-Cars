@@ -1,9 +1,9 @@
+import 'package:Car_Wave/models/car.dart';
+import 'package:Car_Wave/screens/car_details.dart';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
-import 'package:world_car/models/car.dart';
-import 'package:world_car/screens/car_details.dart';
-import 'package:world_car/screens/compared.dart';
 
 class Favorite extends StatefulWidget {
   const Favorite({
@@ -25,9 +25,9 @@ class _FavoriteState extends State<Favorite> with TickerProviderStateMixin {
   initState() {
     super.initState();
     _controller = AnimationController(
-        duration: const Duration(milliseconds: 500), vsync: this, value: 0);
-    _animation =
-        CurvedAnimation(parent: _controller, curve: Curves.easeInOutQuart);
+        duration: const Duration(milliseconds: 600), vsync: this, value: 0);
+    _animation = CurvedAnimation(
+        parent: _controller, curve: Curves.fastEaseInToSlowEaseOut);
 
     _controller.forward();
   }

@@ -1,10 +1,10 @@
+import 'package:Car_Wave/widgets/grid_home_category.dart';
+import 'package:Car_Wave/widgets/home_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:world_car/models/category.dart';
-import 'package:world_car/screens/brands.dart';
-import 'package:world_car/widgets/grid_home_category.dart';
-import 'package:world_car/widgets/home_slider.dart';
 
 import '../data/details_data.dart';
+import '../models/category.dart';
+import 'brands.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({
@@ -27,8 +27,8 @@ class _HomeCategoriesState extends State<HomeCategories>
 
     Route _createRoute() {
       return PageRouteBuilder(
-        transitionDuration: Duration(milliseconds: 600),
-        reverseTransitionDuration: Duration(milliseconds: 400),
+        transitionDuration: const Duration(milliseconds: 600),
+        reverseTransitionDuration: const Duration(milliseconds: 500),
         pageBuilder: (context, animation, secondaryAnimation) => Brands(
           transitionAnimation: animation,
           title: categoryT.cityName,
@@ -62,7 +62,7 @@ class _HomeCategoriesState extends State<HomeCategories>
   initState() {
     super.initState();
     _controller = AnimationController(
-        duration: const Duration(milliseconds: 400), vsync: this, value: 0);
+        duration: const Duration(milliseconds: 600), vsync: this, value: 0);
     _animation = CurvedAnimation(
         parent: _controller, curve: Curves.fastEaseInToSlowEaseOut);
 
