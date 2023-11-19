@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:Car_Wave/provider/favorites_provider.dart';
-import 'package:Car_Wave/screens/compared.dart';
 
 import '../models/car.dart';
 
@@ -297,7 +296,7 @@ class _CarDetailsState extends ConsumerState<CarDetails>
                                   ),
                                   Text(
                                     widget.details[index].detailName,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
@@ -306,7 +305,7 @@ class _CarDetailsState extends ConsumerState<CarDetails>
                               ),
                               Text(
                                 widget.details[index].detailInfo,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),
@@ -331,12 +330,12 @@ class _CarDetailsState extends ConsumerState<CarDetails>
         builder: (context, child) {
           return SlideTransition(
             position: Tween<Offset>(
-              begin: Offset(0, 1),
-              end: Offset(0, 0),
+              begin: const Offset(0, 1),
+              end: const Offset(0, 0),
             ).animate(
               CurvedAnimation(
                 parent: _controller,
-                curve: Interval(
+                curve: const Interval(
                   0,
                   1,
                   curve: Curves.ease,

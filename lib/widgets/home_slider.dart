@@ -117,7 +117,7 @@ class _homeSliderState extends State<homeSlider> {
             height: 200,
             enlargeCenterPage: true,
             autoPlayCurve: Curves.easeInOut,
-            autoPlayInterval: Duration(seconds: 5),
+            autoPlayInterval: Duration(seconds: 3),
             autoPlayAnimationDuration: Duration(milliseconds: 2000),
             autoPlay: false,
             onPageChanged: (index, reason) {
