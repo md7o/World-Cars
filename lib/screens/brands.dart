@@ -27,32 +27,6 @@ class Brands extends StatefulWidget {
 }
 
 class _BrandsState extends State<Brands> {
-  // Route _createRoute() {
-  //   return PageRouteBuilder(
-  //     transitionDuration: Duration(milliseconds: 600),
-  //     reverseTransitionDuration: Duration(milliseconds: 400),
-  //     pageBuilder: (context, animation, secondaryAnimation) => CarsGroups(
-  //       categoryT: widget.categoryT,
-  //       cars: widget.cars[index],
-  //       // assortment: cars[index].assortment,
-  //     ),
-  //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-  //       const begin = Offset(-0.2, 1.0);
-  //       const end = Offset.zero;
-  //       const curve = Curves.ease;
-
-  //       var tween = Tween(begin: begin, end: end).chain(
-  //         CurveTween(curve: curve),
-  //       );
-
-  //       return SlideTransition(
-  //         position: animation.drive(tween),
-  //         child: child,
-  //       );
-  //     },
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     Widget content = Column(
