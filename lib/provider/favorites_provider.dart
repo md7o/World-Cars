@@ -24,14 +24,3 @@ final favoriteAssortmentProvider =
     return FavortieAssortmentNotifier();
   },
 );
-
-// =====================================================================
-
-// final animationProvider = Provider<Animation<double>>((ref) {
-//   final controller = AnimationController(
-//     vsync: ref.read(vsyncProvider), // You need to provide a TickerProvider
-//     duration: Duration(seconds: 1), // Set the animation duration
-//   )..forward(); // Start the animation immediately
-
-//   return Tween<double>(begin: 0, end: 1).animate(controller);
-// });
